@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  django:
+    build: .
+    image: blasphemy_django
+    container_name: blasphemy_django
+    volumes:
+      - .:/code
+    env_file: .env
+    working_dir: /code/src
+    command: python manage.py runserver 0:8000
+    ports:
+      - "${DJANGO_HOST_FORWARD_PORT:-8000}:8000"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - db
+      - redis
+
+  db:
+    env_file: .env
+    image: postgres:13.3-alpine
+    container_name: blasphemy_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB_NAME}
+      POSTGRES_USER: ${POSTGRES_DB_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
+      PGPORT: ${POSTGRES_DB_PORT}
+    ports:
+      - "${POSTGRES_HOST_FORWARD_PORT}:${POSTGRES_DB_PORT}"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+  redis:
+    env_file: .env
+    image: redis:6.2.4-alpine3.13
+    container_name: blasphemy_redis
+    ports:
+      # TODO: Check if internal port is configurable
+      - "${REDIS_PORT:-6379}:${REDIS_PORT:-6379}"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  dbdata:
+    driver: local
+  redis-data:
+    driver: local
