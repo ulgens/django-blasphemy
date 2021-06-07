@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import environ
 from pathlib import Path
 
 # TODO:
@@ -81,8 +82,12 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "HOST": env.str("POSTGRES_DB_HOST"),
+        "PORT": env.str("POSTGRES_DB_PORT"),
+        "NAME": env.str("POSTGRES_DB_NAME"),
+        "USER": env.str("POSTGRES_DB_USER"),
+        "PASSWORD": env.str("POSTGRES_DB_PASSWORD"),
     }
 }
 
