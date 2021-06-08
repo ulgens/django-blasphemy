@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import environ
 from pathlib import Path
+
+import environ
 
 # TODO:
 #  Compare with dynaconf
@@ -36,7 +37,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -79,7 +79,6 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -94,7 +93,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -113,24 +111,48 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = "/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Sentry
+# https://docs.sentry.io/platforms/python/guides/django/
+if env.bool("ENABLE_SENTRY"):
+    import logging
+
+    import git
+    import sentry_sdk
+
+    # from sentry_sdk.integrations.celery import CeleryIntegration
+    from sentry_sdk.integrations.django import DjangoIntegration
+    from sentry_sdk.integrations.logging import LoggingIntegration
+    # from sentry_sdk.integrations.redis import RedisIntegration
+
+    repo = git.Repo(search_parent_directories=True)
+    sha = repo.head.object.hexsha
+
+    sentry_sdk.init(
+        dsn=env.str("SENTRY_DSN"),
+        integrations=[
+            # CeleryIntegration(),
+            DjangoIntegration(),
+            # FIXME: Sentry doesn't record info level logs with this config
+            LoggingIntegration(level=logging.INFO),
+            # RedisIntegration(),
+        ],
+        environment=env.str("SENTRY_ENVIRONMENT", "development"),
+        release=sha,
+        send_default_pii=True,
+        traces_sample_rate=1.0,
+    )

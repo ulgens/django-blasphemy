@@ -4,6 +4,8 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
     apt update && \
     # There should be an upgrade step on prod. image
     apt install -y \
+        # required by gitpython
+        git \
         # For development purposes
         nano
 
