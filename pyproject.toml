@@ -18,7 +18,7 @@ python = "3.9.5"
 Django = "3.2.4"
 django-environ = "0.4.5"
 GitPython = "3.1.17"
-psycopg2-binary = "2.8.6"
+psycopg2-binary = "2.9"
 sentry-sdk = "1.1.0"
 
 [build-system]
