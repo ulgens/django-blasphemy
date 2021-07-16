@@ -11,7 +11,7 @@ ipython = "7.25.0"
 # Formatters
 black = "21.6b0"
 fixit = "0.1.3"  # https://github.com/Instagram/Fixit
-shed = "0.3.6"  # Requires an old version of click. Can be updated.
+shed = "0.3.7"  # Requires an old version of click. Can be updated.
 
 [tool.poetry.dependencies]
 python = "3.9.5"
