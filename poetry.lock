@@ -133,11 +133,11 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-environ"
-version = "0.4.5"
+version = "0.5.0"
 description = "Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3"
 
 [[package]]
 name = "fixit"
@@ -692,7 +692,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.5"
-content-hash = "5ad32da0fbb632e2db3d14ca15a1a4b91982e55a871b51cbd063e77e68cb94e7"
+content-hash = "8af00cc50df4fb47b777d496ee7acf6e97005f3869243ec262f3a65c9ef0083e"
 
 [metadata.files]
 appnope = [
@@ -743,8 +743,8 @@ django = [
     {file = "Django-3.2.6.tar.gz", hash = "sha256:f27f8544c9d4c383bbe007c57e3235918e258364577373d4920e9162837be022"},
 ]
 django-environ = [
-    {file = "django-environ-0.4.5.tar.gz", hash = "sha256:6c9d87660142608f63ec7d5ce5564c49b603ea8ff25da595fd6098f6dc82afde"},
-    {file = "django_environ-0.4.5-py2.py3-none-any.whl", hash = "sha256:c57b3c11ec1f319d9474e3e5a79134f40174b17c7cc024bbb2fad84646b120c4"},
+    {file = "django-environ-0.5.0.tar.gz", hash = "sha256:a8726675c1ebefa4706b36398c4d3c5c790d335ffe55c4a10378f6bfd57ad8d0"},
+    {file = "django_environ-0.5.0-py2.py3-none-any.whl", hash = "sha256:027797af03258931f16c5491cab32e6b386d52f041eb582f1e30f7b5abc22e04"},
 ]
 fixit = [
     {file = "fixit-0.1.4-py3-none-any.whl", hash = "sha256:4d4db17b91e562637f78ffcb017e82b02b299863addf9907b57f05fafd45f8c4"},
