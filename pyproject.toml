@@ -14,7 +14,7 @@ fixit = "0.1.4"  # https://github.com/Instagram/Fixit
 shed = "0.3.10"  # Requires an old version of click. Can be updated.
 
 [tool.poetry.dependencies]
-python = "3.9.5"
+python = "3.9.7"
 Django = "3.2.7"
 django-environ = "0.6.0"
 GitPython = "3.1.18"
