@@ -9,3 +9,17 @@ updates:
       interval: "daily"
     assignees:
       - "ulgens"
+    allow:
+    - dependency-type: all
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "ulgens"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "ulgens"
