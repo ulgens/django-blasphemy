@@ -1,4 +1,4 @@
-FROM python:3.9.5-slim-buster
+FROM python:3.9.7-slim-buster
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
