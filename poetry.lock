@@ -133,7 +133,7 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-environ"
-version = "0.6.0"
+version = "0.7.0"
 description = "A package that allows you to utilize 12factor inspired environment variables to configure your Django application."
 category = "main"
 optional = false
@@ -687,7 +687,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.7"
-content-hash = "899ddf91a48b3384aa21d078705c8edd831ccde62260db01dc5a73e87d18ea02"
+content-hash = "6b2453122dbd34be8ba4e9304ae57250b6fde6f385e37550caae8c3b0aeb2f4f"
 
 [metadata.files]
 appnope = [
@@ -738,8 +738,8 @@ django = [
     {file = "Django-3.2.7.tar.gz", hash = "sha256:95b318319d6997bac3595517101ad9cc83fe5672ac498ba48d1a410f47afecd2"},
 ]
 django-environ = [
-    {file = "django-environ-0.6.0.tar.gz", hash = "sha256:6b3ce447f31c5a5144671d754baa0819c9bde2fb34dcdc05ba619a97f4567e5a"},
-    {file = "django_environ-0.6.0-py2.py3-none-any.whl", hash = "sha256:f63b6489ee2113239fe60cdf94efc93a2b42ac07aefb5b5182d401b4fa820374"},
+    {file = "django-environ-0.7.0.tar.gz", hash = "sha256:b99bd3704221f8b717c8517d8146e53fdee509d9e99056be560060003b92213e"},
+    {file = "django_environ-0.7.0-py2.py3-none-any.whl", hash = "sha256:20a5a3570333d3718c0a7ca834290ef850e2b96237ae4ca0a05823b3a0cb3363"},
 ]
 fixit = [
     {file = "fixit-0.1.4-py3-none-any.whl", hash = "sha256:4d4db17b91e562637f78ffcb017e82b02b299863addf9907b57f05fafd45f8c4"},
