@@ -548,7 +548,7 @@ tornado = ["tornado (>=5)"]
 
 [[package]]
 name = "shed"
-version = "0.3.10"
+version = "0.4.2"
 description = "`shed` canonicalises Python code."
 category = "dev"
 optional = false
@@ -687,7 +687,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.7"
-content-hash = "b4662cd572eb2bb82e873dbf678926a8ce5ab8982caf172656e25efafd0f6e2f"
+content-hash = "04715776bf6da172d3e8abe1e7d0dc9fa1c076150b484ba9fd44378c8c71b206"
 
 [metadata.files]
 appnope = [
@@ -985,8 +985,8 @@ sentry-sdk = [
     {file = "sentry_sdk-1.4.1-py2.py3-none-any.whl", hash = "sha256:ea04bc3be6eb082f34ff3f8f6380ea9c691766592298f3f975a435dafac6bf6a"},
 ]
 shed = [
-    {file = "shed-0.3.10-py3-none-any.whl", hash = "sha256:17492f5a15cae154dec318c79d29e9342865fdb77b0ba52494d95040d9bed53c"},
-    {file = "shed-0.3.10.tar.gz", hash = "sha256:e1ef6ea10cbd48832c8111f135634d2f2d709e2eadfcc545c474112fd347732b"},
+    {file = "shed-0.4.2-py3-none-any.whl", hash = "sha256:1b74d549d42a9edb9e1b6c804dddf559a2837039481e1a5648765e417a435f6a"},
+    {file = "shed-0.4.2.tar.gz", hash = "sha256:9402b2cb5b19d556248c911f46acd88f4b1ceba78b80c5a2780d0598b6d8694c"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
