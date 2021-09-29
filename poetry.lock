@@ -519,7 +519,7 @@ python-versions = "*"
 
 [[package]]
 name = "sentry-sdk"
-version = "1.4.2"
+version = "1.4.3"
 description = "Python client for Sentry (https://sentry.io)"
 category = "main"
 optional = false
@@ -687,7 +687,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.7"
-content-hash = "9b381dd986b5259d4be61b24ef2d7668b2b6eb1c5df1a9f9816771e213c2beb9"
+content-hash = "480d9df17b0105bfa292669a4efb9d28be0fc29b527cf19764998ccee4969ac6"
 
 [metadata.files]
 appnope = [
@@ -981,8 +981,8 @@ regex = [
     {file = "regex-2021.9.24.tar.gz", hash = "sha256:6266fde576e12357b25096351aac2b4b880b0066263e7bc7a9a1b4307991bb0e"},
 ]
 sentry-sdk = [
-    {file = "sentry-sdk-1.4.2.tar.gz", hash = "sha256:683e2f677d518b6a203785f5a6c27d3a6b48cca8293d43cc7efc7815ea4dada5"},
-    {file = "sentry_sdk-1.4.2-py2.py3-none-any.whl", hash = "sha256:ffb7b1f7c9a2ca771066aa4b502756e1ef08aff246de23ffecaa5d2af1533a62"},
+    {file = "sentry-sdk-1.4.3.tar.gz", hash = "sha256:b9844751e40710e84a457c5bc29b21c383ccb2b63d76eeaad72f7f1c808c8828"},
+    {file = "sentry_sdk-1.4.3-py2.py3-none-any.whl", hash = "sha256:c091cc7115ff25fe3a0e410dbecd7a996f81a3f6137d2272daef32d6c3cfa6dc"},
 ]
 shed = [
     {file = "shed-0.4.2-py3-none-any.whl", hash = "sha256:1b74d549d42a9edb9e1b6c804dddf559a2837039481e1a5648765e417a435f6a"},
