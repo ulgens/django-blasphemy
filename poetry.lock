@@ -402,7 +402,7 @@ test = ["appdirs (==1.4.4)", "pytest (>=6)", "pytest-cov (>=2.7)", "pytest-mock 
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.20"
+version = "3.0.21"
 description = "Library for building powerful interactive command lines in Python"
 category = "dev"
 optional = false
@@ -785,8 +785,8 @@ platformdirs = [
     {file = "platformdirs-2.4.0.tar.gz", hash = "sha256:367a5e80b3d04d2428ffa76d33f124cf11e8fff2acdaa9b43d545f5c7d661ef2"},
 ]
 prompt-toolkit = [
-    {file = "prompt_toolkit-3.0.20-py3-none-any.whl", hash = "sha256:6076e46efae19b1e0ca1ec003ed37a933dc94b4d20f486235d436e64771dcd5c"},
-    {file = "prompt_toolkit-3.0.20.tar.gz", hash = "sha256:eb71d5a6b72ce6db177af4a7d4d7085b99756bf656d98ffcc4fecd36850eea6c"},
+    {file = "prompt_toolkit-3.0.21-py3-none-any.whl", hash = "sha256:62b3d3ea5a3ccee94dc1aac018279cf64866a76837156ebe159b981c42dd20a8"},
+    {file = "prompt_toolkit-3.0.21.tar.gz", hash = "sha256:27f13ff4e4850fe8f860b77414c7880f67c6158076a7b099062cc8570f1562e5"},
 ]
 psycopg2-binary = [
     {file = "psycopg2-binary-2.9.1.tar.gz", hash = "sha256:b0221ca5a9837e040ebf61f48899926b5783668b7807419e4adae8175a31f773"},
