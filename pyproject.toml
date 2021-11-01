@@ -9,7 +9,7 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 ipdb = "0.13.9"
 ipython = "7.28.0"
 # Formatters
-black = "21.9b0"
+black = "21.10b0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
 shed = "0.5.3"
 
