@@ -292,7 +292,7 @@ testing = ["Django (<3.1)", "colorama", "docopt", "pytest (<6.0.0)"]
 
 [[package]]
 name = "jsonschema"
-version = "4.2.0"
+version = "4.2.1"
 description = "An implementation of JSON Schema validation for Python"
 category = "dev"
 optional = false
@@ -745,8 +745,8 @@ jedi = [
     {file = "jedi-0.18.0.tar.gz", hash = "sha256:92550a404bad8afed881a137ec9a461fed49eca661414be45059329614ed0707"},
 ]
 jsonschema = [
-    {file = "jsonschema-4.2.0-py3-none-any.whl", hash = "sha256:2b563117f3659a7f433dffe1371c88f52115b79133493f376f15724b9caa7efa"},
-    {file = "jsonschema-4.2.0.tar.gz", hash = "sha256:e2d3601321ac74d38214e2853300ae740cd07e53d919a15862b8c71f9d840574"},
+    {file = "jsonschema-4.2.1-py3-none-any.whl", hash = "sha256:2a0f162822a64d95287990481b45d82f096e99721c86534f48201b64ebca6e8c"},
+    {file = "jsonschema-4.2.1.tar.gz", hash = "sha256:390713469ae64b8a58698bb3cbc3859abe6925b565a973f87323ef21b09a27a8"},
 ]
 libcst = [
     {file = "libcst-0.3.21-py3-none-any.whl", hash = "sha256:a9c6fea4fa3bf92f87e40c6850dec099aaa7aaf963a934c763844544b32d3a1e"},
