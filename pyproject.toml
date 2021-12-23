@@ -11,7 +11,7 @@ ipython = "7.30.1"
 # Formatters
 black = "21.12b0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
-shed = "0.6.0"
+shed = "0.7.0"
 
 [tool.poetry.dependencies]
 python = "3.9.7"
