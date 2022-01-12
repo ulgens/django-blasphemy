@@ -20,7 +20,7 @@ services:
 
   db:
     env_file: .env
-    image: postgres:13.3-alpine
+    image: postgres:14.1-alpine3.15
     container_name: blasphemy_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB_NAME}
