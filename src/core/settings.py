@@ -10,9 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
-
 import environ
+from pathlib import Path
 
 # TODO:
 #  Compare with dynaconf
@@ -37,7 +36,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-INSTALLED_APPS = [
+DJANGO_INTERNALS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -45,6 +44,14 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+DEBUG_APPS = [
+    "debug_toolbar",
+]
+
+INSTALLED_APPS = DJANGO_INTERNALS
+if DEBUG:
+    INSTALLED_APPS += DEBUG_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -55,6 +62,9 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+if DEBUG:
+    MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+
 
 ROOT_URLCONF = "core.urls"
 
@@ -126,6 +136,15 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Django debug toolbar
+if DEBUG:
+    import os
+    import socket
+
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
+
+
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
 if env.bool("ENABLE_SENTRY"):
@@ -137,6 +156,7 @@ if env.bool("ENABLE_SENTRY"):
     # from sentry_sdk.integrations.celery import CeleryIntegration
     from sentry_sdk.integrations.django import DjangoIntegration
     from sentry_sdk.integrations.logging import LoggingIntegration
+
     # from sentry_sdk.integrations.redis import RedisIntegration
 
     repo = git.Repo(search_parent_directories=True)
