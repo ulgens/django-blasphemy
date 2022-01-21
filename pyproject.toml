@@ -7,11 +7,11 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 [tool.poetry.dev-dependencies]
 # Debugging
 ipdb = "0.13.9"
-ipython = "7.31.0"
+ipython = "8.0.1"
 # Formatters
 black = "21.12b0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
-shed = "0.7.0"
+shed = "0.8.0"
 
 [tool.poetry.dependencies]
 python = "3.10.2"
@@ -20,7 +20,7 @@ django-debug-toolbar = "3.2.4"
 django-environ = "0.8.1"
 GitPython = "3.1.26"
 psycopg2-binary = "2.9.3"
-sentry-sdk = "1.5.2"
+sentry-sdk = "1.5.3"
 
 [build-system]
 requires = ["poetry-core>=1.1.8"]
