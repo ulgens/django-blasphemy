@@ -8,6 +8,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/topics/settings/
 """
 
+import dj_database_url
 import environ
 from pathlib import Path
 
@@ -87,15 +88,13 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
+DEFAULT_DATABASE_URL = env.str("DATABASE_URL")
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "HOST": env.str("POSTGRES_DB_HOST"),
-        "PORT": env.str("POSTGRES_DB_PORT"),
-        "NAME": env.str("POSTGRES_DB_NAME"),
-        "USER": env.str("POSTGRES_DB_USER"),
-        "PASSWORD": env.str("POSTGRES_DB_PASSWORD"),
-    }
+    "default": dj_database_url.parse(
+        DEFAULT_DATABASE_URL,
+        conn_max_age=600,
+        # ssl_require=True,
+    ),
 }
 
 
