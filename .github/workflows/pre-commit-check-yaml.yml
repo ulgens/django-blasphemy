@@ -1,6 +1,6 @@
 # https://github.com/pre-commit/action
 
-name: black
+name: "pre-commit: check-yaml"
 
 on:
   push:
@@ -16,4 +16,4 @@ jobs:
     - uses: actions/setup-python@v2
     - uses: pre-commit/action@v2.0.3
       with:
-        extra_args: black --all-files
+        extra_args: check-yaml --all-files
