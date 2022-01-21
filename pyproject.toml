@@ -12,6 +12,8 @@ ipython = "8.0.1"
 black = "21.12b0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
 shed = "0.8.0"
+# Quality check
+pre-commit = "2.17.0"
 
 [tool.poetry.dependencies]
 python = "3.10.2"
