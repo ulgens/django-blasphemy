@@ -144,7 +144,7 @@ if DEBUG:
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
-if env.bool("ENABLE_SENTRY"):
+if env.bool("ENABLE_SENTRY", default=False):
     import logging
 
     import git
