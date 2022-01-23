@@ -35,7 +35,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-DJANGO_INTERNALS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,11 +44,15 @@ DJANGO_INTERNALS = [
     "django.contrib.staticfiles",
 ]
 
+INTERNAL_APPS = [
+    "users",
+]
+
 DEBUG_APPS = [
     "debug_toolbar",
 ]
 
-INSTALLED_APPS = DJANGO_INTERNALS
+INSTALLED_APPS = DJANGO_APPS + INTERNAL_APPS
 if DEBUG:
     INSTALLED_APPS += DEBUG_APPS
 
@@ -97,6 +101,8 @@ DATABASES = {
     ),
 }
 
+AUTH_USER_MODEL = "users.User"
+
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
@@ -135,7 +141,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Django debug toolbar
 if DEBUG:
-    import os
     import socket
 
     hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
