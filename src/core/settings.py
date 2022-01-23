@@ -8,9 +8,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/topics/settings/
 """
 
+from pathlib import Path
+
 import dj_database_url
 import environ
-from pathlib import Path
 
 # TODO:
 #  Compare with dynaconf

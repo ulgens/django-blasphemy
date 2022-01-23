@@ -1,6 +1,6 @@
-from django.urls import path
-
 import logging
+
+from django.urls import path
 
 logger = logging.getLogger(__name__)
 
