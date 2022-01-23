@@ -35,7 +35,12 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 
-# Application definition
+# Application definitions
+PRIORITY_APPS = [
+    "admin_interface",
+    "colorfield",
+]
+
 DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -53,7 +58,7 @@ DEBUG_APPS = [
     "debug_toolbar",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + INTERNAL_APPS
+INSTALLED_APPS = PRIORITY_APPS + DJANGO_APPS + INTERNAL_APPS
 if DEBUG:
     INSTALLED_APPS += DEBUG_APPS
 
@@ -147,6 +152,11 @@ if DEBUG:
     hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
     INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
+
+# Admin related
+# https://github.com/fabiocaccamo/django-admin-interface#installation
+X_FRAME_OPTIONS = "SAMEORIGIN"
+# SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
