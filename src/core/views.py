@@ -10,14 +10,14 @@ def error(request):
 def manual_log(request):
     try:
         1 / 0
-    except Exception as error:
-        logger.exception(error)
+    except Exception as e:
+        logger.exception(e)
         raise error
 
 
 def manual_flat_log(request):
     try:
         1 / 0
-    except Exception as error:
-        logger.exception(str(error))
+    except Exception as e:
+        logger.exception(str(e))
         raise error
