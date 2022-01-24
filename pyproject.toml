@@ -11,6 +11,7 @@ ipython = "8.0.1"
 # Formatters
 black = "21.12b0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
+flake8 = "4.0.1"
 isort = "5.10.1"
 shed = "0.8.0"
 # Quality check
