@@ -28,7 +28,7 @@ dj-database-url = "0.5.0"
 GitPython = "3.1.26"
 gunicorn = "20.1.0"
 psycopg2-binary = "2.9.3"
-sentry-sdk = "1.5.3"
+sentry-sdk = "1.5.4"
 whitenoise = "5.3.0"
 
 [build-system]
