@@ -7,7 +7,7 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 [tool.poetry.dev-dependencies]
 # Debugging
 ipdb = "0.13.9"
-ipython = "8.1.0"
+ipython = "8.1.1"
 # Formatters
 black = "22.1.0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
