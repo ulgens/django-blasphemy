@@ -13,7 +13,7 @@ black = "22.1.0"
 fixit = "0.1.4"  # https://github.com/Instagram/Fixit
 flake8 = "4.0.1"
 isort = "5.10.1"
-shed = "0.9.3"
+shed = "0.9.4"
 # Quality check
 pre-commit = "2.17.0"
 
