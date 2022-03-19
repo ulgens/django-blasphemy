@@ -674,7 +674,7 @@ python-versions = ">=3.9"
 
 [[package]]
 name = "sentry-sdk"
-version = "1.5.7"
+version = "1.5.8"
 description = "Python client for Sentry (https://sentry.io)"
 category = "main"
 optional = false
@@ -886,7 +886,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.3"
-content-hash = "9a37b7b8666d34739b9235b0044e24bb03c28c200e70c26d86da0b60f8aa2ee2"
+content-hash = "3c8e817d2e4375b1f02cded91e4cf635741b1b5f778ca8922c39276629e318f7"
 
 [metadata.files]
 appnope = [
@@ -1311,8 +1311,8 @@ refactor = [
     {file = "refactor-0.4.1.tar.gz", hash = "sha256:23627d7862fb392c9fb47d64f60cb611d3eb2708eb9e858e076e8cf8026e38ef"},
 ]
 sentry-sdk = [
-    {file = "sentry-sdk-1.5.7.tar.gz", hash = "sha256:aa52da941c56b5a76fd838f8e9e92a850bf893a9eb1e33ffce6c21431d07ee30"},
-    {file = "sentry_sdk-1.5.7-py2.py3-none-any.whl", hash = "sha256:411a8495bd18cf13038e5749e4710beb4efa53da6351f67b4c2f307c2d9b6d49"},
+    {file = "sentry-sdk-1.5.8.tar.gz", hash = "sha256:38fd16a92b5ef94203db3ece10e03bdaa291481dd7e00e77a148aa0302267d47"},
+    {file = "sentry_sdk-1.5.8-py2.py3-none-any.whl", hash = "sha256:32af1a57954576709242beb8c373b3dbde346ac6bd616921def29d68846fb8c3"},
 ]
 shed = [
     {file = "shed-0.9.4-py3-none-any.whl", hash = "sha256:1dc87e4b02320424b20282033e41399d88ddcdf7275721d3a0bf4f6aa1cde0b9"},
