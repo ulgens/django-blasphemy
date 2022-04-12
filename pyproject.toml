@@ -17,7 +17,7 @@ flake8-builtins = "1.5.3"
 flake8-comprehensions = "3.8.0"
 isort = "5.10.1"
 pep8-naming = "0.12.1"
-shed = "0.9.4"
+shed = "0.9.5"
 # Quality check
 pre-commit = "2.18.1"
 
