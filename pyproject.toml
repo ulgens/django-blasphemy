@@ -19,7 +19,7 @@ isort = "5.10.1"
 pep8-naming = "0.12.1"
 shed = "0.9.5"
 # Quality check
-pre-commit = "2.18.1"
+pre-commit = "2.19.0"
 
 [tool.poetry.dependencies]
 python = "3.10.3"
