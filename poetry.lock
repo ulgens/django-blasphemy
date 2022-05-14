@@ -247,6 +247,24 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "django-migrations-formatter"
+version = "1.0.0"
+description = "A Django library to automatically format your migrations."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+black = {version = ">=22.1.0", optional = true, markers = "extra == \"black\""}
+isort = {version = "*", optional = true, markers = "extra == \"isort\""}
+
+[package.extras]
+black = ["black (>=22.1.0)"]
+dev = ["pre-commit"]
+isort = ["isort"]
+test = ["coverage[toml] (>=6,<7)", "django"]
+
+[[package]]
 name = "executing"
 version = "0.8.3"
 description = "Get the currently executing AST node of a frame, and other information"
@@ -953,7 +971,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.3"
-content-hash = "33c68044a52d527a6b168ddd606b51e749fcb5efc0c879b71fd0770640d5e172"
+content-hash = "364dbc5b10dfbf1e2e135df477d3a31dfe9c9a7c859faa60bffb39c0feebd10a"
 
 [metadata.files]
 appnope = [
@@ -1065,6 +1083,10 @@ django-flat-responsive = [
 ]
 django-flat-theme = [
     {file = "django-flat-theme-1.1.4.tar.gz", hash = "sha256:6b522d8c2b5a8228b30947fb002eff2868da076e9beacf3e798410e5c1a2d849"},
+]
+django-migrations-formatter = [
+    {file = "django-migrations-formatter-1.0.0.tar.gz", hash = "sha256:229b14d5cdfb32d329437691854cea139aa493ad6cb6eaa0194227686b2f61d4"},
+    {file = "django_migrations_formatter-1.0.0-py3-none-any.whl", hash = "sha256:122773e221bfa7d3e0d395a3e7640af7063c9800560b27eee4e1b0a0e32413e0"},
 ]
 executing = [
     {file = "executing-0.8.3-py2.py3-none-any.whl", hash = "sha256:d1eef132db1b83649a3905ca6dd8897f71ac6f8cac79a7e58a1a09cf137546c9"},
