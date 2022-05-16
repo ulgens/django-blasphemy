@@ -950,8 +950,8 @@ brotli = ["brotli"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "3.10.3"
-content-hash = "92af607cd2bae94bc6f66eb81e3fd0a6cc5b8e4c5c464f353f07555bbd724ddb"
+python-versions = "^3.10"
+content-hash = "5aebee1b15d345f340c664fa9da03c6c1cc4447b30efd11442a79b8e934290bf"
 
 [metadata.files]
 appnope = [
