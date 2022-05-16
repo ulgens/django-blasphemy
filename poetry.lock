@@ -750,14 +750,6 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
-name = "refactor"
-version = "0.4.1"
-description = "AST-based fragmental source code refactoring toolkit"
-category = "dev"
-optional = false
-python-versions = ">=3.9"
-
-[[package]]
 name = "sentry-sdk"
 version = "1.5.12"
 description = "Python client for Sentry (https://sentry.io)"
@@ -789,7 +781,7 @@ tornado = ["tornado (>=5)"]
 
 [[package]]
 name = "shed"
-version = "0.9.6"
+version = "0.9.7"
 description = "`shed` canonicalises Python code."
 category = "dev"
 optional = false
@@ -802,7 +794,6 @@ com2ann = {version = ">=0.3.0", markers = "python_version >= \"3.8\""}
 isort = ">=5.10.1"
 libcst = ">=0.4.0"
 pyupgrade = ">=2.32.0"
-teyit = {version = ">=0.4.1", markers = "python_version >= \"3.9\""}
 
 [[package]]
 name = "six"
@@ -843,17 +834,6 @@ pure-eval = "*"
 
 [package.extras]
 tests = ["pytest", "typeguard", "pygments", "littleutils", "cython"]
-
-[[package]]
-name = "teyit"
-version = "0.4.1"
-description = "Unittest assertion formatter"
-category = "dev"
-optional = false
-python-versions = ">=3.9"
-
-[package.dependencies]
-refactor = "0.4.1"
 
 [[package]]
 name = "tokenize-rt"
@@ -971,7 +951,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.3"
-content-hash = "e1fe49cd755a5bc333600cadc9ce015a98b498d2ef21958feede37de0aa8d75e"
+content-hash = "92af607cd2bae94bc6f66eb81e3fd0a6cc5b8e4c5c464f353f07555bbd724ddb"
 
 [metadata.files]
 appnope = [
@@ -1413,17 +1393,13 @@ pyyaml = [
     {file = "PyYAML-6.0-cp39-cp39-win_amd64.whl", hash = "sha256:b3d267842bf12586ba6c734f89d1f5b871df0273157918b0ccefa29deb05c21c"},
     {file = "PyYAML-6.0.tar.gz", hash = "sha256:68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"},
 ]
-refactor = [
-    {file = "refactor-0.4.1-py3-none-any.whl", hash = "sha256:5d27a81a6441e8f3eaf0d9ff508d7fc1dd96d00631f154e030a598f982835630"},
-    {file = "refactor-0.4.1.tar.gz", hash = "sha256:23627d7862fb392c9fb47d64f60cb611d3eb2708eb9e858e076e8cf8026e38ef"},
-]
 sentry-sdk = [
     {file = "sentry-sdk-1.5.12.tar.gz", hash = "sha256:259535ba66933eacf85ab46524188c84dcb4c39f40348455ce15e2c0aca68863"},
     {file = "sentry_sdk-1.5.12-py2.py3-none-any.whl", hash = "sha256:778b53f0a6c83b1ee43d3b7886318ba86d975e686cb2c7906ccc35b334360be1"},
 ]
 shed = [
-    {file = "shed-0.9.6-py3-none-any.whl", hash = "sha256:eda558e910891efedd0e263d5e7609718646b7a4be6816df3411f9cdc219fa15"},
-    {file = "shed-0.9.6.tar.gz", hash = "sha256:6ba954464af2f13d6eb1c922f1ee45b7c491333ff90fa9e3931ea2288205590e"},
+    {file = "shed-0.9.7-py3-none-any.whl", hash = "sha256:0fbc37ea5f124593ba9d28d4d52ea8dc878af77a99141aa5600b424807fa3029"},
+    {file = "shed-0.9.7.tar.gz", hash = "sha256:baf4c3c74cdcc85761a7b3ffafeaca22ad1820c15cd252b5fe1efe09b9cd1f61"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
@@ -1440,10 +1416,6 @@ sqlparse = [
 stack-data = [
     {file = "stack_data-0.2.0-py3-none-any.whl", hash = "sha256:999762f9c3132308789affa03e9271bbbe947bf78311851f4d485d8402ed858e"},
     {file = "stack_data-0.2.0.tar.gz", hash = "sha256:45692d41bd633a9503a5195552df22b583caf16f0b27c4e58c98d88c8b648e12"},
-]
-teyit = [
-    {file = "teyit-0.4.1-py3-none-any.whl", hash = "sha256:ce04df4071188d6a7a7dbc0291aa2d2c1657a81acd3e32460fb446ce7afea6ef"},
-    {file = "teyit-0.4.1.tar.gz", hash = "sha256:b676dd4dfffc0d3cf492eaaa5ada4d47cebf886cfc460836d0c9c9089d1b7d0b"},
 ]
 tokenize-rt = [
     {file = "tokenize_rt-4.2.1-py2.py3-none-any.whl", hash = "sha256:08a27fa032a81cf45e8858d0ac706004fcd523e8463415ddf1442be38e204ea8"},
