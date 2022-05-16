@@ -23,7 +23,7 @@ shed = "0.9.7"
 pre-commit = "2.19.0"
 
 [tool.poetry.dependencies]
-python = "3.10.3"
+python = "^3.10"
 Django = "4.0.4"
 django-admin-interface = "0.19.1"
 django-debug-toolbar = "3.4.0"
