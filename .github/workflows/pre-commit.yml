@@ -17,5 +17,3 @@ jobs:
 
     - uses: pre-commit/action@v3.0.0
       name: Run pre-commit checks
-      with:
-        extra_args: --all-files
