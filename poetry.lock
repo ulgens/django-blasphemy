@@ -15,7 +15,7 @@ optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-tests = ["mypy (>=0.800)", "pytest-asyncio", "pytest"]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
 name = "asttokens"
@@ -215,9 +215,9 @@ optional = false
 python-versions = ">=3.4,<4"
 
 [package.extras]
-develop = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)", "furo (>=2021.8.17b43,<2021.9.0)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
-docs = ["furo (>=2021.8.17b43,<2021.9.0)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
-testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)"]
+testing = ["pytest (>=4.6.11)", "coverage[toml] (>=5.0a4)"]
+docs = ["sphinx-notfound-page", "sphinx (>=3.5.0)", "furo (>=2021.8.17b43,<2021.9.0)"]
+develop = ["sphinx-notfound-page", "sphinx (>=3.5.0)", "furo (>=2021.8.17b43,<2021.9.0)", "pytest (>=4.6.11)", "coverage[toml] (>=5.0a4)"]
 
 [[package]]
 name = "django-extensions"
@@ -259,10 +259,10 @@ black = {version = ">=22.1.0", optional = true, markers = "extra == \"black\""}
 isort = {version = "*", optional = true, markers = "extra == \"isort\""}
 
 [package.extras]
-black = ["black (>=22.1.0)"]
-dev = ["pre-commit"]
+test = ["django", "coverage[toml] (>=6,<7)"]
 isort = ["isort"]
-test = ["coverage[toml] (>=6,<7)", "django"]
+dev = ["pre-commit"]
+black = ["black (>=22.1.0)"]
 
 [[package]]
 name = "executing"
@@ -300,7 +300,7 @@ libcst = ">=0.3.18"
 pyyaml = ">=5.2"
 
 [package.extras]
-dev = ["black (>=19.10b0)", "codecov (>=2.0.15)", "coverage (>=4.5.4)", "isort (>=4.3.20)", "jupyter (>=1.0.0)", "nbsphinx (>=0.7.1)", "pyre-check (==0.0.41)", "sphinx-rtd-theme (>=0.5.0)", "prompt-toolkit (>=2.0.9)", "tox (>=3.14.5)", "diff-cover (>=3.0.1)"]
+dev = ["diff-cover (>=3.0.1)", "tox (>=3.14.5)", "prompt-toolkit (>=2.0.9)", "sphinx-rtd-theme (>=0.5.0)", "pyre-check (==0.0.41)", "nbsphinx (>=0.7.1)", "jupyter (>=1.0.0)", "isort (>=4.3.20)", "coverage (>=4.5.4)", "codecov (>=2.0.15)", "black (>=19.10b0)"]
 
 [[package]]
 name = "flake8"
@@ -404,7 +404,7 @@ license = ["ukkonen"]
 
 [[package]]
 name = "importlib-resources"
-version = "5.8.1"
+version = "5.9.0"
 description = "Read resources from Python packages"
 category = "dev"
 optional = false
@@ -823,7 +823,7 @@ executing = "*"
 pure-eval = "*"
 
 [package.extras]
-tests = ["pytest", "typeguard", "pygments", "littleutils", "cython"]
+tests = ["cython", "littleutils", "pygments", "typeguard", "pytest"]
 
 [[package]]
 name = "tokenize-rt"
@@ -1103,8 +1103,8 @@ identify = [
     {file = "identify-2.5.2.tar.gz", hash = "sha256:a3d4c096b384d50d5e6dc5bc8b9bc44f1f61cefebd750a7b3e9f939b53fb214d"},
 ]
 importlib-resources = [
-    {file = "importlib_resources-5.8.1-py3-none-any.whl", hash = "sha256:3cd3a19cc65381ec243e1ffa4c49cddc5da0226402b35d354b0003ce7586181b"},
-    {file = "importlib_resources-5.8.1.tar.gz", hash = "sha256:fa6350b0f5ec4a294aaf794a34b58c950f0a78d5c3de36d749abe1e22e8be5fc"},
+    {file = "importlib_resources-5.9.0-py3-none-any.whl", hash = "sha256:f78a8df21a79bcc30cfd400bdc38f314333de7c0fb619763f6b9dabab8268bb7"},
+    {file = "importlib_resources-5.9.0.tar.gz", hash = "sha256:5481e97fb45af8dcf2f798952625591c58fe599d0735d86b10f54de086a61681"},
 ]
 ipdb = [
     {file = "ipdb-0.13.9.tar.gz", hash = "sha256:951bd9a64731c444fd907a5ce268543020086a697f6be08f7cc2c9a752a278c5"},
