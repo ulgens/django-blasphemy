@@ -15,7 +15,7 @@ optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-tests = ["mypy (>=0.800)", "pytest-asyncio", "pytest"]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
 name = "asttokens"
@@ -215,9 +215,9 @@ optional = false
 python-versions = ">=3.4,<4"
 
 [package.extras]
-develop = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)", "furo (>=2021.8.17b43,<2021.9.0)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
-docs = ["furo (>=2021.8.17b43,<2021.9.0)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
-testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)"]
+testing = ["pytest (>=4.6.11)", "coverage[toml] (>=5.0a4)"]
+docs = ["sphinx-notfound-page", "sphinx (>=3.5.0)", "furo (>=2021.8.17b43,<2021.9.0)"]
+develop = ["sphinx-notfound-page", "sphinx (>=3.5.0)", "furo (>=2021.8.17b43,<2021.9.0)", "pytest (>=4.6.11)", "coverage[toml] (>=5.0a4)"]
 
 [[package]]
 name = "django-extensions"
@@ -259,14 +259,14 @@ black = {version = ">=22.1.0", optional = true, markers = "extra == \"black\""}
 isort = {version = "*", optional = true, markers = "extra == \"isort\""}
 
 [package.extras]
-black = ["black (>=22.1.0)"]
-dev = ["pre-commit"]
+test = ["django", "coverage[toml] (>=6,<7)"]
 isort = ["isort"]
-test = ["coverage[toml] (>=6,<7)", "django"]
+dev = ["pre-commit"]
+black = ["black (>=22.1.0)"]
 
 [[package]]
 name = "executing"
-version = "0.8.3"
+version = "0.9.0"
 description = "Get the currently executing AST node of a frame, and other information"
 category = "dev"
 optional = false
@@ -300,7 +300,7 @@ libcst = ">=0.3.18"
 pyyaml = ">=5.2"
 
 [package.extras]
-dev = ["black (>=19.10b0)", "codecov (>=2.0.15)", "coverage (>=4.5.4)", "isort (>=4.3.20)", "jupyter (>=1.0.0)", "nbsphinx (>=0.7.1)", "pyre-check (==0.0.41)", "sphinx-rtd-theme (>=0.5.0)", "prompt-toolkit (>=2.0.9)", "tox (>=3.14.5)", "diff-cover (>=3.0.1)"]
+dev = ["diff-cover (>=3.0.1)", "tox (>=3.14.5)", "prompt-toolkit (>=2.0.9)", "sphinx-rtd-theme (>=0.5.0)", "pyre-check (==0.0.41)", "nbsphinx (>=0.7.1)", "jupyter (>=1.0.0)", "isort (>=4.3.20)", "coverage (>=4.5.4)", "codecov (>=2.0.15)", "black (>=19.10b0)"]
 
 [[package]]
 name = "flake8"
@@ -823,7 +823,7 @@ executing = "*"
 pure-eval = "*"
 
 [package.extras]
-tests = ["pytest", "typeguard", "pygments", "littleutils", "cython"]
+tests = ["cython", "littleutils", "pygments", "typeguard", "pytest"]
 
 [[package]]
 name = "tokenize-rt"
@@ -1059,8 +1059,8 @@ django-migrations-formatter = [
     {file = "django_migrations_formatter-1.0.0-py3-none-any.whl", hash = "sha256:122773e221bfa7d3e0d395a3e7640af7063c9800560b27eee4e1b0a0e32413e0"},
 ]
 executing = [
-    {file = "executing-0.8.3-py2.py3-none-any.whl", hash = "sha256:d1eef132db1b83649a3905ca6dd8897f71ac6f8cac79a7e58a1a09cf137546c9"},
-    {file = "executing-0.8.3.tar.gz", hash = "sha256:c6554e21c6b060590a6d3be4b82fb78f8f0194d809de5ea7df1c093763311501"},
+    {file = "executing-0.9.0-py2.py3-none-any.whl", hash = "sha256:d07e9a46c85dd507055f7c4c208689faef1bf6a671ae81e91787f307808bacfb"},
+    {file = "executing-0.9.0.tar.gz", hash = "sha256:ade7276b4b108df69b8480064264db856335585efe170833601f30bcaaed7bc7"},
 ]
 filelock = [
     {file = "filelock-3.7.1-py3-none-any.whl", hash = "sha256:37def7b658813cda163b56fc564cdc75e86d338246458c4c28ae84cabefa2404"},
