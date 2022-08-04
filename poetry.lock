@@ -174,7 +174,7 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-admin-interface"
-version = "0.19.1"
+version = "0.19.2"
 description = "django-admin-interface is a modern responsive flat admin interface customizable by the admin itself."
 category = "main"
 optional = false
@@ -943,7 +943,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "c07d5e8edb2c289d5b17df17a3ae753f531d43f6f3ee08174b60929c2766bf4e"
+content-hash = "1ce9b2504dd3e35f1da1520ff01d4fb811320fe47abe24b09998a24d585c9c1a"
 
 [metadata.files]
 appnope = [
@@ -1031,8 +1031,8 @@ django = [
     {file = "Django-4.1.tar.gz", hash = "sha256:032f8a6fc7cf05ccd1214e4a2e21dfcd6a23b9d575c6573cacc8c67828dbe642"},
 ]
 django-admin-interface = [
-    {file = "django-admin-interface-0.19.1.tar.gz", hash = "sha256:b94bea110138a78d29c79462bcdaf79bae0b5e5ab44b7775e2581bfdd99342c4"},
-    {file = "django_admin_interface-0.19.1-py3-none-any.whl", hash = "sha256:17831521f867a356d748b12d69dd3cd7cd86f15f63f2ca777ab185d3359bf7b5"},
+    {file = "django-admin-interface-0.19.2.tar.gz", hash = "sha256:8e0e5270819ba0dbc6241338e7639551678ca00d3952d4a46273c68134d1c8db"},
+    {file = "django_admin_interface-0.19.2-py3-none-any.whl", hash = "sha256:8f3d8b5c8fc2ad7fb94d5f9efce82a6b5042eaedae30fe82a28794faa225bd6e"},
 ]
 django-colorfield = [
     {file = "django-colorfield-0.7.2.tar.gz", hash = "sha256:9c2c36a7cac60bf6e57e70ca344529a3065226543358d01036e1714371f3166d"},
