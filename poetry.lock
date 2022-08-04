@@ -307,7 +307,7 @@ dev = ["diff-cover (>=3.0.1)", "tox (>=3.14.5)", "prompt-toolkit (>=2.0.9)", "sp
 
 [[package]]
 name = "flake8"
-version = "5.0.3"
+version = "5.0.4"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
 optional = false
@@ -943,7 +943,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "1ce9b2504dd3e35f1da1520ff01d4fb811320fe47abe24b09998a24d585c9c1a"
+content-hash = "de0d78e23f1bc5711ac3c38518358db6428bad901455202db9e0e451cd2bcf24"
 
 [metadata.files]
 appnope = [
@@ -1073,8 +1073,8 @@ fixit = [
     {file = "fixit-0.1.4.tar.gz", hash = "sha256:450281387eebb36fdc6027cdbd14d48a4d4b84134034bd0e50415aaeff272ced"},
 ]
 flake8 = [
-    {file = "flake8-5.0.3-py2.py3-none-any.whl", hash = "sha256:93aa565ae2f0316b95bb57a354f2b2d55ee8508e1fe1cb13b77b9c195b4a2537"},
-    {file = "flake8-5.0.3.tar.gz", hash = "sha256:b27fd7faa8d90aaae763664a489012292990388e5d3604f383b290caefbbc922"},
+    {file = "flake8-5.0.4-py2.py3-none-any.whl", hash = "sha256:7a1cf6b73744f5806ab95e526f6f0d8c01c66d7bbe349562d22dfca20610b248"},
+    {file = "flake8-5.0.4.tar.gz", hash = "sha256:6fbe320aad8d6b95cec8b8e47bc933004678dc63095be98528b7bdd2a9f510db"},
 ]
 flake8-bugbear = [
     {file = "flake8-bugbear-22.7.1.tar.gz", hash = "sha256:e450976a07e4f9d6c043d4f72b17ec1baf717fe37f7997009c8ae58064f88305"},
