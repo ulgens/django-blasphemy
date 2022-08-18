@@ -528,7 +528,7 @@ dev = ["black (==22.3.0)", "coverage (>=4.5.4)", "fixit (==0.1.1)", "flake8 (>=3
 
 [[package]]
 name = "matplotlib-inline"
-version = "0.1.4"
+version = "0.1.6"
 description = "Inline Matplotlib backend for Jupyter"
 category = "dev"
 optional = false
@@ -1160,8 +1160,8 @@ libcst = [
     {file = "libcst-0.4.7.tar.gz", hash = "sha256:95c52c2130531f6e726a3b077442cfd486975435fecf3db8224d43fba7b85099"},
 ]
 matplotlib-inline = [
-    {file = "matplotlib-inline-0.1.4.tar.gz", hash = "sha256:38df7b5d72bb03ccc7e7ba5d03776b163d9c5dfe415579bbc96009a91f611c30"},
-    {file = "matplotlib_inline-0.1.4-py3-none-any.whl", hash = "sha256:d005283ebadff51fe2b84ebdb211f50d45b910fba3a473c39c8fca172a750860"},
+    {file = "matplotlib-inline-0.1.6.tar.gz", hash = "sha256:f887e5f10ba98e8d2b150ddcf4702c1e5f8b3a20005eb0f74bfdbd360ee6f304"},
+    {file = "matplotlib_inline-0.1.6-py3-none-any.whl", hash = "sha256:f1f41aab5328aa5aaea9b16d083b128102f8712542f819fe7e6a420ff581b311"},
 ]
 mccabe = [
     {file = "mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
