@@ -6,7 +6,8 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "daily"
+      # TODO: Change this to something smaller in a real project
+      interval: "monthly"
     assignees:
       - "ulgens"
     allow:
@@ -14,12 +15,14 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "daily"
+      # TODO: Change this to something smaller in a real project
+      interval: "monthly"
     assignees:
       - "ulgens"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      # TODO: Change this to something smaller in a real project
+      interval: "monthly"
     assignees:
       - "ulgens"
