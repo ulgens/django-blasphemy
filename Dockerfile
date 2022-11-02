@@ -1,4 +1,4 @@
-FROM python:3.10.7-slim-bullseye
+FROM python:3.11.0-slim-bullseye
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
