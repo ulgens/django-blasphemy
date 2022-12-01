@@ -7,7 +7,7 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 [tool.poetry.dev-dependencies]
 # Debugging
 ipdb = "0.13.9"
-ipython = "8.6.0"
+ipython = "8.7.0"
 # Formatters
 black = "22.10.0"
 django-migrations-formatter = {extras = ["black", "isort"], version = "1.0.0"}
