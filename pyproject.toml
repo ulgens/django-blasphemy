@@ -6,7 +6,7 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 
 [tool.poetry.dev-dependencies]
 # Debugging
-ipdb = "0.13.9"
+ipdb = "0.13.11"
 ipython = "8.7.0"
 # Formatters
 black = "22.10.0"
