@@ -16,7 +16,7 @@ flake8 = "6.0.0"
 flake8-bugbear = "22.10.27"
 flake8-builtins = "2.0.1"
 flake8-comprehensions = "3.10.1"
-isort = "5.10.1"
+isort = "5.11.4"
 pep8-naming = "0.13.2"
 shed = "0.10.8"
 # Quality check
