@@ -189,14 +189,14 @@ six = ">=1.9.0,<2.0.0"
 
 [[package]]
 name = "django-colorfield"
-version = "0.7.2"
+version = "0.8.0"
 description = "simple color field for your models with a nice color-picker in the admin-interface."
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-Pillow = ">=5.0"
+Pillow = ">=9.0.0"
 
 [[package]]
 name = "django-debug-toolbar"
@@ -1063,8 +1063,8 @@ django-admin-interface = [
     {file = "django_admin_interface-0.23.0-py3-none-any.whl", hash = "sha256:68c27139773946147d9170a8b9e9c96dda51b427c71c3222dfc36611a7aff539"},
 ]
 django-colorfield = [
-    {file = "django-colorfield-0.7.2.tar.gz", hash = "sha256:9c2c36a7cac60bf6e57e70ca344529a3065226543358d01036e1714371f3166d"},
-    {file = "django_colorfield-0.7.2-py3-none-any.whl", hash = "sha256:29dffa09b2ce89f19504a53a120e5bfdbfe3e44621f33b3f94b0e6a572ae93c1"},
+    {file = "django-colorfield-0.8.0.tar.gz", hash = "sha256:e50423af639858d01c39980eed9970f7ae475610bf0709b81f6b21a3dc9c3f92"},
+    {file = "django_colorfield-0.8.0-py3-none-any.whl", hash = "sha256:b7a25e2c430f4e80726ab171805d0d76d1f82cc7ff3799d60c2682f50d2ca03c"},
 ]
 django-debug-toolbar = [
     {file = "django-debug-toolbar-3.7.0.tar.gz", hash = "sha256:1e3acad24e3d351ba45c6fa2072e4164820307332a776b16c9f06d1f89503465"},
