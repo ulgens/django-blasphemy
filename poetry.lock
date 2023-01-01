@@ -802,7 +802,7 @@ testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (
 
 [[package]]
 name = "shed"
-version = "0.10.7"
+version = "0.10.8"
 description = "`shed` canonicalises Python code."
 category = "dev"
 optional = false
@@ -972,7 +972,7 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "52f3d7eb56dadb2b152d358e8c290775a6982f35a501e21c6519adc1ac572e55"
+content-hash = "439590f5cead9a3ab150b258f5f3ed27eb6af42106b89873ade8bbc46febaf4c"
 
 [metadata.files]
 appnope = [
@@ -1471,8 +1471,8 @@ setuptools = [
     {file = "setuptools-65.6.3.tar.gz", hash = "sha256:a7620757bf984b58deaf32fc8a4577a9bbc0850cf92c20e1ce41c38c19e5fb75"},
 ]
 shed = [
-    {file = "shed-0.10.7-py3-none-any.whl", hash = "sha256:3c0aa3c0adb437750656d637333486d3fa7fd74506f24b0b094896895f3b3c1c"},
-    {file = "shed-0.10.7.tar.gz", hash = "sha256:9f4e4dac205e3ddd7b42b4891bef5ed43386ad6d0b76d8154747608d6a06cc40"},
+    {file = "shed-0.10.8-py3-none-any.whl", hash = "sha256:5625a41842ef433bc1ddf1360d039cbeb205d5dcb33b706515ec410f865b4551"},
+    {file = "shed-0.10.8.tar.gz", hash = "sha256:06030eb5ecb7708cc81628f61493725b46614b6d80444352bcead27c5f0da47d"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
