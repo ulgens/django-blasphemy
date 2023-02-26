@@ -20,7 +20,7 @@ services:
 
   db:
     env_file: .env
-    image: postgres:14.1-alpine3.15
+    image: postgres:15.2-alpine3.17
     container_name: blasphemy_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB_NAME}
@@ -34,7 +34,7 @@ services:
 
   redis:
     env_file: .env
-    image: redis:6.2.6-alpine3.15
+    image: redis:7.0.8-alpine3.17
     container_name: blasphemy_redis
     ports:
       # TODO: Check if internal port is configurable
