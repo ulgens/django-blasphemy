@@ -41,3 +41,8 @@ repos:
     hooks:
     -   id: django-upgrade
         args: [--target-version, "4.1"]
+
+-   repo: https://github.com/PyCQA/bandit
+    rev: 1.7.4
+    hooks:
+    -   id: bandit
