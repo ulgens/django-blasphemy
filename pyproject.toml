@@ -23,7 +23,7 @@ pyupgrade = "3.3.1"
 shed = "0.10.9"
 # Quality & security check
 bandit = "1.7.4"
-pre-commit = "3.1.0"
+pre-commit = "3.2.1"
 
 [tool.poetry.dependencies]
 python = "^3.11"
