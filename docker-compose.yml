@@ -34,7 +34,7 @@ services:
 
   redis:
     env_file: .env
-    image: redis:7.0.8-alpine3.17
+    image: redis:7.0.11-alpine3.17
     container_name: blasphemy_redis
     ports:
       # TODO: Check if internal port is configurable
