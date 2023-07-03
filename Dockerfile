@@ -15,7 +15,7 @@ ENV PYTHONFAULTHANDLER=1 \
     PYTHONDONTWRITEBYTECODE=True \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     PIP_DEFAULT_TIMEOUT=100 \
-    POETRY_VERSION="1.4.2"
+    POETRY_VERSION="1.5.1"
 
 RUN --mount=type=cache,target=/root/.cache/pip \
 	pip install "poetry==$POETRY_VERSION"
