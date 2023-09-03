@@ -9,21 +9,21 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 ipdb = "0.13.13"
 ipython = "8.14.0"
 # Formatters
-black = "23.3.0"
-django-upgrade = "1.14.0"
+black = "23.7.0"
+django-upgrade = "1.14.1"
 django-migrations-formatter = {extras = ["black", "isort"], version = "1.0.0"}
-fixit = "0.1.4"  # https://github.com/Instagram/Fixit
-flake8 = "6.0.0"
-flake8-bugbear = "23.6.5"
+fixit = "2.0.0.post1"  # https://github.com/Instagram/Fixit
+flake8 = "6.1.0"
+flake8-bugbear = "23.7.10"
 flake8-builtins = "2.1.0"
-flake8-comprehensions = "3.13.0"
+flake8-comprehensions = "3.14.0"
 isort = "5.12.0"
 pep8-naming = "0.13.3"
-pyupgrade = "3.8.0"
+pyupgrade = "3.10.1"
 shed = "2023.6.1"
 # Quality & security check
 bandit = "1.7.5"
-pre-commit = "3.3.3"
+pre-commit = "3.4.0"
 
 [tool.poetry.dependencies]
 python = "^3.11"
