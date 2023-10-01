@@ -9,7 +9,7 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 ipdb = "0.13.13"
 ipython = "8.15.0"
 # Formatters
-black = "23.7.0"
+black = "23.9.1"
 django-upgrade = "1.14.1"
 django-migrations-formatter = {extras = ["black", "isort"], version = "1.0.0"}
 fixit = "2.0.0.post1"  # https://github.com/Instagram/Fixit
