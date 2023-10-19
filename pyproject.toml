@@ -16,10 +16,10 @@ fixit = "2.0.0.post1"  # https://github.com/Instagram/Fixit
 flake8 = "6.1.0"
 flake8-bugbear = "23.9.16"
 flake8-builtins = "2.1.0"
-flake8-comprehensions = "3.14.0"
+flake8-comprehensions = "3.15.0"
 isort = "5.12.0"
 pep8-naming = "0.13.3"
-pyupgrade = "3.14.0"
+pyupgrade = "3.15.0"
 shed = "2023.6.1"
 # Quality & security check
 bandit = "1.7.5"
