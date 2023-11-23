@@ -10,8 +10,13 @@ updates:
       interval: "monthly"
     assignees:
       - "ulgens"
+    groups:
+      python:
+        patterns:
+        - "*"
     allow:
     - dependency-type: all
+
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
