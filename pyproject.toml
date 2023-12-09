@@ -6,6 +6,7 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 package-mode = false
 
 [tool.poetry.dev-dependencies]
+django-tui = "24.1"
 # Debugging
 ipdb = "0.13.13"
 ipython = "8.22.2"
