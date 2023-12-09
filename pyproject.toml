@@ -6,6 +6,8 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 package-mode = false
 
 [tool.poetry.dev-dependencies]
+aiosmtpd = "1.4.6"  # Required by django-tui
+django-tui = "24.3"
 # Debugging
 ipdb = "0.13.13"
 ipython = "8.26.0"
@@ -34,7 +36,7 @@ django-click = "2.4.0"
 django-debug-toolbar = "4.4.6"
 django-dirtyfields = "1.9.3"
 django-environ = "0.11.2"
-django-extensions = "3.2.3"
+django-extensions = { git = "https://github.com/ulgens/django-extensions.git", branch = "aiosmptd-mail_debug" }
 django-filter = "24.3"
 django-jsonform = "2.22.0"
 dj-database-url = "2.2.0"
