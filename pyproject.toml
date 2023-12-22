@@ -7,9 +7,9 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 [tool.poetry.dev-dependencies]
 # Debugging
 ipdb = "0.13.13"
-ipython = "8.18.1"
+ipython = "8.19.0"
 # Formatters
-black = "23.11.0"
+black = "23.12.0"
 django-upgrade = "1.15.0"
 django-migrations-formatter = {extras = ["black", "isort"], version = "1.0.0"}
 fixit = "2.1.0"  # https://github.com/Instagram/Fixit
@@ -17,18 +17,18 @@ flake8 = "6.1.0"
 flake8-bugbear = "23.12.2"
 flake8-builtins = "2.2.0"
 flake8-comprehensions = "3.14.0"
-isort = "5.12.0"
+isort = "5.13.2"
 pep8-naming = "0.13.3"
 pyupgrade = "3.15.0"
 shed = "2023.6.1"
 # Quality & security check
-bandit = "1.7.5"
-pre-commit = "3.5.0"
+bandit = "1.7.6"
+pre-commit = "3.6.0"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 Django = "5.0"
-django-admin-interface = "0.26.1"
+django-admin-interface = "0.28.0"
 django-debug-toolbar = "4.2.0"
 django-environ = "0.11.2"
 django-extensions = "3.2.3"
@@ -36,7 +36,7 @@ dj-database-url = "2.1.0"
 GitPython = "3.1.40"
 gunicorn = "21.2.0"
 psycopg2-binary = "2.9.9"
-sentry-sdk = "1.38.0"
+sentry-sdk = "1.39.1"
 whitenoise = "6.6.0"
 
 [build-system]
