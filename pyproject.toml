@@ -14,7 +14,7 @@ django-upgrade = "1.15.0"
 django-migrations-formatter = {extras = ["black", "isort"], version = "1.0.0"}
 fixit = "2.1.0"  # https://github.com/Instagram/Fixit
 flake8 = "7.0.0"
-flake8-bugbear = "23.12.2"
+flake8-bugbear = "24.1.17"
 flake8-builtins = "2.2.0"
 flake8-comprehensions = "3.14.0"
 isort = "5.13.2"
