@@ -9,20 +9,20 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 ipdb = "0.13.13"
 ipython = "8.20.0"
 # Formatters
-black = "23.12.1"
+black = "24.1.0"
 django-upgrade = "1.15.0"
 django-migrations-formatter = {extras = ["black", "isort"], version = "1.0.0"}
 fixit = "2.1.0"  # https://github.com/Instagram/Fixit
 flake8 = "7.0.0"
-flake8-bugbear = "23.12.2"
+flake8-bugbear = "24.1.17"
 flake8-builtins = "2.2.0"
 flake8-comprehensions = "3.14.0"
 isort = "5.13.2"
 pep8-naming = "0.13.3"
 pyupgrade = "3.15.0"
-shed = "2023.6.1"
+shed = "2024.1.1"
 # Quality & security check
-bandit = "1.7.6"
+bandit = "1.7.7"
 pre-commit = "3.6.0"
 
 [tool.poetry.dependencies]
