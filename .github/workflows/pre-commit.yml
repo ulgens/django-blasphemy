@@ -15,5 +15,16 @@ jobs:
     - uses: actions/checkout@v4.1.1
       name: Checkout
 
-    - uses: pre-commit/action@v3.0.0
-      name: Run pre-commit checks
+    - uses: actions/setup-python@v5.0.0
+      name: Set up Python
+      with:
+        python-version: 3.12.1
+
+    - name: Install pre-commit
+      run: pip install pre-commit
+
+    - name: Install pre-commit hooks
+      run: pre-commit install-hooks
+
+    - name: Run pre-commit
+      run: pre-commit run --all-files
