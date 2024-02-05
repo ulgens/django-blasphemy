@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # FIXME: Read it from the env
-SECRET_KEY = "django-insecure-fwa(zg5eoz9#vogq1$60scfov9o_pj+$kqha-y)#ao0i@g)6@7"  # nosec B105
+SECRET_KEY = "django-insecure-fwa(zg5eoz9#vogq1$60scfov9o_pj+$kqha-y)#ao0i@g)6@7"  # noqa: S105
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
