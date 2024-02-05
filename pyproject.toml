@@ -16,7 +16,6 @@ flake8-builtins = "2.2.0"
 flake8-comprehensions = "3.14.0"
 isort = "5.13.2"
 pep8-naming = "0.13.3"
-pyupgrade = "3.15.0"
 # Quality & security check
 bandit = "1.7.7"
 pre-commit = "3.6.0"
@@ -47,6 +46,8 @@ target-version = "py312"
 select = [
     # https://docs.astral.sh/ruff/rules/unused-noqa/
     "RUF100",
+    # https://docs.astral.sh/ruff/rules/#pyupgrade-up
+    "UP",
 ]
 
 [tool.isort]
