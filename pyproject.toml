@@ -43,6 +43,12 @@ build-backend = "poetry.core.masonry.api"
 line-length = 120
 target-version = "py312"
 
+[tool.ruff.lint]
+select = [
+    # https://docs.astral.sh/ruff/rules/unused-noqa/
+    "RUF100",
+]
+
 [tool.isort]
 # We are no longer using black directly but ruff needs that profile definition too.
 profile = "black"
