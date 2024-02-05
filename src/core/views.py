@@ -12,7 +12,7 @@ def manual_log(request):
         1 / 0
     except Exception as e:
         logger.exception(e)
-        raise error
+        raise e
 
 
 def manual_flat_log(request):
@@ -20,4 +20,4 @@ def manual_flat_log(request):
         1 / 0
     except Exception as e:
         logger.exception(str(e))
-        raise error
+        raise e
