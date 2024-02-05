@@ -16,12 +16,6 @@ repos:
       - id: ruff-format
         name: ruff format
 
--   repo: https://github.com/pycqa/flake8
-    rev: 7.0.0
-    hooks:
-    -   id: flake8
-        additional_dependencies: [flake8-bugbear==24.1.17, flake8-builtins==2.2.0, flake8-comprehensions==3.14.0, pep8-naming==0.13.3]
-
 -   repo: https://github.com/adamchainz/django-upgrade
     rev: 1.15.0
     hooks:
