@@ -9,7 +9,6 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 ipdb = "0.13.13"
 ipython = "8.21.0"
 # Formatters
-black = "24.1.1"
 django-upgrade = "1.15.0"
 flake8 = "7.0.0"
 flake8-bugbear = "24.1.17"
@@ -40,22 +39,10 @@ whitenoise = "6.6.0"
 requires = ["poetry-core>=1.1.8"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.black]
+[tool.ruff]
 line-length = 120
-target-version = ["py312"]
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+target-version = "py312"
 
 [tool.isort]
+# We are no longer using black directly but ruff needs that profile definition too.
 profile = "black"

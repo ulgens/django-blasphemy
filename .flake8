@@ -1,5 +1,5 @@
 [flake8]
 extend-ignore =
-    # Line lengths are checked & managed by Black
+    # Line lengths are checked & managed by ruff
     # https://www.flake8rules.com/rules/E501.html
     E501
