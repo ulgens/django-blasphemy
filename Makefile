@@ -22,7 +22,3 @@ test:
 	docker-compose run --rm django python -Wd manage.py test --parallel
 test_fast:
 	docker-compose run --rm django python -Wd manage.py test --keepdb --failfast --parallel
-format:
-	docker-compose run --rm django black .
-format_check:
-	docker-compose run --rm django black . --diff --color
