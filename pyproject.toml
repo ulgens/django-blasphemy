@@ -61,6 +61,9 @@ select = [
     # https://docs.astral.sh/ruff/rules/#flake8-bandit-s
     # https://github.com/tylerwince/flake8-bandit
     "S",
+    # https://docs.astral.sh/ruff/rules/#tryceratops-try
+    # https://github.com/guilatrova/tryceratops
+    "TRY",
     # https://docs.astral.sh/ruff/rules/#pyupgrade-up
     # https://github.com/asottile/pyupgrade
     "UP",

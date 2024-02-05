@@ -10,14 +10,15 @@ def error(request):
 def manual_log(request):
     try:
         return 1 / 0
-    except Exception as e:
-        logger.exception(e)
-        raise e
+    except ZeroDivisionError:
+        logger.exception("Manually logged exception")
+        raise
 
 
 def manual_flat_log(request):
     try:
         return 1 / 0
-    except Exception as e:
-        logger.exception(str(e))
-        raise e
+    except ZeroDivisionError as e:
+        flat_log = str(e)
+        logger.exception(flat_log)
+        raise
