@@ -52,8 +52,9 @@ select = [
     # https://docs.astral.sh/ruff/rules/#pep8-naming-n
     # https://github.com/PyCQA/pep8-naming
     "N",
-    # https://docs.astral.sh/ruff/rules/unused-noqa/
-    "RUF100",
+    # https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
+    # Project link is the astral/ruff website, so no external links.
+    "RUF",
     # https://docs.astral.sh/ruff/rules/#flake8-bandit-s
     # https://github.com/tylerwince/flake8-bandit
     "S",
