@@ -62,7 +62,6 @@ THIRD_PARTY_APPS = [
 
 DEBUG_APPS = [
     "debug_toolbar",
-    "django_migrations_formatter.apps.MigrationsFormatter",
 ]
 
 INSTALLED_APPS = PRIORITY_APPS + DJANGO_APPS + THIRD_PARTY_APPS + INTERNAL_APPS

@@ -322,27 +322,6 @@ files = [
 Django = ">=3.2"
 
 [[package]]
-name = "django-migrations-formatter"
-version = "1.0.0"
-description = "A Django library to automatically format your migrations."
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "django-migrations-formatter-1.0.0.tar.gz", hash = "sha256:229b14d5cdfb32d329437691854cea139aa493ad6cb6eaa0194227686b2f61d4"},
-    {file = "django_migrations_formatter-1.0.0-py3-none-any.whl", hash = "sha256:122773e221bfa7d3e0d395a3e7640af7063c9800560b27eee4e1b0a0e32413e0"},
-]
-
-[package.dependencies]
-black = {version = ">=22.1.0", optional = true, markers = "extra == \"black\""}
-isort = {version = "*", optional = true, markers = "extra == \"isort\""}
-
-[package.extras]
-black = ["black (>=22.1.0)"]
-dev = ["pre-commit"]
-isort = ["isort"]
-test = ["Django", "coverage[toml] (>=6,<7)"]
-
-[[package]]
 name = "django-upgrade"
 version = "1.15.0"
 description = "Automatically upgrade your Django project code."
@@ -1536,4 +1515,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "7f871946c4e016a67e5f1fc6f096cace6481612e6df18535f43873b19577871b"
+content-hash = "029ba08e131f45d919cb3893a3bc66830e3806715dba54c940360df0f35e0c33"
