@@ -8,6 +8,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/topics/settings/
 """
 
+# "noqa: ERA001" in this file means the related line added as an example for an alternative
+# use case and/or further implementation, and the code should stay there. Think it like .gitkeep file.
+
 import os
 from pathlib import Path
 
@@ -110,7 +113,7 @@ DATABASES = {
     "default": dj_database_url.parse(
         DEFAULT_DATABASE_URL,
         conn_max_age=600,
-        # ssl_require=True,
+        # ssl_require=True,  # noqa: ERA001
     ),
 }
 
@@ -173,7 +176,7 @@ if DEBUG:
 # Admin related
 # https://github.com/fabiocaccamo/django-admin-interface#installation
 X_FRAME_OPTIONS = "SAMEORIGIN"
-# SILENCED_SYSTEM_CHECKS = ["security.W019"]
+# SILENCED_SYSTEM_CHECKS = ["security.W019"]  # noqa: ERA001
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
@@ -183,11 +186,11 @@ if env.bool("ENABLE_SENTRY", default=False):
     import git
     import sentry_sdk
 
-    # from sentry_sdk.integrations.celery import CeleryIntegration
+    # from sentry_sdk.integrations.celery import CeleryIntegration  # noqa: ERA001
     from sentry_sdk.integrations.django import DjangoIntegration
     from sentry_sdk.integrations.logging import LoggingIntegration
 
-    # from sentry_sdk.integrations.redis import RedisIntegration
+    # from sentry_sdk.integrations.redis import RedisIntegration  # noqa: ERA001
 
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
@@ -195,11 +198,11 @@ if env.bool("ENABLE_SENTRY", default=False):
     sentry_sdk.init(
         dsn=env.str("SENTRY_DSN"),
         integrations=[
-            # CeleryIntegration(),
+            # CeleryIntegration(),  # noqa: ERA001
             DjangoIntegration(),
             # FIXME: Sentry doesn't record info level logs with this config
             LoggingIntegration(level=logging.INFO),
-            # RedisIntegration(),
+            # RedisIntegration(),  # noqa: ERA001
         ],
         environment=env.str("SENTRY_ENVIRONMENT", "development"),
         release=sha,
