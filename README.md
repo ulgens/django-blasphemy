@@ -19,7 +19,7 @@ heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
 heroku buildpacks:add heroku/python
 
 heroku config:set POETRY_VERSION=1.7.1
-heroku config:set PYTHON_RUNTIME_VERSION=3.12.0
+heroku config:set PYTHON_RUNTIME_VERSION=3.12.2
 ```
 
 # Contribution
