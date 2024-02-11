@@ -14,6 +14,7 @@ help:
 	@echo "  make test [test_name]"
 	@echo "  make test_fast [test_name]"
 
+# FIXME: "ENV" doesn't sound like the best option here.
 ENV = docker compose
 DJANGO_ENV = $(ENV) run --rm django
 
