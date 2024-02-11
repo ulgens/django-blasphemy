@@ -1,24 +1,36 @@
-# Pass args if command is `manage`
-ifeq (manage, $(firstword $(MAKECMDGOALS)))
-   MANAGE_ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
-   $(eval $(MANAGE_ARGS):;@:)
-endif
+.PHONY: help build up down manage shell bash test test_fast
+
+ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
+
+# Default target, display available commands
+help:
+	@echo "Available commands:"
+	@echo "  make build"
+	@echo "  make up"
+	@echo "  make down"
+	@echo "  make bash"
+	@echo "  make manage command"
+	@echo "  make shell"
+	@echo "  make test [test_name]"
+	@echo "  make test_fast [test_name]"
+
+ENV = docker compose
+DJANGO_ENV = $(ENV) run --rm django
 
 build:
-	docker-compose build --progress plain
+	${ENV} build --progress plain
 up:
-	docker-compose up
+	${ENV} up
 down:
-	docker-compose down
-# calling like this: make -- manage migrate
-# About "--": https://stackoverflow.com/questions/2214575/passing-arguments-to-make-run#comment29441378_14061796
-manage:
-	docker-compose run --rm django python manage.py $(MANAGE_ARGS)
-shell:
-	docker-compose run --rm django python manage.py shell_plus
+	${ENV} down
+
 bash:
-	docker-compose run --rm django bash
+	${DJANGO_ENV} bash
+manage:
+	${DJANGO_ENV} python manage.py $(ARGS)
+shell:
+	${DJANGO_ENV} python manage.py shell_plus
 test:
-	docker-compose run --rm django python -Wd manage.py test --parallel
+	${DJANGO_ENV} python -Wd manage.py test --parallel=auto $(ARGS)
 test_fast:
-	docker-compose run --rm django python -Wd manage.py test --keepdb --failfast --parallel
+	${DJANGO_ENV} python -Wd manage.py test --failfast --keepdb --parallel=auto $(ARGS)
