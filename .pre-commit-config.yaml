@@ -18,7 +18,7 @@ repos:
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.15.0
+    rev: 1.16.0
     hooks:
     -   id: django-upgrade
         args: [--target-version, "5.0"]

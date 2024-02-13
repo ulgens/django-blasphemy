@@ -198,17 +198,17 @@ Django = ">=3.2"
 
 [[package]]
 name = "django-upgrade"
-version = "1.15.0"
+version = "1.16.0"
 description = "Automatically upgrade your Django project code."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "django_upgrade-1.15.0-py3-none-any.whl", hash = "sha256:ced9f859729a116cf6edb2951767c7d5140c7c11f61fed00cf30ebe9d382477a"},
-    {file = "django_upgrade-1.15.0.tar.gz", hash = "sha256:b62cc4f5c86ba687196e894c2795264c0f399bbbff69f30d381374b3d0407dbc"},
+    {file = "django-upgrade-1.16.0.tar.gz", hash = "sha256:7e473e8ecf234a531448d4a0c1c772746fa831fc762eae3d7578f13f6d847370"},
+    {file = "django_upgrade-1.16.0-py3-none-any.whl", hash = "sha256:605708b130368ee6dd304df00253f184a7c2f00d1c2dd5d4dac41a31307a2a14"},
 ]
 
 [package.dependencies]
-tokenize-rt = ">=4.1.0"
+tokenize-rt = ">=4.1"
 
 [[package]]
 name = "executing"
@@ -293,13 +293,13 @@ tornado = ["tornado (>=0.2)"]
 
 [[package]]
 name = "identify"
-version = "2.5.33"
+version = "2.5.34"
 description = "File identification library for Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "identify-2.5.33-py2.py3-none-any.whl", hash = "sha256:d40ce5fcd762817627670da8a7d8d8e65f24342d14539c59488dc603bf662e34"},
-    {file = "identify-2.5.33.tar.gz", hash = "sha256:161558f9fe4559e1557e1bff323e8631f6a0e4837f7497767c1782832f16b62d"},
+    {file = "identify-2.5.34-py2.py3-none-any.whl", hash = "sha256:a4316013779e433d08b96e5eabb7f641e6c7942e4ab5d4c509ebd2e7a8994aed"},
+    {file = "identify-2.5.34.tar.gz", hash = "sha256:ee17bc9d499899bc9eaec1ac7bf2dc9eedd480db9d88b96d123d3b64a9d34f5d"},
 ]
 
 [package.extras]
@@ -544,13 +544,13 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.4.3)", "pytest-
 
 [[package]]
 name = "pre-commit"
-version = "3.6.0"
+version = "3.6.1"
 description = "A framework for managing and maintaining multi-language pre-commit hooks."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "pre_commit-3.6.0-py2.py3-none-any.whl", hash = "sha256:c255039ef399049a5544b6ce13d135caba8f2c28c3b4033277a788f434308376"},
-    {file = "pre_commit-3.6.0.tar.gz", hash = "sha256:d30bad9abf165f7785c15a21a1f46da7d0677cb00ee7ff4c579fd38922efe15d"},
+    {file = "pre_commit-3.6.1-py2.py3-none-any.whl", hash = "sha256:9fe989afcf095d2c4796ce7c553cf28d4d4a9b9346de3cda079bcf40748454a4"},
+    {file = "pre_commit-3.6.1.tar.gz", hash = "sha256:c90961d8aa706f75d60935aba09469a6b0bcb8345f127c3fbee4bdc5f114cf4b"},
 ]
 
 [package.dependencies]
@@ -697,13 +697,13 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "python-slugify"
-version = "8.0.3"
+version = "8.0.4"
 description = "A Python slugify application that also handles Unicode"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "python-slugify-8.0.3.tar.gz", hash = "sha256:e04cba5f1c562502a1175c84a8bc23890c54cdaf23fccaaf0bf78511508cabed"},
-    {file = "python_slugify-8.0.3-py2.py3-none-any.whl", hash = "sha256:c71189c161e8c671f1b141034d9a56308a8a5978cd13d40446c879569212fdd1"},
+    {file = "python-slugify-8.0.4.tar.gz", hash = "sha256:59202371d1d05b54a9e7720c5e038f928f45daaffe41dd10822f3907b937c856"},
+    {file = "python_slugify-8.0.4-py2.py3-none-any.whl", hash = "sha256:276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8"},
 ]
 
 [package.dependencies]
@@ -774,13 +774,13 @@ files = [
 
 [[package]]
 name = "sentry-sdk"
-version = "1.40.0"
+version = "1.40.4"
 description = "Python client for Sentry (https://sentry.io)"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sentry-sdk-1.40.0.tar.gz", hash = "sha256:34ad8cfc9b877aaa2a8eb86bfe5296a467fffe0619b931a05b181c45f6da59bf"},
-    {file = "sentry_sdk-1.40.0-py2.py3-none-any.whl", hash = "sha256:78575620331186d32f34b7ece6edea97ce751f58df822547d3ab85517881a27a"},
+    {file = "sentry-sdk-1.40.4.tar.gz", hash = "sha256:657abae98b0050a0316f0873d7149f951574ae6212f71d2e3a1c4c88f62d6456"},
+    {file = "sentry_sdk-1.40.4-py2.py3-none-any.whl", hash = "sha256:ac5cf56bb897ec47135d239ddeedf7c1c12d406fb031a4c0caa07399ed014d7e"},
 ]
 
 [package.dependencies]
@@ -806,7 +806,7 @@ huey = ["huey (>=2)"]
 loguru = ["loguru (>=0.5)"]
 opentelemetry = ["opentelemetry-distro (>=0.35b0)"]
 opentelemetry-experimental = ["opentelemetry-distro (>=0.40b0,<1.0)", "opentelemetry-instrumentation-aiohttp-client (>=0.40b0,<1.0)", "opentelemetry-instrumentation-django (>=0.40b0,<1.0)", "opentelemetry-instrumentation-fastapi (>=0.40b0,<1.0)", "opentelemetry-instrumentation-flask (>=0.40b0,<1.0)", "opentelemetry-instrumentation-requests (>=0.40b0,<1.0)", "opentelemetry-instrumentation-sqlite3 (>=0.40b0,<1.0)", "opentelemetry-instrumentation-urllib (>=0.40b0,<1.0)"]
-pure-eval = ["asttokens", "executing", "pure-eval"]
+pure-eval = ["asttokens", "executing", "pure_eval"]
 pymongo = ["pymongo (>=3.1)"]
 pyspark = ["pyspark (>=2.4.4)"]
 quart = ["blinker (>=1.1)", "quart (>=0.16.1)"]
@@ -819,18 +819,18 @@ tornado = ["tornado (>=5)"]
 
 [[package]]
 name = "setuptools"
-version = "69.0.3"
+version = "69.1.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "setuptools-69.0.3-py3-none-any.whl", hash = "sha256:385eb4edd9c9d5c17540511303e39a147ce2fc04bc55289c322b9e5904fe2c05"},
-    {file = "setuptools-69.0.3.tar.gz", hash = "sha256:be1af57fc409f93647f2e8e4573a142ed38724b8cdd389706a867bb4efcf1e78"},
+    {file = "setuptools-69.1.0-py3-none-any.whl", hash = "sha256:c054629b81b946d63a9c6e732bc8b2513a7c3ea645f11d0139a2191d735c60c6"},
+    {file = "setuptools-69.1.0.tar.gz", hash = "sha256:850894c4195f09c4ed30dba56213bf7c3f21d86ed6bdaafb5df5972593bfc401"},
 ]
 
 [package.extras]
 docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-favicon", "sphinx-inline-tabs", "sphinx-lint", "sphinx-notfound-page (>=1,<2)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
-testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.develop (>=7.21)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pip (>=19.1)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-ruff", "pytest-timeout", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
+testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.develop (>=7.21)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pip (>=19.1)", "pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-home (>=0.5)", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-ruff (>=0.2.1)", "pytest-timeout", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
 testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.1)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
@@ -940,13 +940,13 @@ files = [
 
 [[package]]
 name = "tzdata"
-version = "2023.4"
+version = "2024.1"
 description = "Provider of IANA time zone data"
 optional = false
 python-versions = ">=2"
 files = [
-    {file = "tzdata-2023.4-py2.py3-none-any.whl", hash = "sha256:aa3ace4329eeacda5b7beb7ea08ece826c28d761cda36e747cfbf97996d39bf3"},
-    {file = "tzdata-2023.4.tar.gz", hash = "sha256:dd54c94f294765522c77399649b4fefd95522479a664a0cec87f41bebc6148c9"},
+    {file = "tzdata-2024.1-py2.py3-none-any.whl", hash = "sha256:9068bc196136463f5245e51efda838afa15aaeca9903f49050dfa2679db4d252"},
+    {file = "tzdata-2024.1.tar.gz", hash = "sha256:2674120f8d891909751c38abcdfd386ac0a5a1127954fbc332af6b5ceae07efd"},
 ]
 
 [[package]]
@@ -1014,4 +1014,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "148e8e04a5862ffa12b06f740b3c5f3096b7a9f111f6b7acd43f3448dd337a89"
+content-hash = "30c7a51a2d670cc44791e7493ea0284b4a6248b77ab7d5f0874b463d35c18316"
