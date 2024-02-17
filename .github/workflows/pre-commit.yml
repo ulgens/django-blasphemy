@@ -8,6 +8,10 @@ on:
       - main
   pull_request: ~
 
+env:
+  PYTHON_VERSION: 3.12.2
+  PRE_COMMIT_VERSION: 3.6.0
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -16,12 +20,12 @@ jobs:
       name: Checkout
 
     - uses: actions/setup-python@v5.0.0
-      name: Set up Python
+      name: Set up Python ${{ env.PYTHON_VERSION }}
       with:
-        python-version: 3.12.2
+        python-version: ${{ env.PYTHON_VERSION }}
 
-    - name: Install pre-commit
-      run: pip install pre-commit
+    - name: Install pre-commit ${{ env.PRE_COMMIT_VERSION }}
+      run: pip install pre-commit==${{ env.PRE_COMMIT_VERSION }}
 
     - name: Install pre-commit hooks
       run: pre-commit install-hooks
