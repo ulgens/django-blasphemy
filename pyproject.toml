@@ -11,7 +11,7 @@ ipython = "8.21.0"
 # Formatters
 django-upgrade = "1.16.0"
 # Quality check
-pre-commit = "3.6.1"
+pre-commit = "3.6.2"
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -21,10 +21,10 @@ django-debug-toolbar = "4.3.0"
 django-environ = "0.11.2"
 django-extensions = "3.2.3"
 dj-database-url = "2.1.0"
-GitPython = "3.1.41"
+GitPython = "3.1.42"
 gunicorn = "21.2.0"
 psycopg2-binary = "2.9.9"
-sentry-sdk = "1.40.4"
+sentry-sdk = "1.40.5"
 whitenoise = "6.6.0"
 
 [build-system]
