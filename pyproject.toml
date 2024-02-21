@@ -3,6 +3,10 @@ name = "django-blasphemy"
 version = "0.1.0"
 description = ""
 authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
+# Will be usable with 1.8.0 release - https://github.com/python-poetry/poetry/issues/8770
+# Removes the need for "--no-root" flag with "poetry install" command.
+# https://github.com/python-poetry/poetry/pull/8650
+# package-mode = false
 
 [tool.poetry.dev-dependencies]
 # Debugging
