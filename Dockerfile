@@ -27,5 +27,4 @@ COPY poetry.lock pyproject.toml /code/
 
 # I'm not sure if this is the best way to manage venv in container.
 RUN poetry config virtualenvs.create false \
-  && poetry config virtualenvs.path "/root/.virtualenvs" \
   && poetry install --no-interaction --no-ansi
