@@ -14,8 +14,16 @@ ENV PYTHONFAULTHANDLER=1 \
     PYTHONHASHSEED=random \
     PYTHONDONTWRITEBYTECODE=True \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
-    PIP_DEFAULT_TIMEOUT=100 \
-    POETRY_VERSION="1.7.1"
+    PIP_DEFAULT_TIMEOUT=100
+
+# Poetry settings
+ENV POETRY_VERSION="1.7.1" \
+    # # When true, `poetry run` is required to run the commands relating to the venv
+    POETRY_VIRTUALENVS_CREATE=0 \
+    # --no-root will be redundant with poetry==1.8.0
+    POETRY_NO_ROOT=1 \
+    POETRY_NO_INTERACTION=1 \
+    POETRY_NO_ANSI=1
 
 RUN --mount=type=cache,target=/root/.cache/pip \
 	pip install "poetry==$POETRY_VERSION"
@@ -26,7 +34,4 @@ WORKDIR /code
 COPY poetry.lock pyproject.toml /code/
 
 # TODO: Share the venv folder with the host.
-# When true, `poetry run` is required to run the commands relating to the venv
-RUN poetry config virtualenvs.create false
-# --no-root will be redundant with poetry==1.8.0
-RUN poetry install --no-interaction --no-ansi --no-root
+RUN poetry install
