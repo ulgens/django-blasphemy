@@ -25,6 +25,8 @@ WORKDIR /code
 
 COPY poetry.lock pyproject.toml /code/
 
-# I'm not sure if this is the best way to manage venv in container.
-RUN poetry config virtualenvs.create false \
-  && poetry install --no-interaction --no-ansi
+# TODO: Share the venv folder with the host.
+# When true, `poetry run` is required to run the commands relating to the venv
+RUN poetry config virtualenvs.create false
+# --no-root will be redundant with poetry==1.8.0
+RUN poetry install --no-interaction --no-ansi --no-root
