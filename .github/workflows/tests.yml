@@ -1,0 +1,41 @@
+# Things to check before start:
+# * https://github.com/marketplace/actions/python-poetry-action
+# * https://github.com/packetcoders/action-setup-cache-python-poetry/blob/main/action.yml
+# * https://gist.github.com/soof-golan/6ebb97a792ccd87816c0bda1e6e8b8c2
+# * https://github.com/nicoloboschi/poetry-dockerize-plugin
+# * https://github.com/wemake-services/wemake-django-template/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/docker/django/Dockerfile
+# * https://github.com/orgs/python-poetry/discussions/1879
+
+name: "tests"
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
+  # pull_request: ~
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+          options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v4.1.1
+      name: Checkout
+
+    - uses: actions/setup-python@v5.0.0
+      id: setup_python
+      name: Set up Python ${{ env.PYTHON_VERSION }}
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    # TODO: Complete the setup
