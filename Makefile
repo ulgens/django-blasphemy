@@ -19,7 +19,7 @@ ENV = docker compose
 DJANGO_ENV = $(ENV) run --rm django
 
 build:
-	${ENV} build --progress plain
+	${ENV} --progress plain build
 up:
 	${ENV} up
 down:
