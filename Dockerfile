@@ -17,11 +17,9 @@ ENV PYTHONFAULTHANDLER=1 \
     PIP_DEFAULT_TIMEOUT=100
 
 # Poetry settings
-ENV POETRY_VERSION="1.7.1" \
+ENV POETRY_VERSION="1.8.1" \
     # # When true, `poetry run` is required to run the commands relating to the venv
     POETRY_VIRTUALENVS_CREATE=0 \
-    # --no-root will be redundant with poetry==1.8.0
-    POETRY_NO_ROOT=1 \
     POETRY_NO_INTERACTION=1 \
     POETRY_NO_ANSI=1
 
