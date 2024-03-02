@@ -11,10 +11,10 @@ repos:
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.3.0
     hooks:
-      - id: ruff
+    -   id: ruff
         name: ruff lint
         args: ["--fix"]
-      - id: ruff-format
+    -   id: ruff-format
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
