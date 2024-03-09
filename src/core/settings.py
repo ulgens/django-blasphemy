@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 """
 
 # "noqa: ERA001" in this file means the related line added as an example for an alternative
-# use case and/or further implementation, and the code should stay there. Think it like .gitkeep file.
+# use case and/or further implementation, and the code should stay there. Think it like a .gitkeep file.
 
-import os
 from pathlib import Path
 
 import dj_database_url
@@ -32,6 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # FIXME: Read it from the env
+# noinspection SpellCheckingInspection
 SECRET_KEY = "django-insecure-fwa(zg5eoz9#vogq1$60scfov9o_pj+$kqha-y)#ao0i@g)6@7"  # noqa: S105
 
 # SECURITY WARNING: don't run with debug turned on in production!

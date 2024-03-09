@@ -104,7 +104,7 @@ select = [
     # https://github.com/pre-commit/pygrep-hooks
     "PGH",
     # Can be useful with pytest.
-    # Not planning to use pytest but I will keep it for now.
+    # Not planning to use pytest, but I will keep it for now.
     # https://docs.astral.sh/ruff/rules/#flake8-pytest-style-pt
     # https://github.com/m-burst/flake8-pytest-style
     # "PT",
