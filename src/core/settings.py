@@ -137,6 +137,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "mailpit"
+EMAIL_PORT = 1025
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/

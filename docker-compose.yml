@@ -16,6 +16,7 @@ services:
     tty: true
     depends_on:
       - db
+      - mailpit
       - redis
 
   db:
@@ -32,6 +33,16 @@ services:
     volumes:
       - dbdata:/var/lib/postgresql/data
 
+  mailpit:
+    image: axllent/mailpit
+    container_name: blasphemy_mailpit
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    restart: unless-stopped
+    volumes:
+      - mailpit-data:/data
+
   redis:
     env_file: .env
     image: redis:7.2.4-alpine3.19
@@ -44,6 +55,8 @@ services:
 
 volumes:
   dbdata:
+    driver: local
+  mailpit-data:
     driver: local
   redis-data:
     driver: local
