@@ -1,0 +1,75 @@
+name: "pre-commit autoupdate"
+
+on:
+  schedule:
+    - cron: "0 12 * * SUN"  # Every sunday at 12 PM
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: 3.12.2
+  PRE_COMMIT_VERSION: 3.6.0
+  CONFIG_PATH: .pre-commit-config.yaml
+  BRANCH_NAME: "pre-commit-autoupdate"
+  PULL_REQUEST_TITLE: "pre-commit autoupdate"
+  COMMIT_MESSAGE: "pre-commit autoupdate"
+
+jobs:
+  auto-update:
+    permissions:
+      contents: write # for peter-evans/create-pull-request to create branch
+      pull-requests: write # for peter-evans/create-pull-request to create a PR
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4.1.1
+        name: Checkout
+
+      - uses: actions/setup-python@v5.0.0
+        id: setup_python
+        name: Set up Python ${{ env.PYTHON_VERSION }}
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: actions/cache@v4.0.1
+        id: python_package_cache
+        name: Cache installed Python packages
+        with:
+          key: python_packages-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-${{ env.PRE_COMMIT_VERSION }}
+          path: ${{ env.pythonLocation }}
+          restore-keys: |
+            python_packages-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-
+
+      - name: Install pre-commit ${{ env.PRE_COMMIT_VERSION }}
+        if: steps.python_package_cache.outputs.cache-hit != 'true'
+        run: pip install pre-commit==${{ env.PRE_COMMIT_VERSION }}
+
+      - name: pre-commit cache
+        id: precommit_hooks_cache
+        uses: actions/cache@v4.0.1
+        with:
+          path: ~/.cache/pre-commit
+          key: pre_commit_hooks-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-hooks-${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys: |
+            pre_commit_hooks-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-hooks-
+
+      - name: Install pre-commit hooks
+        if: steps.precommit_hooks_cache.outputs.cache-hit != 'true'
+        run: pre-commit install-hooks
+
+      - name: Update pre-commit hooks
+        run: pre-commit autoupdate --config ${{ inputs.config_path }}
+        shell: bash
+
+      - name: Install pre-commit hooks
+        run: pre-commit install-hooks
+
+      - name: Run pre-commit
+        run: pre-commit run --all-files
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.PRECOMMIT_UPDATE_TOKEN }}
+          branch: ${{ inputs.BRANCH_NAME }}
+          title: ${{ inputs.PULL_REQUEST_TITLE }}
+          commit-message: ${{ inputs.COMMIT_MESSAGE }}
