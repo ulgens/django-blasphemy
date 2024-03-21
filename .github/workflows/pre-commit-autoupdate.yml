@@ -64,8 +64,6 @@ jobs:
 
       - name: Run pre-commit
         run: pre-commit run --all-files
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
 
       - uses: peter-evans/create-pull-request@v6
         with:
