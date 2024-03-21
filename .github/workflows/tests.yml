@@ -10,10 +10,14 @@ name: "tests"
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
-  # pull_request: ~
+  push:
+    branches:
+      - main
+  pull_request: ~
+
+env:
+    PYTHON_VERSION: 3.12.2
+    POETRY_VERSION: 1.8.2
 
 jobs:
   test:
@@ -38,4 +42,27 @@ jobs:
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
-    # TODO: Complete the setup
+    - uses: actions/cache@v4.0.1
+      name: Cache for Poetry setup
+      id: poetry_install_cache
+      with:
+        key: poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-${{ env.PRE_COMMIT_VERSION }}
+        path: ${{ env.pythonLocation }}
+        restore-keys: |
+          poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-
+
+    - name: Setup Poetry
+      if: steps.poetry_install_cache.outputs.cache-hit != 'true'
+      run: pip install poetry==${{ env.POETRY_VERSION }}
+
+    # TODO:
+    #   This step must be cached too; but with current small list of packages,
+    #   installing them is faster than cache retrieval and update.
+    - name: Install packages
+      run: poetry install
+
+    - name: Run tests
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+        SECRET_KEY: ""
+      run: poetry run python src/manage.py test
