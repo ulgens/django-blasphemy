@@ -12,7 +12,7 @@ ipython = "8.22.2"
 # Formatters
 django-upgrade = "1.16.0"
 # Quality check
-pre-commit = "3.6.2"
+pre-commit = "3.7.0"
 
 [tool.poetry.dependencies]
 python = "^3.12"
