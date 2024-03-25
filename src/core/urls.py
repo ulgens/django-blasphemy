@@ -2,6 +2,7 @@
 URL Configuration
 """
 
+from api import urls as api_urls
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
@@ -13,6 +14,7 @@ urlpatterns = [
     path("error/", error),
     path("manual_log/", manual_log),
     path("manual_flat_log/", manual_flat_log),
+    path("api/", include(api_urls)),
 ]
 
 if settings.DEBUG:
