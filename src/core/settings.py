@@ -61,6 +61,7 @@ INTERNAL_APPS = [
 
 THIRD_PARTY_APPS = [
     "django_extensions",
+    "drf_spectacular",
 ]
 
 DEBUG_APPS = [
@@ -180,6 +181,16 @@ if DEBUG:
 # https://github.com/fabiocaccamo/django-admin-interface#installation
 X_FRAME_OPTIONS = "SAMEORIGIN"
 # SILENCED_SYSTEM_CHECKS = ["security.W019"]  # noqa: ERA001
+
+# DRF
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Blasphemy",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
