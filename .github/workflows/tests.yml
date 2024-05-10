@@ -33,7 +33,7 @@ jobs:
           options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-    - uses: actions/checkout@v4.1.4
+    - uses: actions/checkout@v4.1.5
       name: Checkout
 
     - uses: actions/setup-python@v5.1.0
