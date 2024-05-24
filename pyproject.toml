@@ -10,9 +10,9 @@ package-mode = false
 ipdb = "0.13.13"
 ipython = "8.24.0"
 # Formatters
-django-upgrade = "1.16.0"
+django-upgrade = "1.17.0"
 # Quality check
-pre-commit = "3.7.0"
+pre-commit = "3.7.1"
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -27,7 +27,7 @@ drf-spectacular = "0.27.2"
 GitPython = "3.1.43"
 gunicorn = "22.0.0"
 psycopg2-binary = "2.9.9"
-sentry-sdk = "2.1.1"
+sentry-sdk = "2.3.1"
 whitenoise = "6.6.0"
 
 [build-system]
