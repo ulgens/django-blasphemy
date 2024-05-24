@@ -20,7 +20,7 @@ jobs:
       pull-requests: write # for peter-evans/create-pull-request to create a PR
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4.1.5
+      - uses: actions/checkout@v4.1.6
         name: Checkout
 
       - uses: actions/setup-python@v5.1.0
