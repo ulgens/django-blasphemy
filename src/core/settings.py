@@ -15,6 +15,7 @@ from pathlib import Path
 
 import dj_database_url
 import environ
+from celery.schedules import crontab
 
 # TODO:
 #  Compare with dynaconf
@@ -204,6 +205,13 @@ SHELL_PLUS_IMPORTS = ("from core.tasks import test_task",)
 # FIXME: Get from the env
 CELERY_BROKER_URL = "redis://redis:6379/0"
 CELERY_RESULT_BACKEND = "redis://redis:6379/0"
+
+CELERY_BEAT_SCHEDULE = {
+    "sample_task": {
+        "task": "core.tasks.beat_task",
+        "schedule": crontab(minute="*/1"),
+    },
+}
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
