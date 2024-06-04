@@ -199,6 +199,12 @@ SPECTACULAR_SETTINGS = {
     "SERVE_INCLUDE_SCHEMA": False,
 }
 
+SHELL_PLUS_IMPORTS = ("from core.tasks import test_task",)
+
+# FIXME: Get from the env
+CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"
+
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
 if env.bool("ENABLE_SENTRY", default=False):
