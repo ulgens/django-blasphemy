@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 
 # "noqa: ERA001" in this file means the related line added as an example for an alternative
 # use case and/or further implementation, and the code should stay there. Think it like a .gitkeep file.
-
+import sys
 from pathlib import Path
 
 import dj_database_url
@@ -70,7 +70,11 @@ DEBUG_APPS = [
 ]
 
 INSTALLED_APPS = PRIORITY_APPS + DJANGO_APPS + THIRD_PARTY_APPS + INTERNAL_APPS
-if DEBUG:
+
+# https://django-debug-toolbar.readthedocs.io/en/latest/installation.html#disable-the-toolbar-when-running-tests-optional
+TESTING = "test" in sys.argv
+
+if DEBUG and not TESTING:
     INSTALLED_APPS += DEBUG_APPS
 
 MIDDLEWARE = [
@@ -83,7 +87,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-if DEBUG:
+if DEBUG and not TESTING:
     MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
 
 
