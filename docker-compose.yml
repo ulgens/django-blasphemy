@@ -53,6 +53,36 @@ services:
     volumes:
       - redis-data:/data
 
+  celery_workers:
+    build: .
+    image: blasphemy_celery_workers
+    container_name: blasphemy_celery_workers
+    volumes:
+      - .:/code
+    env_file: .env
+    working_dir: /code/src
+    command: celery -A core.celery worker -E -l info
+    depends_on:
+      - db
+      - redis
+    stdin_open: true
+    tty: true
+
+  celery_beat:
+    build: .
+    image: blasphemy_celery_beat
+    container_name: blasphemy_celery_beat
+    volumes:
+      - .:/code
+    env_file: .env
+    working_dir: /code/src
+    command: celery -A core.celery beat -l info
+    depends_on:
+      - db
+      - redis
+    stdin_open: true
+    tty: true
+
 volumes:
   dbdata:
     driver: local
