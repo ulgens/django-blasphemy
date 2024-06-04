@@ -83,6 +83,19 @@ services:
     stdin_open: true
     tty: true
 
+  celery_flower:
+    build: .
+    image: blasphemy_celery_flower
+    volumes:
+      - .:/code
+    env_file: .env
+    working_dir: /code/src
+    command: celery --broker=redis://redis:6379/0 flower --port=5555
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+
 volumes:
   dbdata:
     driver: local
