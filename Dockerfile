@@ -6,6 +6,8 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
     apt install -y \
         # required by gitpython
         git \
+        # graph_models command
+        graphviz \
         # For development purposes
         nano
 
