@@ -202,6 +202,14 @@ SPECTACULAR_SETTINGS = {
 
 SHELL_PLUS_IMPORTS = ("from core.tasks import test_task",)
 
+
+GRAPH_MODELS = {
+    "app_labels": ("users",),
+    "exclude_models": "BaseModel",
+    "group_models": True,
+    "theme": "original",
+}
+
 # FIXME: Get from the env
 CELERY_BROKER_URL = "redis://redis:6379/0"
 CELERY_RESULT_BACKEND = "redis://redis:6379/0"

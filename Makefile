@@ -35,3 +35,9 @@ test:
 	${DJANGO_ENV} python -Wd manage.py test --parallel=auto $(ARGS)
 test_fast:
 	${DJANGO_ENV} python -Wd manage.py test --failfast --keepdb --parallel=auto $(ARGS)
+
+visualize_models:
+	# Requires graphviz in Dockerfile and pydot in pyproject.toml
+	# Another possible renderer is pygraphviz, but it requires GCC to be installed,
+	# and the result image doesn't look any different. (Can be revisited.)
+	${DJANGO_ENV} python manage.py graph_models --pydot -o models.svg
