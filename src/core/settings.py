@@ -64,6 +64,7 @@ INTERNAL_APPS = [
 THIRD_PARTY_APPS = [
     "django_extensions",
     "drf_spectacular",
+    "rest_framework",
 ]
 
 DEBUG_APPS = [
