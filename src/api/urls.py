@@ -19,6 +19,7 @@ swagger_patterns = [
     path(
         route="",
         view=RedirectView.as_view(url=reverse_lazy("api:swagger-ui")),
+        name="home",
     ),
 ]
 
