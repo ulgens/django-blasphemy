@@ -20,3 +20,17 @@ class SnippetAdmin(admin.ModelAdmin):
         "language",
         "style",
     )
+    fields = (
+        "id",
+        "created_at",
+        "updated_at",
+        "title",
+        "language",
+        "style",
+        "code",
+    )
+    readonly_fields = (
+        "id",
+        "created_at",
+        "updated_at",
+    )
