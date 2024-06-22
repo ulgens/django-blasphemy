@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 # "noqa: ERA001" in this file means the related line added as an example for an alternative
 # use case and/or further implementation, and the code should stay there. Think it like a .gitkeep file.
 import sys
+from gettext import gettext as _
 from pathlib import Path
 
 import dj_database_url
@@ -152,6 +153,7 @@ EMAIL_PORT = 1025
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
+LANGUAGES = (("en", _("English")),)
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
