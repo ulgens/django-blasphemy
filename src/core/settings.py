@@ -82,7 +82,6 @@ if DEBUG and not TESTING:
     INSTALLED_APPS += DEBUG_APPS
 
 MIDDLEWARE = [
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -94,6 +93,12 @@ MIDDLEWARE = [
 if DEBUG and not TESTING:
     MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
 
+if not TESTING:
+    # Having whitenoise enabled in tests cause
+    #    UserWarning: No directory at: /code/src/staticfiles/
+    # warning, when we don't even need to serve static files in tests.
+    # https://whitenoise.readthedocs.io/en/stable/django.html#enable-whitenoise
+    MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
 ROOT_URLCONF = "core.urls"
 
