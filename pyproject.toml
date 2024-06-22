@@ -13,6 +13,8 @@ ipython = "8.25.0"
 django-upgrade = "1.18.0"
 # Quality check
 pre-commit = "3.7.1"
+# Testing
+factory-boy = "3.3.0"
 # Visualization
 pydot = "2.0.0"  # For visualizing Django models with "graph_models --pydot"
 

@@ -205,7 +205,10 @@ SPECTACULAR_SETTINGS = {
     "SERVE_INCLUDE_SCHEMA": False,
 }
 
-SHELL_PLUS_IMPORTS = ("from core.tasks import test_task",)
+SHELL_PLUS_IMPORTS = (
+    "from core.tasks import test_task",
+    "from users.factories import UserFactory",
+)
 
 
 GRAPH_MODELS = {
