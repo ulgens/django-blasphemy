@@ -34,8 +34,8 @@ flower = "2.0.1"
 GitPython = "3.1.43"
 gunicorn = "22.0.0"
 psycopg2-binary = "2.9.9"
-sentry-sdk = "2.5.1"
-whitenoise = "6.6.0"
+sentry-sdk = "2.6.0"
+whitenoise = "6.7.0"
 
 [build-system]
 requires = ["poetry-core>=1.1.8"]
