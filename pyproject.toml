@@ -15,6 +15,7 @@ django-upgrade = "1.18.0"
 pre-commit = "3.7.1"
 # Testing
 factory-boy = "3.3.0"
+tblib = "3.0.0"
 # Visualization
 pydot = "2.0.0"  # For visualizing Django models with "graph_models --pydot"
 

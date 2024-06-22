@@ -30,7 +30,13 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
-          options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+        - 5432:5432
 
     steps:
     - uses: actions/checkout@v4.1.7
@@ -62,7 +68,8 @@ jobs:
       run: poetry install
 
     - name: Run tests
+      working-directory: ./src
       env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+        DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
         SECRET_KEY: ""
-      run: poetry run python src/manage.py test
+      run: poetry run python manage.py test --parallel --shuffle
