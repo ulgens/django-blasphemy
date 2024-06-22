@@ -1,6 +1,8 @@
 from django.contrib import admin
 
-from .models import Snippet
+from snippets.models import Snippet
+
+__all__ = ("SnippetAdmin",)
 
 
 @admin.register(Snippet)
