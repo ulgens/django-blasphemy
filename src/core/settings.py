@@ -172,6 +172,14 @@ STORAGES = {
     },
 }
 
+# FIXME:
+#   Having whitenoise enabled in tests cause
+#       ValueError: Missing staticfiles manifest entry for 'admin/css/base.css'
+if TESTING:
+    STORAGES["staticfiles"] = {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    }
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
