@@ -2,6 +2,7 @@ from django.urls import include, path
 from django.views.generic import RedirectView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.reverse import reverse_lazy
+
 from snippets.urls import urlpatterns as snippets_urlpatterns
 
 app_name = "api"

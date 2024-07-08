@@ -1,5 +1,6 @@
-from core.models import BaseModel
 from django.contrib.auth.models import AbstractUser
+
+from core.models import BaseModel
 
 
 class User(BaseModel, AbstractUser):

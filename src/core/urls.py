@@ -2,12 +2,13 @@
 URL Configuration
 """
 
-from api import urls as api_urls
 from django.conf import settings
 from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import include, path, reverse_lazy
 from django.views.generic import RedirectView
+
+from api import urls as api_urls
 
 from .views import error, manual_flat_log, manual_log
 
