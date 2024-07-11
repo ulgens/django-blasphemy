@@ -188,6 +188,12 @@ if TESTING:
     }
 
 
+# With the original hashers setting, the test takes ~10x longer.
+# https://docs.djangoproject.com/en/5.0/topics/testing/overview/#password-hashing
+if TESTING:
+    PASSWORD_HASHERS = ("django.contrib.auth.hashers.MD5PasswordHasher",)
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
