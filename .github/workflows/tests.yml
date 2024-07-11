@@ -70,6 +70,9 @@ jobs:
     - name: Run tests
       working-directory: ./src
       env:
+        APP_REDIS_URL: ""
+        CELERY_BROKER_URL: ""
+        CELERY_RESULT_BACKEND: ""
         DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
         SECRET_KEY: ""
       run: poetry run python manage.py test --parallel --shuffle
