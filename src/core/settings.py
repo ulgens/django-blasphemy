@@ -256,31 +256,20 @@ APP_REDIS_URL = env.str("APP_REDIS_URL")
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
 if env.bool("ENABLE_SENTRY", default=False):
-    import logging
-
     import git
     import sentry_sdk
-
-    # from sentry_sdk.integrations.celery import CeleryIntegration  # noqa: ERA001
-    from sentry_sdk.integrations.django import DjangoIntegration
-    from sentry_sdk.integrations.logging import LoggingIntegration
-
-    # from sentry_sdk.integrations.redis import RedisIntegration  # noqa: ERA001
 
     repo = git.Repo(search_parent_directories=True)
     sha = repo.head.object.hexsha
 
     sentry_sdk.init(
         dsn=env.str("SENTRY_DSN"),
-        integrations=[
-            # CeleryIntegration(),  # noqa: ERA001
-            DjangoIntegration(),
-            # FIXME: Sentry doesn't record info level logs with this config
-            LoggingIntegration(level=logging.INFO),
-            # RedisIntegration(),  # noqa: ERA001
-        ],
         environment=env.str("SENTRY_ENVIRONMENT", "development"),
         release=sha,
+        # Enabled integrations can be checked via `sentry = sentry_sdk.init(...); sentry._client.integrations`
+        # https://docs.sentry.io/platforms/python/configuration/options/#auto-enabling-integrations
+        auto_enabling_integrations=True,
         send_default_pii=True,
         traces_sample_rate=1.0,
+        profiles_sample_rate=1.0,
     )
