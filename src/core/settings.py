@@ -234,8 +234,8 @@ GRAPH_MODELS = {
 }
 
 # FIXME: Get from the env
-CELERY_BROKER_URL = "redis://redis:6379/0"
-CELERY_RESULT_BACKEND = "redis://redis:6379/0"
+CELERY_BROKER_URL = env.str("CELERY_BROKER_URL")
+CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND")
 
 CELERY_BEAT_SCHEDULE = {
     "sample_task": {
@@ -243,6 +243,9 @@ CELERY_BEAT_SCHEDULE = {
         "schedule": crontab(minute="*/1"),
     },
 }
+
+# Redis
+APP_REDIS_URL = env.str("APP_REDIS_URL")
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
