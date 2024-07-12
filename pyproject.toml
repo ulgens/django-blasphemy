@@ -68,6 +68,9 @@ select = [
     # https://docs.astral.sh/ruff/rules/#flake8-django-dj
     # https://github.com/rocioar/flake8-django
     "DJ",
+    # https://docs.astral.sh/ruff/rules/#error-e
+    # https://github.com/PyCQA/pycodestyle
+    "E",
     # https://docs.astral.sh/ruff/rules/#flake8-errmsg-em
     # https://github.com/henryiii/flake8-errmsg
     "EM",
@@ -77,6 +80,9 @@ select = [
     # https://docs.astral.sh/ruff/rules/#flake8-executable-exe
     # https://github.com/xuhdev/flake8-executable
     "EXE",
+    # https://docs.astral.sh/ruff/rules/#pyflakes-f
+    # https://github.com/PyCQA/pyflakes
+    "F",
     # Can be useful for refactoring from old Python versions
     # https://docs.astral.sh/ruff/rules/#flake8-future-annotations-fa
     # https://github.com/tyleryep/flake8-future-annotations
@@ -149,6 +155,14 @@ select = [
     # https://docs.astral.sh/ruff/rules/#pyupgrade-up
     # https://github.com/asottile/pyupgrade
     "UP",
+    # https://docs.astral.sh/ruff/rules/#warning-w
+    # https://github.com/PyCQA/pycodestyle
+    "W",
+]
+ignore = [
+    # Line lengths are checked & managed by ruff, don't need to check again.
+    # https://docs.astral.sh/ruff/rules/line-too-long/
+    "E501",
 ]
 
 [tool.isort]
