@@ -23,11 +23,11 @@ def run_formatters(written_files, ruff_path=(sentinel := object())):  # noqa: B0
 
     if ruff_path:
         subprocess.run(
-            input=[ruff_path, "check", "--force-exclude", "--fix", *written_files],
+            [ruff_path, "check", "--force-exclude", "--fix", *written_files],  # noqa: S603
             capture_output=True,
         )
         subprocess.run(
-            input=[ruff_path, "format", "--force-exclude", *written_files],
+            [ruff_path, "format", "--force-exclude", *written_files],  # noqa: S603
             capture_output=True,
         )
 
