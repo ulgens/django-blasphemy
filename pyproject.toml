@@ -10,6 +10,9 @@ package-mode = false
 ipdb = "0.13.13"
 ipython = "8.26.0"
 # Formatters
+# Required for https://docs.djangoproject.com/en/dev/ref/django-admin/#black-formatting
+# https://code.djangoproject.com/ticket/35527
+black = "24.4.2"
 django-upgrade = "1.19.0"
 # Quality check
 pre-commit = "3.7.1"
