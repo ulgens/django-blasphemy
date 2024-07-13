@@ -10,9 +10,8 @@ package-mode = false
 ipdb = "0.13.13"
 ipython = "8.26.0"
 # Formatters
-# Required for https://docs.djangoproject.com/en/dev/ref/django-admin/#black-formatting
-# https://code.djangoproject.com/ticket/35527
-black = "24.4.2"
+# Used by Django's find_formatters and run_formatters (with a monkey patch)
+ruff = "0.5.1"
 django-upgrade = "1.19.0"
 # Quality check
 pre-commit = "3.7.1"
@@ -167,6 +166,12 @@ ignore = [
     # https://docs.astral.sh/ruff/rules/line-too-long/
     "E501",
 ]
+
+[tool.ruff.lint.per-file-ignores]
+# RUF012 is violated by Django-generated migrations.
+# Fixing them manually each time doesn't seem to add value.
+# https://docs.astral.sh/ruff/rules/mutable-class-default/
+"**/migrations/*" = ["RUF012"]
 
 [tool.isort]
 # We are no longer using black directly but ruff needs that profile definition too.
