@@ -1,14 +1,15 @@
-import uuid
-
+import uuid_extensions
 from django.db import models
 
 __all__ = ("BaseModel",)
 
 
+# TODO:
+#    * Make use of db_default: https://docs.djangoproject.com/en/5.0/ref/models/fields/#db-default
+#    * Check RandomUUID for Postgres: https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/functions/#randomuuid
 class UUIDModel(models.Model):
-    # TODO: Make use of db_default
     id = models.UUIDField(
-        default=uuid.uuid4,
+        default=uuid_extensions.uuid7,
         editable=False,
         primary_key=True,
         verbose_name="ID",
