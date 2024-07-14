@@ -38,6 +38,7 @@ GitPython = "3.1.43"
 gunicorn = "22.0.0"
 psycopg2-binary = "2.9.9"
 sentry-sdk = "2.9.0"
+uuid7 = "0.1.0"
 whitenoise = "6.7.0"
 
 [build-system]
