@@ -331,6 +331,20 @@ django = ">=4.2.9"
 sqlparse = ">=0.2"
 
 [[package]]
+name = "django-dirtyfields"
+version = "1.9.3"
+description = "Tracking dirty fields on a Django model instance."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django-dirtyfields-1.9.3.tar.gz", hash = "sha256:c0ac06cd152f44bdc65f39e4b8e04ec0df2c54882e3726fc713b57da7d05f2ad"},
+    {file = "django_dirtyfields-1.9.3-py3-none-any.whl", hash = "sha256:efeeb49c5b36a982eb44e0aa03a9e4619ad0b48da36c9101cdca8175f5e416ed"},
+]
+
+[package.dependencies]
+Django = ">=2.2"
+
+[[package]]
 name = "django-environ"
 version = "0.11.2"
 description = "A package that allows you to utilize 12factor inspired environment variables to configure your Django application."
@@ -1672,4 +1686,4 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "a31acf87aeffc04a16220f3a790ad88a84c36a57033527457db6fecf56623d36"
+content-hash = "c29e96744c383978f4c1b3065ac2f21841e17c35c45fef436a8c4abad3774bfa"
