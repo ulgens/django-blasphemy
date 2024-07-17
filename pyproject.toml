@@ -38,7 +38,8 @@ drf-spectacular = "0.27.2"
 flower = "2.0.1"
 GitPython = "3.1.43"
 gunicorn = "22.0.0"
-psycopg2-binary = "2.9.9"
+# https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
+psycopg = {extras = ["binary"], version = "3.2.1"}
 rich = "13.7.1"
 sentry-sdk = "2.10.0"
 uuid7 = "0.1.0"
