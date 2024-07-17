@@ -66,7 +66,7 @@ class SnippetAPITests(APITestCase):
         self.assertEqual(self.list_url, "/api/snippets/")
 
     def test_list(self):
-        with self.assertNumQueries(2):
+        with self.assertNumQueries(1):
             # Run the request
             resp = self.client.get(self.list_url)
 
@@ -74,7 +74,8 @@ class SnippetAPITests(APITestCase):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
         data = resp.json()
-        self.assertEqual(data["count"], self.instance_number)
+        # Assumes self.instance_number < settings.REST_FRAMEWORK["PAGE_SIZE"]
+        self.assertEqual(len(data["results"]), self.instance_number)
 
         api_response_keys = data["results"][0].keys()
         self.assertSetEqual(set(api_response_keys), set(self.response_keys))
