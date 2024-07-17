@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 
-from snippets.filters import SnippetFilter
-from snippets.models import Snippet
-from snippets.serializers import SnippetSerializer
+from ..models import Snippet  # noqa: TID252
+from .filters import SnippetFilter
+from .serializers import SnippetSerializer
 
 
 class SnippetViewSet(ModelViewSet):

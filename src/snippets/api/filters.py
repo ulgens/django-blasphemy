@@ -1,7 +1,7 @@
 from django_filters.rest_framework import FilterSet, filters
 
-from .choices import LANGUAGE_CHOICES, STYLE_CHOICES
-from .models import Snippet
+from ..choices import LANGUAGE_CHOICES, STYLE_CHOICES  # noqa: TID252
+from ..models import Snippet  # noqa: TID252
 
 
 class SnippetFilter(FilterSet):
