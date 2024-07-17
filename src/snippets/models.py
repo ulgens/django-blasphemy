@@ -12,11 +12,13 @@ class Snippet(BaseModel):
         choices=LANGUAGE_CHOICES,
         default="python",
         max_length=128,
+        db_index=True,
     )
     style = models.CharField(
         choices=STYLE_CHOICES,
         default="friendly",
         max_length=128,
+        db_index=True,
     )
 
     def __str__(self):
