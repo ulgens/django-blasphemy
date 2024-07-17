@@ -1,6 +1,6 @@
 from django.db import models
 
-from core.models import BaseModel
+from core.db.models import BaseModel
 
 from .choices import LANGUAGE_CHOICES, STYLE_CHOICES
 
