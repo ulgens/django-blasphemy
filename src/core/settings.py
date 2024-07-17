@@ -134,6 +134,8 @@ DATABASES = {
 
 AUTH_USER_MODEL = "users.User"
 
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
@@ -252,6 +254,13 @@ CELERY_BEAT_SCHEDULE = {
 
 # Redis
 APP_REDIS_URL = env.str("APP_REDIS_URL")
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": APP_REDIS_URL,
+    },
+}
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
