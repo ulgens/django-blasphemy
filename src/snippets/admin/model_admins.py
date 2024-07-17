@@ -1,3 +1,5 @@
+from gettext import gettext as _
+
 from django.contrib import admin
 
 from snippets.models import Snippet
@@ -22,14 +24,20 @@ class SnippetAdmin(admin.ModelAdmin):
         "language",
         "style",
     )
-    fields = (
-        "id",
-        "created_at",
-        "updated_at",
-        "title",
-        "language",
-        "style",
-        "code",
+
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": ("id", "title", "language", "style", "code"),
+            },
+        ),
+        (
+            _("Timestamps"),
+            {
+                "fields": ("created_at", "updated_at"),
+            },
+        ),
     )
     readonly_fields = (
         "id",
