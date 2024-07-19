@@ -11,7 +11,7 @@ ipdb = "0.13.13"
 ipython = "8.26.0"
 # Formatters
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.5.2"
+ruff = "0.5.3"
 django-upgrade = "1.19.0"
 # Quality check
 pre-commit = "3.7.1"
@@ -19,7 +19,7 @@ pre-commit = "3.7.1"
 factory-boy = "3.3.0"
 tblib = "3.0.0"
 # Visualization
-pydot = "2.0.0"  # For visualizing Django models with "graph_models --pydot"
+pydot = "3.0.1"  # For visualizing Django models with "graph_models --pydot"
 
 [tool.poetry.dependencies]
 python = "^3.12"
