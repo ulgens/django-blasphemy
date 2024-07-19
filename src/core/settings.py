@@ -269,6 +269,7 @@ CACHES = {
 if env.bool("ENABLE_SENTRY", default=False):
     import git
     import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
     from sentry_sdk.integrations.logging import LoggingIntegration
 
     repo = git.Repo(search_parent_directories=True)
@@ -282,6 +283,7 @@ if env.bool("ENABLE_SENTRY", default=False):
         # https://docs.sentry.io/platforms/python/configuration/options/#auto-enabling-integrations
         auto_enabling_integrations=True,
         integrations=[
+            DjangoIntegration(cache_spans=True),
             LoggingIntegration(event_level=logging.WARNING),
         ],
         send_default_pii=True,
