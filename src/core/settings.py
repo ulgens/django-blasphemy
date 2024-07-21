@@ -66,6 +66,7 @@ INTERNAL_APPS = [
 THIRD_PARTY_APPS = [
     "django_extensions",
     "django_filters",
+    "django_jsonform",
     "drf_spectacular",
     "rest_framework",
 ]
