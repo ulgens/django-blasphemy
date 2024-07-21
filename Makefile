@@ -24,6 +24,8 @@ up:
 	${ENV} up
 down:
 	${ENV} down
+init_data:
+	${DJANGO_ENV} python manage.py init_data --dev
 
 bash:
 	${DJANGO_ENV} bash
