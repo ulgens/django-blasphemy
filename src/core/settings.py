@@ -59,6 +59,7 @@ DJANGO_APPS = [
 ]
 
 INTERNAL_APPS = [
+    "core",
     "snippets",
     "users",
 ]

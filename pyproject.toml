@@ -18,6 +18,7 @@ pre-commit = "3.7.1"
 # Testing
 factory-boy = "3.3.0"
 tblib = "3.0.0"
+xkcdpass = "1.19.9"
 # Visualization
 pydot = "3.0.1"  # For visualizing Django models with "graph_models --pydot"
 

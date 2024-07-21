@@ -22,7 +22,9 @@ def list_superusers():
         secho("No superusers found", fg="red")
         return
 
-    table = Table()
+    table = Table(
+        row_styles=["", "dim"],
+    )
     table.add_column(header="ID", style="cyan", no_wrap=True)
     table.add_column(header="username", no_wrap=True)
     table.add_column(header="email", no_wrap=True)
