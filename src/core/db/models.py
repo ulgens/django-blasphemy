@@ -4,6 +4,8 @@ from django.db import models
 
 __all__ = ("BaseModel",)
 
+from uuid_extensions import uuid_to_datetime
+
 
 # TODO:
 #    * Make use of db_default: https://docs.djangoproject.com/en/5.0/ref/models/fields/#db-default
@@ -32,6 +34,11 @@ class TimeStampedModel(models.Model):
 class BaseModel(DirtyFieldsMixin, TimeStampedModel, UUIDModel):
     class Meta:
         abstract = True
+
+    # TODO: Try to make use of GeneratedField
+    # TODO: Use this method to replace created_at fieldd
+    def get_created_at_from_uuid(self):
+        return uuid_to_datetime(self.id)
 
     def save_dirty_fields(self):
         """
