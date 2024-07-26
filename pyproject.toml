@@ -11,8 +11,8 @@ ipdb = "0.13.13"
 ipython = "8.26.0"
 # Formatters
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.5.3"
-django-upgrade = "1.19.0"
+ruff = "0.5.5"
+django-upgrade = "1.20.0"
 # Quality check
 pre-commit = "3.7.1"
 # Testing
@@ -43,7 +43,7 @@ gunicorn = "22.0.0"
 # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
 psycopg = {extras = ["binary"], version = "3.2.1"}
 rich = "13.7.1"
-sentry-sdk = "2.10.0"
+sentry-sdk = "2.11.0"
 uuid7 = "0.1.0"
 whitenoise = "6.7.0"
 
