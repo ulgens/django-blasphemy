@@ -145,6 +145,7 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "OPTIONS": {"user_attributes": ("email", "full_name", "short_name")},
     },
     {
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",

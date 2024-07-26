@@ -1,9 +1,9 @@
-import uuid
-
-import django.contrib.auth.models
-import django.contrib.auth.validators
 import django.utils.timezone
+from dirtyfields import DirtyFieldsMixin
 from django.db import migrations, models
+from uuid_extensions import uuid7
+
+from ..managers import UserManager  # noqa: TID252
 
 
 class Migration(migrations.Migration):
@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 (
                     "id",
                     models.UUIDField(
-                        default=uuid.uuid4,
+                        default=uuid7,
                         editable=False,
                         primary_key=True,
                         serialize=False,
@@ -41,6 +41,22 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
+                    "full_name",
+                    models.CharField(
+                        blank=True,
+                        max_length=200,
+                        verbose_name="full name",
+                    ),
+                ),
+                (
+                    "short_name",
+                    models.CharField(
+                        blank=True,
+                        max_length=50,
+                        verbose_name="short name",
+                    ),
+                ),
+                (
                     "is_superuser",
                     models.BooleanField(
                         default=False,
@@ -49,37 +65,10 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "username",
-                    models.CharField(
-                        error_messages={"unique": "A user with that username already exists."},
-                        help_text="Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.",
-                        max_length=150,
-                        unique=True,
-                        validators=[django.contrib.auth.validators.UnicodeUsernameValidator()],
-                        verbose_name="username",
-                    ),
-                ),
-                (
-                    "first_name",
-                    models.CharField(
-                        blank=True,
-                        max_length=150,
-                        verbose_name="first name",
-                    ),
-                ),
-                (
-                    "last_name",
-                    models.CharField(
-                        blank=True,
-                        max_length=150,
-                        verbose_name="last name",
-                    ),
-                ),
-                (
                     "email",
                     models.EmailField(
-                        blank=True,
                         max_length=254,
+                        unique=True,
                         verbose_name="email address",
                     ),
                 ),
@@ -125,7 +114,7 @@ class Migration(migrations.Migration):
                         help_text="The groups this user belongs to. A user will get all permissions granted to each of their groups.",
                         related_name="user_set",
                         related_query_name="user",
-                        to="auth.Group",
+                        to="auth.group",
                         verbose_name="groups",
                     ),
                 ),
@@ -136,19 +125,18 @@ class Migration(migrations.Migration):
                         help_text="Specific permissions for this user.",
                         related_name="user_set",
                         related_query_name="user",
-                        to="auth.Permission",
+                        to="auth.permission",
                         verbose_name="user permissions",
                     ),
                 ),
             ],
             options={
-                "verbose_name": "user",
-                "verbose_name_plural": "users",
                 "abstract": False,
                 "swappable": "AUTH_USER_MODEL",
             },
+            bases=(DirtyFieldsMixin, models.Model),
             managers=[
-                ("objects", django.contrib.auth.models.UserManager()),
+                ("objects", UserManager()),
             ],
         ),
     )
