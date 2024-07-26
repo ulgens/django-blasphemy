@@ -852,6 +852,20 @@ files = [
 ]
 
 [[package]]
+name = "parameterized"
+version = "0.9.0"
+description = "Parameterized testing with any Python test framework"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "parameterized-0.9.0-py2.py3-none-any.whl", hash = "sha256:4e0758e3d41bea3bbd05ec14fc2c24736723f243b28d702081aef438c9372b1b"},
+    {file = "parameterized-0.9.0.tar.gz", hash = "sha256:7fc905272cefa4f364c1a3429cbbe9c0f98b793988efb5bf90aac80f08db09b1"},
+]
+
+[package.extras]
+dev = ["jinja2"]
+
+[[package]]
 name = "parso"
 version = "0.8.4"
 description = "A Python Parser"
@@ -1790,4 +1804,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "fd4e61ade61183a3854ab6d32addb0861f532d301a0167659c978075681c80c6"
+content-hash = "7dbcb72d6df26aeb755a597254d240afd457df9a8e731d09916bc8720246d10a"
