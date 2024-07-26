@@ -26,7 +26,6 @@ def list_superusers():
         row_styles=["", "dim"],
     )
     table.add_column(header="ID", style="cyan", no_wrap=True)
-    table.add_column(header="username", no_wrap=True)
     table.add_column(header="email", no_wrap=True)
     table.add_column(header="is_active", justify="center")
     table.add_column(header="last_login")
@@ -34,7 +33,6 @@ def list_superusers():
     for user in superusers:
         table.add_row(
             str(user.id),
-            user.username,
             user.email,
             get_is_active_emoji(user.is_active),
             user.last_login.strftime(settings.DATETIME_INPUT_FORMATS[0]) if user.last_login else "",
