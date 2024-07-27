@@ -3,8 +3,6 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from .forms import UserCreationForm
-
 User = get_user_model()
 
 
@@ -17,7 +15,6 @@ class UserAdmin(BaseUserAdmin):
     search_fields = list(BaseUserAdmin.search_fields)  # noqa: RUF012
     search_fields.remove("username")
 
-    add_form = UserCreationForm
     add_fieldsets = (
         (
             None,

@@ -2,6 +2,7 @@ from gettext import gettext as _
 
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
+from django.contrib.postgres.fields import CIEmailField
 from django.db import models
 
 from core.db.models import BaseModel
@@ -30,7 +31,7 @@ class User(BaseModel, AbstractUser):
     first_name = None
     last_name = None
 
-    email = models.EmailField(
+    email = CIEmailField(
         _("email address"),
         unique=True,
     )
