@@ -10,7 +10,7 @@ on:
 
 env:
   PYTHON_VERSION: 3.12.4
-  PRE_COMMIT_VERSION: 3.7.1
+  PRE_COMMIT_VERSION: 3.8.0
 
 jobs:
   check:
