@@ -9,6 +9,7 @@ package-mode = false
 # Debugging
 ipdb = "0.13.13"
 ipython = "8.26.0"
+wat-inspector = "0.3.3"
 # Formatters
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
 ruff = "0.5.5"

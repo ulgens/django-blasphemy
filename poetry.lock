@@ -1767,6 +1767,17 @@ docs = ["furo (>=2023.7.26)", "proselint (>=0.13)", "sphinx (>=7.1.2,!=7.3)", "s
 test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7)", "packaging (>=23.1)", "pytest (>=7.4)", "pytest-env (>=0.8.2)", "pytest-freezer (>=0.4.8)", "pytest-mock (>=3.11.1)", "pytest-randomly (>=3.12)", "pytest-timeout (>=2.1)", "setuptools (>=68)", "time-machine (>=2.10)"]
 
 [[package]]
+name = "wat-inspector"
+version = "0.3.3"
+description = "Deep inspection of Python objects"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "wat_inspector-0.3.3-py3-none-any.whl", hash = "sha256:179a6d8f3438f039a219898419b64f4a68afc60cb027a1d70702a286f6308e68"},
+    {file = "wat_inspector-0.3.3.tar.gz", hash = "sha256:056f4c308cd03247a0836fd3b2c53148abcb902c939ffdecd98bba32fe336b56"},
+]
+
+[[package]]
 name = "wcwidth"
 version = "0.2.13"
 description = "Measures the displayed width of unicode strings in a terminal"
@@ -1804,4 +1815,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "4e70816dfd78cea0c7609d6836af672495140f7f66ca3ef1db7a35620779bd29"
+content-hash = "acfb2dacaa427c9d7dfa07423a9f2700992255b92597460603703b5827e88083"

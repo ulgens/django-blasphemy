@@ -233,6 +233,7 @@ SPECTACULAR_SETTINGS = {
 }
 
 SHELL_PLUS_IMPORTS = (
+    "import wat",
     "from core.tasks import test_task",
     "from users.factories import UserFactory",
     "from snippets.factories import SnippetFactory",
