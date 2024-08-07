@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHON_VERSION: 3.12.4
+  PYTHON_VERSION: 3.12.5
   PRE_COMMIT_VERSION: 3.8.0
   CONFIG_PATH: .pre-commit-config.yaml
   BRANCH_NAME: "pre-commit-autoupdate"
