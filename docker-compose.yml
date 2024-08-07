@@ -6,6 +6,9 @@ services:
     volumes:
       - .:/code
     env_file: .env
+    environment:
+      # For django-tui: https://github.com/anze3db/django-tui/issues/6
+      - TERM=xterm-256color
     working_dir: /code/src
     command: python manage.py runserver 0:8000
     ports:
