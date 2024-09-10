@@ -29,7 +29,7 @@ pydot = "3.0.1"  # For visualizing Django models with "graph_models --pydot"
 [tool.poetry.dependencies]
 python = "^3.12"
 celery = {extras = ["redis"], version = "5.4.0"}
-Django = "5.0.9"
+Django = "5.1.1"
 djangorestframework = "3.15.2"
 django-admin-interface = "0.28.8"
 django-click = "2.4.0"
