@@ -16,7 +16,7 @@ on:
   pull_request: ~
 
 env:
-    PYTHON_VERSION: 3.12.5
+    PYTHON_VERSION: 3.12.6
     POETRY_VERSION: 1.8.3
 
 jobs:
