@@ -35,7 +35,7 @@ services:
       - dbdata:/var/lib/postgresql/data
 
   mailpit:
-    image: axllent/mailpit:v1.20.2
+    image: axllent/mailpit:v1.20.4
     container_name: blasphemy_mailpit
     ports:
       - "8025:8025"
