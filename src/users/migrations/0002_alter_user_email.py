@@ -15,7 +15,6 @@ class Migration(migrations.Migration):
             name="email",
             field=CIEmailField(
                 max_length=254,
-                unique=True,
                 verbose_name="email address",
             ),
         ),

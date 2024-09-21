@@ -60,6 +60,6 @@ class UserEmailTestCase(TestCase):
 
         with self.assertRaisesMessage(
             expected_exception=IntegrityError,
-            expected_message='duplicate key value violates unique constraint "users_user_email_key"',
+            expected_message='duplicate key value violates unique constraint "users_user_email_',
         ):
             UserFactory(email=cased_email)
