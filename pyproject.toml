@@ -1,9 +1,10 @@
-[tool.poetry]
+[project]
 name = "django-blasphemy"
 version = "0.1.0"
 description = ""
 authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 package-mode = false
+project = ""
 
 [tool.poetry.dev-dependencies]
 aiosmtpd = "1.4.6"  # Required by django-tui
@@ -51,9 +52,7 @@ sentry-sdk = "2.14.0"
 uuid7 = "0.1.0"
 whitenoise = "6.7.0"
 
-[build-system]
-requires = ["poetry-core>=1.1.8"]
-build-backend = "poetry.core.masonry.api"
+
 
 [tool.ruff]
 line-length = 120
