@@ -30,11 +30,6 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
         ports:
         - 5432:5432
       redis:
@@ -84,4 +79,6 @@ jobs:
         CELERY_RESULT_BACKEND: ""
         DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
         SECRET_KEY: ""
-      run: poetry run python manage.py test --parallel --shuffle
+      run: |
+        poetry run python manage.py wait_for_db
+        poetry run python manage.py test --parallel --shuffle
