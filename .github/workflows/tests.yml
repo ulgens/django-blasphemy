@@ -36,11 +36,6 @@ jobs:
         image: redis:7.4.0-alpine3.20
         ports:
         - 6379:6379
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     steps:
     - uses: actions/checkout@v4.1.7
@@ -81,4 +76,5 @@ jobs:
         SECRET_KEY: ""
       run: |
         poetry run python manage.py wait_for_db
+        poetry run python manage.py wait_for_cache
         poetry run python manage.py test --parallel --shuffle
