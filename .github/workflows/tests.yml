@@ -38,7 +38,7 @@ jobs:
         - 6379:6379
 
     steps:
-    - uses: actions/checkout@v4.1.7
+    - uses: actions/checkout@v4.2.0
       name: Checkout
 
     - uses: actions/setup-python@v5.2.0
