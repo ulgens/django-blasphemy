@@ -27,4 +27,4 @@ repos:
     rev: v2.3.0
     hooks:
     -   id: codespell
-        args: [-L, "astroid, wast"]
+        args: ["--ignore-words-list", "astroid, wast"]
