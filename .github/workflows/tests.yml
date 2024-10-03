@@ -51,10 +51,10 @@ jobs:
       name: Cache for Poetry setup
       id: poetry_install_cache
       with:
-        key: poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-${{ env.PRE_COMMIT_VERSION }}
+        key: poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-poetry-${{ env.POETRY_VERSION }}
         path: ${{ env.pythonLocation }}
         restore-keys: |
-          poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-
+          poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-poetry-
 
     - name: Setup Poetry
       if: steps.poetry_install_cache.outputs.cache-hit != 'true'
