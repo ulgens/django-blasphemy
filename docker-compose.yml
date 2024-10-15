@@ -7,7 +7,8 @@ services:
       - .:/code
     env_file: .env
     environment:
-      # For django-tui: https://github.com/anze3db/django-tui/issues/6
+      # The default value is "xterm" and limits available color palette
+      # https://stackoverflow.com/questions/10003136/what-is-the-difference-between-xterm-color-xterm-256color
       - TERM=xterm-256color
     working_dir: /code/src
     command: python manage.py runserver 0:8000
