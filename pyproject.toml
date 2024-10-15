@@ -25,7 +25,7 @@ xkcdpass = "1.19.9"
 pydot = "3.0.2"  # For visualizing Django models with "graph_models --pydot"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.13"
 celery = {extras = ["redis"], version = "5.4.0"}
 Django = "5.1.2"
 djangorestframework = "3.15.2"
