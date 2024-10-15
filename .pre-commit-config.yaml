@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
     -   id: check-case-conflict
     -   id: check-merge-conflict
@@ -9,7 +9,7 @@ repos:
     -   id: trailing-whitespace
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.8
+    rev: v0.6.9
     hooks:
     -   id: ruff
         name: ruff lint
@@ -18,7 +18,7 @@ repos:
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.21.0
+    rev: 1.22.1
     hooks:
     -   id: django-upgrade
         args: [--target-version, "5.0"]
