@@ -1072,7 +1072,6 @@ files = [
 
 [package.dependencies]
 psycopg-binary = {version = "3.2.3", optional = true, markers = "implementation_name != \"pypy\" and extra == \"binary\""}
-typing-extensions = {version = ">=4.6", markers = "python_version < \"3.13\""}
 tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
 [package.extras]
@@ -1835,5 +1834,5 @@ files = [
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.12"
-content-hash = "8499addf112d53d25d589b651048854c7d3a85bbc954ac423ad1089be7df9cc2"
+python-versions = "^3.13"
+content-hash = "b2f5a90c93dc6025ba790373e5a34222d2600fbf3bf9a870f60c55493641fda2"

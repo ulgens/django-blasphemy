@@ -1,4 +1,4 @@
-FROM python:3.12.6-slim-bookworm
+FROM python:3.13.0-slim-bookworm
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
