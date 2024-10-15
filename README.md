@@ -18,7 +18,7 @@ heroku buildpacks:clear
 heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
 heroku buildpacks:add heroku/python
 
-heroku config:set POETRY_VERSION=1.8.3
+heroku config:set POETRY_VERSION=1.8.4
 heroku config:set PYTHON_RUNTIME_VERSION=3.12.6
 ```
 
