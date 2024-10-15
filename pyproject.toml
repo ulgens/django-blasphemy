@@ -6,8 +6,6 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 package-mode = false
 
 [tool.poetry.dev-dependencies]
-aiosmtpd = "1.4.6"  # Required by django-tui
-django-tui = "24.3"
 # Debugging
 ipdb = "0.13.13"
 ipython = "8.28.0"
