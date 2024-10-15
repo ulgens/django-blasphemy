@@ -52,7 +52,9 @@ uuid7 = "0.1.0"
 whitenoise = "6.7.0"
 
 [build-system]
-requires = ["poetry-core>=1.1.8"]
+# Earliest version with Python 3.13 support
+# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
+requires = ["poetry-core>=1.9.1"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
