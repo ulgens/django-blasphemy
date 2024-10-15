@@ -10,14 +10,14 @@ aiosmtpd = "1.4.6"  # Required by django-tui
 django-tui = "24.3"
 # Debugging
 ipdb = "0.13.13"
-ipython = "8.27.0"
+ipython = "8.28.0"
 wat-inspector = "0.4.0"
 # Formatters
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.6.8"
-django-upgrade = "1.21.0"
+ruff = "0.6.9"
+django-upgrade = "1.22.1"
 # Quality check
-pre-commit = "3.8.0"
+pre-commit = "4.0.1"
 # Testing
 factory-boy = "3.3.1"
 parameterized = "0.9.0"
@@ -29,7 +29,7 @@ pydot = "3.0.2"  # For visualizing Django models with "graph_models --pydot"
 [tool.poetry.dependencies]
 python = "^3.12"
 celery = {extras = ["redis"], version = "5.4.0"}
-Django = "5.1.1"
+Django = "5.1.2"
 djangorestframework = "3.15.2"
 django-admin-interface = "0.28.9"
 django-click = "2.4.0"
@@ -38,7 +38,7 @@ django-dirtyfields = "1.9.3"
 django-environ = "0.11.2"
 django-extensions = { git = "https://github.com/ulgens/django-extensions.git", branch = "aiosmptd-mail_debug" }
 django-filter = "24.3"
-django-jsonform = "2.23.0"
+django-jsonform = "2.23.1"
 dj-database-url = "2.2.0"
 drf-spectacular = "0.27.2"
 flower = "2.0.1"
@@ -46,8 +46,8 @@ GitPython = "3.1.43"
 gunicorn = "23.0.0"
 # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
 psycopg = {extras = ["binary"], version = "3.2.3"}
-rich = "13.9.1"
-sentry-sdk = "2.15.0"
+rich = "13.9.2"
+sentry-sdk = "2.16.0"
 uuid7 = "0.1.0"
 whitenoise = "6.7.0"
 
