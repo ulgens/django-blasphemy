@@ -36,7 +36,7 @@ services:
       - dbdata:/var/lib/postgresql/data
 
   mailpit:
-    image: axllent/mailpit:v1.20.5
+    image: axllent/mailpit:v1.21.0
     container_name: blasphemy_mailpit
     ports:
       - "8025:8025"
@@ -47,7 +47,7 @@ services:
 
   redis:
     env_file: .env
-    image: redis:7.4.0-alpine3.20
+    image: redis:7.4.1-alpine3.20
     container_name: blasphemy_redis
     ports:
       # TODO: Check if internal port is configurable
