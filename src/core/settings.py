@@ -268,6 +268,15 @@ CACHES = {
     },
 }
 
+# SSL
+# https://stackoverflow.com/a/65934202/1726238
+USE_SSL = env.bool("USE_SSL", default=True)
+if USE_SSL:
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_SCHEME", "https")
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
 if env.bool("ENABLE_SENTRY", default=False):

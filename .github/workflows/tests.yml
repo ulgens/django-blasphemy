@@ -74,6 +74,7 @@ jobs:
         CELERY_RESULT_BACKEND: ""
         DATABASE_URL: postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres
         SECRET_KEY: ""
+        USE_SSL: "false"
       run: |
         poetry run python manage.py wait_for_db
         poetry run python manage.py wait_for_cache
