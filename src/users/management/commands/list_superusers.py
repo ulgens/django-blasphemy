@@ -1,7 +1,7 @@
+import djclick
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.management import CommandError
-from djclick import command
 from rich.console import Console
 from rich.table import Table
 
@@ -12,7 +12,7 @@ def get_is_active_emoji(is_active: bool) -> str:
     return "✅" if is_active else "❌"
 
 
-@command()
+@djclick.command()
 def list_superusers():
     """
     List all superusers in the system.
