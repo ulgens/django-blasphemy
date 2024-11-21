@@ -172,7 +172,7 @@ ignore = [
 "**/migrations/*" = ["RUF012"]
 
 [tool.isort]
-# We are no longer using black directly but ruff needs that profile definition too.
+# We don't use black directly but ruff uses the same profile name with isort.
 profile = "black"
 
 # I really don't know why ruff expects two different isort sections - @ulgens
