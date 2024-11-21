@@ -113,10 +113,6 @@ select = [
     # https://docs.astral.sh/ruff/rules/#isort-i
     # https://pycqa.github.io/isort/
     "I",
-    # Can be useful with data-focused packages like numpy, pandas, Plotly etc.
-    # https://docs.astral.sh/ruff/rules/#flake8-import-conventions-icn
-    # https://github.com/joaopalmeiro/flake8-import-conventions
-    # "ICN",
     # https://docs.astral.sh/ruff/rules/#flake8-no-pep420-inp
     # https://github.com/adamchainz/flake8-no-pep420
     "INP",
@@ -132,18 +128,9 @@ select = [
     # https://docs.astral.sh/ruff/rules/#pygrep-hooks-pgh
     # https://github.com/pre-commit/pygrep-hooks
     "PGH",
-    # Can be useful with pytest.
-    # Not planning to use pytest, but I will keep it for now.
-    # https://docs.astral.sh/ruff/rules/#flake8-pytest-style-pt
-    # https://github.com/m-burst/flake8-pytest-style
-    # "PT",
     # https://docs.astral.sh/ruff/rules/#flake8-use-pathlib-pth
     # https://gitlab.com/RoPP/flake8-use-pathlib
     "PTH",
-    # TODO: Not sure how much sense the rules make. Will check again.
-    # https://docs.astral.sh/ruff/rules/#flake8-return-ret
-    # https://github.com/afonasev/flake8-return
-    # "RET",
     # https://docs.astral.sh/ruff/rules/#flake8-raise-rse
     # https://github.com/jdufresne/flake8-raise
     "RSE",
