@@ -16,16 +16,16 @@ jobs:
   check:
     runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@v4
       name: Checkout
 
-    - uses: actions/setup-python@v5.3.0
+    - uses: actions/setup-python@v5
       id: setup_python
       name: Set up Python ${{ env.PYTHON_VERSION }}
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
-    - uses: actions/cache@v4.1.2
+    - uses: actions/cache@v4
       id: python_package_cache
       name: Cache installed Python packages
       with:
@@ -40,7 +40,7 @@ jobs:
 
     - name: pre-commit cache
       id: precommit_hooks_cache
-      uses: actions/cache@v4.1.2
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pre-commit
         key: pre_commit_hooks-${{ runner.os }}-${{ env.PYTHON_VERSION }}-pre-commit-hooks-${{ hashFiles('.pre-commit-config.yaml') }}
