@@ -175,6 +175,6 @@ ignore = [
 # We are no longer using black directly but ruff needs that profile definition too.
 profile = "black"
 
-# I really don't know why ruff expects too different isort sections - @ulgens
+# I really don't know why ruff expects two different isort sections - @ulgens
 [tool.ruff.lint.isort]
 known-first-party = ["api", "core", "snippets", "users"]
