@@ -5,7 +5,7 @@ description = ""
 authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 package-mode = false
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 # Debugging
 ipdb = "0.13.13"
 ipython = "8.30.0"
