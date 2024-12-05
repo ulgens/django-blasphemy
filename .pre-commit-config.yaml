@@ -9,7 +9,7 @@ repos:
     -   id: trailing-whitespace
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.0
+    rev: v0.8.2
     hooks:
     -   id: ruff
         name: ruff lint
@@ -18,7 +18,7 @@ repos:
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.22.1
+    rev: 1.22.2
     hooks:
     -   id: django-upgrade
         args: [--target-version, "5.1"]
