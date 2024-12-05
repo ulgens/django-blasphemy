@@ -20,7 +20,7 @@ env:
     POETRY_VERSION: 1.8.4
 
 jobs:
-  test:
+  run-django-tests:
     runs-on: ubuntu-24.04
 
     services:
