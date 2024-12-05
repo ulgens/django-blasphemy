@@ -9,7 +9,7 @@ on:
   pull_request: ~
 
 env:
-  PYTHON_VERSION: 3.13.0
+  PYTHON_VERSION: 3.13.1
   PRE_COMMIT_VERSION: 4.0.1
 
 jobs:
