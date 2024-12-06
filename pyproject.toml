@@ -57,16 +57,13 @@ uuid7 = "0.1.0"
 whitenoise = "6.8.2"
 
 [tool.ruff]
-line-length = 120
 target-version = "py312"
 
-[tool.ruff.format]
-preview = true
+line-length = 120
+format.preview = true
 
-[tool.ruff.lint]
-preview = true
 # https://docs.astral.sh/ruff/rules/
-select = [
+lint.select = [
     # https://docs.astral.sh/ruff/rules/#flake8-builtins-a
     # https://github.com/gforcada/flake8-builtins
     "A",
@@ -160,25 +157,25 @@ select = [
     # https://github.com/PyCQA/pycodestyle
     "W",
 ]
-ignore = [
+lint.ignore = [
     # Line lengths are checked & managed by ruff, don't need to check again.
     # https://docs.astral.sh/ruff/rules/line-too-long/
     "E501",
 ]
 
-[tool.ruff.lint.per-file-ignores]
 # RUF012 is violated by Django-generated migrations.
 # Fixing them manually each time doesn't seem to add value.
 # https://docs.astral.sh/ruff/rules/mutable-class-default/
-"**/migrations/*" = ["RUF012"]
+lint.per-file-ignores."**/migrations/*" = [ "RUF012" ]
+
+# I really don't know why ruff expects two different isort sections - @ulgens
+lint.isort.known-first-party = [ "api", "core", "snippets", "users" ]
+
+lint.preview = true
 
 [tool.isort]
 # We don't use black directly but ruff uses the same profile name with isort.
 profile = "black"
-
-# I really don't know why ruff expects two different isort sections - @ulgens
-[tool.ruff.lint.isort]
-known-first-party = ["api", "core", "snippets", "users"]
 
 [tool.pyproject-fmt]
 indent = 4
