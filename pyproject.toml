@@ -9,7 +9,7 @@ requires = [ "poetry-core>=1.9.1" ]
 name = "django-blasphemy"
 version = "0.1.0"
 description = ""
-authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
+authors = [ "Ülgen Sarıkavak <ulgensrkvk@gmail.com>" ]
 package-mode = false
 
 [tool.poetry.group.dev.dependencies]
@@ -29,11 +29,11 @@ parameterized = "0.9.0"
 tblib = "3.0.0"
 xkcdpass = "1.19.9"
 # Visualization
-pydot = "3.0.3"  # For visualizing Django models with "graph_models --pydot"
+pydot = "3.0.3" # For visualizing Django models with "graph_models --pydot"
 
 [tool.poetry.dependencies]
 python = "^3.13"
-celery = {extras = ["redis"], version = "5.4.0"}
+celery = { extras = [ "redis" ], version = "5.4.0" }
 Django = "5.1.4"
 djangorestframework = "3.15.2"
 django-admin-interface = "0.29.2"
@@ -50,7 +50,7 @@ flower = "2.0.1"
 GitPython = "3.1.43"
 gunicorn = "23.0.0"
 # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-psycopg = {extras = ["binary"], version = "3.2.3"}
+psycopg = { extras = [ "binary" ], version = "3.2.3" }
 rich = "13.9.4"
 sentry-sdk = "2.19.1"
 uuid7 = "0.1.0"
