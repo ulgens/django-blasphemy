@@ -1,3 +1,10 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+
+# Earliest version with Python 3.13 support
+# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
+requires = [ "poetry-core>=1.9.1" ]
+
 [tool.poetry]
 name = "django-blasphemy"
 version = "0.1.0"
@@ -48,12 +55,6 @@ rich = "13.9.4"
 sentry-sdk = "2.19.1"
 uuid7 = "0.1.0"
 whitenoise = "6.8.2"
-
-[build-system]
-# Earliest version with Python 3.13 support
-# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
-requires = ["poetry-core>=1.9.1"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 120
