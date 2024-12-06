@@ -178,3 +178,6 @@ profile = "black"
 # I really don't know why ruff expects two different isort sections - @ulgens
 [tool.ruff.lint.isort]
 known-first-party = ["api", "core", "snippets", "users"]
+
+[tool.pyproject-fmt]
+indent = 4
