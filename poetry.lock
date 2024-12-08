@@ -422,6 +422,23 @@ files = [
 django = ">=2.0"
 
 [[package]]
+name = "django-removals"
+version = "1.0.5"
+description = "Tool for finding removed features in your Django project"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django_removals-1.0.5-py2.py3-none-any.whl", hash = "sha256:794dc7be966549b2467c45da712b70bc804450591d10be98be52f644f1680cbe"},
+    {file = "django_removals-1.0.5.tar.gz", hash = "sha256:e838b23a82a5e82fd27935f18db21c7da1eb75ef7e00fce1903996c35bbc137f"},
+]
+
+[package.dependencies]
+Django = ">=4.2"
+
+[package.extras]
+dev = ["ambient-package-update", "coverage (>=7.6,<8.0)", "flit (>=3.9,<4.0)", "freezegun (>=1.5,<2.0)", "keyring (>=25.4,<26.0)", "m2r2 (==0.3.3.post2)", "mistune (<2.0.0)", "pre-commit (>=4.0,<5.0)", "pytest-django (>=4.9,<5.0)", "pytest-mock (>=3.14,<4.0)", "ruff (>=0.6,<1.0)", "sphinx (>=7.1,<8.0)", "sphinx-rtd-theme (>=2.0,<3.0)", "typer (>=0.12,<1.0)"]
+
+[[package]]
 name = "django-upgrade"
 version = "1.22.2"
 description = "Automatically upgrade your Django project code."
@@ -1829,4 +1846,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.13"
-content-hash = "aa140e14609be2acc4ba65354ebd80474fc85dba921436e587dd86231a5c0e80"
+content-hash = "559a09717b626b3e3fddf1db824d93801819f27e01c3eeb59be088084de2aa41"
