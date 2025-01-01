@@ -639,13 +639,13 @@ tests = ["freezegun", "pytest", "pytest-cov"]
 
 [[package]]
 name = "identify"
-version = "2.6.3"
+version = "2.6.4"
 description = "File identification library for Python"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "identify-2.6.3-py2.py3-none-any.whl", hash = "sha256:9edba65473324c2ea9684b1f944fe3191db3345e50b6d04571d10ed164f8d7bd"},
-    {file = "identify-2.6.3.tar.gz", hash = "sha256:62f5dae9b5fef52c84cc188514e9ea4f3f636b1d8799ab5ebc475471f9e47a02"},
+    {file = "identify-2.6.4-py2.py3-none-any.whl", hash = "sha256:993b0f01b97e0568c179bb9196391ff391bfb88a99099dbf5ce392b68f42d0af"},
+    {file = "identify-2.6.4.tar.gz", hash = "sha256:285a7d27e397652e8cafe537a6cc97dd470a970f48fb2e9d979aa38eae5513ac"},
 ]
 
 [package.extras]
@@ -1224,13 +1224,13 @@ windows-terminal = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "pyparsing"
-version = "3.2.0"
+version = "3.2.1"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "pyparsing-3.2.0-py3-none-any.whl", hash = "sha256:93d9577b88da0bbea8cc8334ee8b918ed014968fd2ec383e868fb8afb1ccef84"},
-    {file = "pyparsing-3.2.0.tar.gz", hash = "sha256:cbf74e27246d595d9a74b186b810f6fbb86726dbf3b9532efb343f6d7294fe9c"},
+    {file = "pyparsing-3.2.1-py3-none-any.whl", hash = "sha256:506ff4f4386c4cec0590ec19e6302d3aedb992fdc02c761e90416f158dacf8e1"},
+    {file = "pyparsing-3.2.1.tar.gz", hash = "sha256:61980854fd66de3a90028d679a954d5f2623e83144b5afe5ee86f43d762e5f0a"},
 ]
 
 [package.extras]
