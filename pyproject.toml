@@ -19,7 +19,7 @@ ipython = "8.31.0"
 wat-inspector = "0.4.3"
 # Formatters
 # Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.8.4"
+ruff = "0.9.2"
 django-upgrade = "1.22.2"
 # Quality check
 pre-commit = "4.0.1"
@@ -29,18 +29,18 @@ parameterized = "0.9.0"
 tblib = "3.0.0"
 xkcdpass = "1.19.9"
 # Visualization
-pydot = "3.0.3" # For visualizing Django models with "graph_models --pydot"
+pydot = "3.0.4" # For visualizing Django models with "graph_models --pydot"
 
 [tool.poetry.dependencies]
 python = "^3.13"
 celery = { extras = [ "redis" ], version = "5.4.0" }
-Django = "5.1.4"
+Django = "5.1.5"
 djangorestframework = "3.15.2"
-django-admin-interface = "0.29.2"
+django-admin-interface = "0.29.3"
 django-click = "2.4.0"
-django-debug-toolbar = "4.4.6"
+django-debug-toolbar = "5.0.1"
 django-dirtyfields = "1.9.5"
-django-environ = "0.11.2"
+django-environ = "0.12.0"
 django-extensions = { git = "https://github.com/ulgens/django-extensions.git", branch = "aiosmptd-mail_debug" }
 django-filter = "24.3"
 django-jsonform = "2.23.1"
@@ -48,12 +48,12 @@ django-removals = "1.0.5"
 dj-database-url = "2.3.0"
 drf-spectacular = "0.28.0"
 flower = "2.0.1"
-GitPython = "3.1.43"
+GitPython = "3.1.44"
 gunicorn = "23.0.0"
 # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-psycopg = { extras = [ "binary" ], version = "3.2.3" }
+psycopg = { extras = [ "binary" ], version = "3.2.4" }
 rich = "13.9.4"
-sentry-sdk = "2.19.2"
+sentry-sdk = "2.20.0"
 uuid7 = "0.1.0"
 whitenoise = "6.8.2"
 
