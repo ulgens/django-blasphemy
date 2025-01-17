@@ -1,15 +1,20 @@
 [build-system]
 build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core>=2" ]
 
-# Earliest version with Python 3.13 support
-# https://github.com/python-poetry/poetry-core/releases/tag/1.9.1
-requires = [ "poetry-core>=1.9.1" ]
-
-[tool.poetry]
+[project]
 name = "django-blasphemy"
 version = "0.1.0"
 description = ""
-authors = [ "Ülgen Sarıkavak <ulgensrkvk@gmail.com>" ]
+authors = [
+    { name = "Ülgen Sarıkavak", email = "ulgensrkvk@gmail.com" },
+]
+requires-python = ">=3.13"
+classifiers = [ "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.13" ]
+# https://python-poetry.org/docs/dependency-specification#projectdependencies-and-toolpoetrydependencies
+dynamic = [ "dependencies" ]
+
+[tool.poetry]
 package-mode = false
 
 [tool.poetry.group.dev.dependencies]
