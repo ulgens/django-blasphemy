@@ -63,7 +63,7 @@ pydot = "3.0.4" # For visualizing Django models with "graph_models --pydot"
 
 [tool.ruff]
 line-length = 120
-target-version = "py312"
+target-version = "py313"
 
 [tool.ruff.format]
 preview = true
