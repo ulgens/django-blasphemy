@@ -6,60 +6,52 @@ authors = [
     { name = "Ülgen Sarıkavak", email = "ulgensrkvk@gmail.com" },
 ]
 requires-python = ">=3.13"
-# https://python-poetry.org/docs/dependency-specification#projectdependencies-and-toolpoetrydependencies
-dynamic = [ "dependencies" ]
+dependencies = [
+    "celery[redis]==5.4",
+    "dj-database-url==2.3",
+    "django==5.1.5",
+    "django-admin-interface==0.29.3",
+    "django-click==2.4",
+    "django-debug-toolbar==5.0.1",
+    "django-dirtyfields==1.9.5",
+    "django-environ==0.12",
+    "django-extensions",
+    "django-filter==24.3",
+    "django-jsonform==2.23.1",
+    "django-removals==1.0.5",
+    "djangorestframework==3.15.2",
+    "drf-spectacular==0.28",
+    "flower==2.0.1",
+    "gitpython==3.1.44",
+    "gunicorn==23",
+    # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
+    "psycopg[binary]==3.2.4",
+    "rich==13.9.4",
+    "sentry-sdk==2.20",
+    "uuid7==0.1",
+    "whitenoise==6.8.2",
+]
 
-[build-system]
-build-backend = "poetry.core.masonry.api"
-requires = [ "poetry-core>=2" ]
-
-[tool.poetry]
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "^3.13"
-celery = { extras = [ "redis" ], version = "5.4.0" }
-Django = "5.1.5"
-djangorestframework = "3.15.2"
-django-admin-interface = "0.29.3"
-django-click = "2.4.0"
-django-debug-toolbar = "5.0.1"
-django-dirtyfields = "1.9.5"
-django-environ = "0.12.0"
-django-extensions = { git = "https://github.com/ulgens/django-extensions.git", branch = "aiosmptd-mail_debug" }
-django-filter = "24.3"
-django-jsonform = "2.23.1"
-django-removals = "1.0.5"
-dj-database-url = "2.3.0"
-drf-spectacular = "0.28.0"
-flower = "2.0.1"
-GitPython = "3.1.44"
-gunicorn = "23.0.0"
-# https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-psycopg = { extras = [ "binary" ], version = "3.2.4" }
-rich = "13.9.4"
-sentry-sdk = "2.20.0"
-uuid7 = "0.1.0"
-whitenoise = "6.8.2"
-
-[tool.poetry.group.dev.dependencies]
-# Debugging
-ipdb = "0.13.13"
-ipython = "8.31.0"
-wat-inspector = "0.4.3"
-# Formatters
-# Used by Django's find_formatters and run_formatters (with a monkey patch)
-ruff = "0.9.2"
-django-upgrade = "1.22.2"
-# Quality check
-pre-commit = "4.0.1"
-# Testing
-factory-boy = "3.3.1"
-parameterized = "0.9.0"
-tblib = "3.0.0"
-xkcdpass = "1.19.9"
-# Visualization
-pydot = "3.0.4" # For visualizing Django models with "graph_models --pydot"
+[dependency-groups]
+dev = [
+    # Debugging
+    "ipdb==0.13.13",
+    "ipython==8.31",
+    "wat-inspector==0.4.3",
+    # Formatters
+    # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "ruff==0.9.2",
+    "django-upgrade==1.22.2",
+    # Quality check
+    "pre-commit==4.0.1",
+    # Testing
+    "factory-boy==3.3.1",
+    "parameterized==0.9",
+    "tblib==3",
+    "xkcdpass==1.19.9",
+    # Visualization
+    "pydot==3.0.4", # For visualizing Django models with "graph_models --pydot"
+]
 
 [tool.ruff]
 line-length = 120
@@ -184,3 +176,10 @@ profile = "black"
 # I really don't know why ruff expects two different isort sections - @ulgens
 [tool.ruff.lint.isort]
 known-first-party = ["api", "core", "snippets", "users"]
+
+[tool.uv]
+package = false
+required-version = ">=0.5.0"
+
+[tool.uv.sources]
+django-extensions = { git = "https://github.com/ulgens/django-extensions.git", branch = "aiosmptd-mail_debug" }
