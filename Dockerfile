@@ -1,3 +1,7 @@
+# Adapted from
+# * https://github.com/astral-sh/uv-docker-example/blob/main/Dockerfile
+# * https://github.com/wemake-services/wemake-django-template/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/docker/django/Dockerfile
+
 FROM python:3.13.1-slim-bookworm
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
@@ -14,24 +18,28 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
 ENV PYTHONFAULTHANDLER=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONHASHSEED=random \
-    PYTHONDONTWRITEBYTECODE=True \
-    PIP_DISABLE_PIP_VERSION_CHECK=on \
-    PIP_DEFAULT_TIMEOUT=100
+    PYTHONDONTWRITEBYTECODE=True
 
-# Poetry settings
-ENV POETRY_VERSION="2.0.1" \
-    # # When true, `poetry run` is required to run the commands relating to the venv
-    POETRY_VIRTUALENVS_CREATE=0 \
-    POETRY_NO_INTERACTION=1 \
-    POETRY_NO_ANSI=1
+# uv settings
+# https://github.com/astral-sh/uv-docker-example/blob/main/pyproject.toml
+# https://hynek.me/articles/docker-uv/
 
-RUN --mount=type=cache,target=/root/.cache/pip \
-	pip install "poetry==$POETRY_VERSION"
+# Enable bytecode compilation
+ENV UV_COMPILE_BYTECODE=1
+# Silence uv complaining about not being able to use hard links.
+ENV UV_LINK_MODE=copy
+# https://github.com/astral-sh/uv/pull/6834#issuecomment-2319253359
+ENV UV_PROJECT_ENVIRONMENT="/usr/local/"
+ENV UV_PYTHON_PREFERENCE=system
 
-RUN mkdir /code
-WORKDIR /code
+# https://docs.astral.sh/uv/guides/integration/docker/#installing-uv
+# uv version can not be defined in an environment variable,
+# because COPY --from doesn't support variable expansion
+# https://github.com/moby/moby/issues/34482
+COPY --from=ghcr.io/astral-sh/uv:0.5.21 /uv /uvx /bin/
 
-COPY poetry.lock pyproject.toml /code/
-
-# TODO: Share the venv folder with the host.
-RUN poetry install
+# https://github.com/astral-sh/uv-docker-example/blob/a14ebc89e3a5e5b33131284968d8969ae054ed0d/Dockerfile#L13
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --frozen --no-install-project

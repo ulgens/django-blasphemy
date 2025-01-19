@@ -1,10 +1,4 @@
-# Things to check before start:
-# * https://github.com/marketplace/actions/python-poetry-action
-# * https://github.com/packetcoders/action-setup-cache-python-poetry/blob/main/action.yml
-# * https://gist.github.com/soof-golan/6ebb97a792ccd87816c0bda1e6e8b8c2
-# * https://github.com/nicoloboschi/poetry-dockerize-plugin
-# * https://github.com/wemake-services/wemake-django-template/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/docker/django/Dockerfile
-# * https://github.com/orgs/python-poetry/discussions/1879
+# Adapted from https://docs.astral.sh/uv/guides/integration/github/#using-uv-in-github-actions
 
 name: "tests"
 
@@ -17,7 +11,7 @@ on:
 
 env:
     PYTHON_VERSION: 3.13.1
-    POETRY_VERSION: 2.0.1
+    UV_VERSION: 0.5.21
 
 jobs:
   run-django-tests:
@@ -41,30 +35,19 @@ jobs:
     - uses: actions/checkout@v4.2.2
       name: Checkout
 
-    - uses: actions/setup-python@v5.3.0
-      id: setup_python
-      name: Set up Python ${{ env.PYTHON_VERSION }}
+    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
+      uses: astral-sh/setup-uv@v5
       with:
+        # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
+        enable-cache: true
+        # uv can install Python, no need for actions/setup-python
+        # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#do-i-still-need-actionssetup-python-alongside-setup-uv
+        # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#python-version
         python-version: ${{ env.PYTHON_VERSION }}
+        version: ${{ env.UV_VERSION }}
 
-    - uses: actions/cache@v4.1.2
-      name: Cache for Poetry setup
-      id: poetry_install_cache
-      with:
-        key: poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-poetry-${{ env.POETRY_VERSION }}
-        path: ${{ env.pythonLocation }}
-        restore-keys: |
-          poetry_install-${{ runner.os }}-${{ env.PYTHON_VERSION }}-poetry-
-
-    - name: Setup Poetry
-      if: steps.poetry_install_cache.outputs.cache-hit != 'true'
-      run: pip install poetry==${{ env.POETRY_VERSION }}
-
-    # TODO:
-    #   This step must be cached too; but with current small list of packages,
-    #   installing them is faster than cache retrieval and update.
     - name: Install packages
-      run: poetry install
+      run: uv sync --frozen --no-install-project
 
     - name: Run tests
       working-directory: ./src
@@ -76,6 +59,6 @@ jobs:
         SECRET_KEY: ""
         USE_SSL: "false"
       run: |
-        poetry run python manage.py wait_for_db
-        poetry run python manage.py wait_for_cache
-        poetry run python manage.py test --parallel --shuffle
+        uv run python manage.py wait_for_db
+        uv run python manage.py wait_for_cache
+        uv run python manage.py test --parallel --shuffle
