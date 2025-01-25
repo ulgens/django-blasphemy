@@ -24,7 +24,7 @@ repos:
         args: [--target-version, "5.1"]
 
 -   repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.0
     hooks:
     -   id: codespell
-        args: ["--ignore-words-list", "astroid, wast"]
+        args: ["--ignore-words-list", "ABL, wast"]
