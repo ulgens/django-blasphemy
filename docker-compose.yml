@@ -23,7 +23,7 @@ services:
 
   db:
     env_file: .env
-    image: postgres:16.4-alpine3.20
+    image: postgres:17.2-alpine3.21
     container_name: blasphemy_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB_NAME}
@@ -36,7 +36,7 @@ services:
       - dbdata:/var/lib/postgresql/data
 
   mailpit:
-    image: axllent/mailpit:v1.21.0
+    image: axllent/mailpit:v1.21.8
     container_name: blasphemy_mailpit
     ports:
       - "8025:8025"
@@ -47,7 +47,7 @@ services:
 
   redis:
     env_file: .env
-    image: redis:7.4.1-alpine3.20
+    image: redis:7.4.2-alpine3.21
     container_name: blasphemy_redis
     ports:
       # TODO: Check if internal port is configurable
