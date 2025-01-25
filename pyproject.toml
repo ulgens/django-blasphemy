@@ -10,7 +10,7 @@ dependencies = [
     "celery[redis]==5.4",
     "dj-database-url==2.3",
     "django==5.1.5",
-    "django-admin-interface==0.29.3",
+    "django-admin-interface==0.29.4",
     "django-click==2.4",
     "django-debug-toolbar==5.0.1",
     "django-dirtyfields==1.9.5",
