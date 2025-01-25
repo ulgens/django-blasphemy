@@ -7,7 +7,7 @@ FROM python:3.13.1-slim-bookworm
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
     # There should be an upgrade step on prod. image
-    apt install -y \
+    apt install -y --no-install-recommends \
         # required by gitpython
         git \
         # graph_models command
