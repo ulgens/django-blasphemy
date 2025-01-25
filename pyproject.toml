@@ -43,7 +43,7 @@ dev = [
     "ruff==0.9.3",
     "django-upgrade==1.22.2",
     # Quality check
-    "pre-commit==4.0.1",
+    "pre-commit==4.1.0",
     # Testing
     "factory-boy==3.3.1",
     "parameterized==0.9",
