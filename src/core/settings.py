@@ -15,7 +15,6 @@ import sys
 from gettext import gettext as _
 from pathlib import Path
 
-import dj_database_url
 import environ
 from celery.schedules import crontab
 
@@ -127,13 +126,15 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DEFAULT_DATABASE_URL = env.str("DATABASE_URL")
 DATABASES = {
-    "default": dj_database_url.parse(
-        DEFAULT_DATABASE_URL,
-        conn_max_age=600,
-        # ssl_require=True,  # noqa: ERA001
-    ),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env.str("DATABASE_NAME"),
+        "USER": env.str("DATABASE_USER"),
+        "PASSWORD": env.str("DATABASE_PASSWORD"),
+        "HOST": env.str("DATABASE_HOST"),
+        "PORT": env.int("DATABASE_PORT"),
+    },
 }
 
 AUTH_USER_MODEL = "users.User"
