@@ -292,14 +292,14 @@ wheels = [
 
 [[package]]
 name = "django-colorfield"
-version = "0.11.0"
+version = "0.12.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/18/c4/75a831118a0d213a7646b72af8cef264e43116c84083a0e24d2cdebc6102/django-colorfield-0.11.0.tar.gz", hash = "sha256:05c38c8eb2a94938b810a19b2011846391a4ce71d1c92e88a35974fbcc8fc62e", size = 55337 }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/c6/837e963e3fbf9919aac11b0433629261f6d34bf48dac31211430bdfdbb48/django_colorfield-0.12.0.tar.gz", hash = "sha256:9fbace0e3bf7126acab33daa52a5ae2fe0b339aeee30233f52bf911b685c0c71", size = 56444 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/28/82/06d2517024afa2355a5aefed9c1ef006308f7d655f250cf1c552ff24ced4/django_colorfield-0.11.0-py3-none-any.whl", hash = "sha256:460f40e6123b6ae0fb51a4eb86fc258fcdc0ea28f75102b685e8209b1eae9ec3", size = 53171 },
+    { url = "https://files.pythonhosted.org/packages/6a/ba/1c59fbacc298e20d84ac95f908529aed120c9fa9b17ec8be8851793f9b94/django_colorfield-0.12.0-py3-none-any.whl", hash = "sha256:ceb9a312e01773a0d609847eb308e3b81ac18c33874d17b2c7135a8d1b2ec86d", size = 53856 },
 ]
 
 [[package]]
