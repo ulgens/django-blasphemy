@@ -6,7 +6,7 @@ from parameterized import parameterized
 
 from core.tests.utils import CASE_FUNCTIONS
 
-from ..factories import UserFactory  # noqa: TID252
+from ..factories import UserFactory
 from .utils import denormalize_email
 
 fake = Faker()
