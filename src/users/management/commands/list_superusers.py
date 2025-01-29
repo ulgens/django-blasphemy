@@ -1,7 +1,6 @@
 import djclick
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.management import CommandError
 from rich.console import Console
 from rich.table import Table
 
@@ -20,8 +19,8 @@ def list_superusers():
     superusers = User.objects.filter(is_superuser=True)
 
     if not superusers.exists():
-        msg = "No superusers found"
-        raise CommandError(msg)
+        djclick.secho("\nNo superusers found.", fg="red")
+        return
 
     table = Table(
         row_styles=["", "dim"],
