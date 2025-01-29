@@ -91,11 +91,3 @@ def command(dev):
         call_command("list_superusers")
         create_superuser_auto()
         create_superuser_manual()
-
-
-def add_arguments(self, parser):
-    parser.add_argument(
-        "--dev",
-        help="",
-        action="store_true",
-    )
