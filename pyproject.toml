@@ -96,10 +96,9 @@ select = [
     # https://docs.astral.sh/ruff/rules/#refurb-furb
     # https://github.com/dosisod/refurb
     "FURB",
-    # Can be useful for refactoring from old Python versions
     # https://docs.astral.sh/ruff/rules/#flynt-fly
     # https://github.com/ikamensh/flynt
-    # "FLY",
+    "FLY",
     # https://docs.astral.sh/ruff/rules/#flake8-logging-format-g
     # https://github.com/globality-corp/flake8-logging-format
     "G",
