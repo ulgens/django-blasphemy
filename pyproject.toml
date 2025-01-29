@@ -93,10 +93,6 @@ select = [
     # https://docs.astral.sh/ruff/rules/#pyflakes-f
     # https://github.com/PyCQA/pyflakes
     "F",
-    # Can be useful for refactoring from old Python versions
-    # https://docs.astral.sh/ruff/rules/#flake8-future-annotations-fa
-    # https://github.com/tyleryep/flake8-future-annotations
-    # "FA",
     # https://docs.astral.sh/ruff/rules/#refurb-furb
     # https://github.com/dosisod/refurb
     "FURB",
