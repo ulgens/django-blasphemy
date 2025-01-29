@@ -3,7 +3,7 @@ from dirtyfields import DirtyFieldsMixin
 from django.db import migrations, models
 from uuid_extensions import uuid7
 
-from ..managers import UserManager  # noqa: TID252
+from ..managers import UserManager
 
 
 class Migration(migrations.Migration):

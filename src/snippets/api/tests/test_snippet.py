@@ -6,7 +6,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from ...factories import SnippetFactory  # noqa: TID252
+from ...factories import SnippetFactory
 
 
 @tag("api", "snippet")
