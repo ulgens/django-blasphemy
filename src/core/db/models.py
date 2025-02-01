@@ -8,8 +8,8 @@ from uuid_extensions import uuid_to_datetime
 
 
 # TODO:
-#    * Make use of db_default: https://docs.djangoproject.com/en/5.0/ref/models/fields/#db-default
-#    * Check RandomUUID for Postgres: https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/functions/#randomuuid
+#    * Make use of db_default: https://docs.djangoproject.com/en/dev/ref/models/fields/#db-default
+#    * Check RandomUUID for Postgres: https://docs.djangoproject.com/en/dev/ref/contrib/postgres/functions/#randomuuid
 class UUIDModel(models.Model):
     id = models.UUIDField(
         default=uuid_extensions.uuid7,
