@@ -16,6 +16,7 @@ class UUIDModel(models.Model):
         editable=False,
         primary_key=True,
         verbose_name="ID",
+        help_text="The unique identifier of the record, in UUIDv7 format.",
     )
 
     class Meta:
