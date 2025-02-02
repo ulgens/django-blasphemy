@@ -16,7 +16,7 @@ dependencies = [
     "django-environ==0.12",
     "django-extensions",
     "django-filter==24.3",
-    "django-jsonform==2.23.1",
+    "django-jsonform==2.23.2",
     "django-removals==1.0.5",
     "djangorestframework==3.15.2",
     "drf-spectacular==0.28",
@@ -35,11 +35,11 @@ dependencies = [
 dev = [
     # Debugging
     "ipdb==0.13.13",
-    "ipython==8.31",
+    "ipython==8.32",
     "wat-inspector==0.4.3",
     # Formatters
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.9.3",
+    "ruff==0.9.4",
     "django-upgrade==1.22.2",
     # Quality check
     "pre-commit==4.1.0",
