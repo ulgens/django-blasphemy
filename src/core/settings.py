@@ -235,6 +235,13 @@ SPECTACULAR_SETTINGS = {
     "SERVE_INCLUDE_SCHEMA": False,
 }
 
+# https://django-filter.readthedocs.io/en/stable/ref/settings.html#filters-verbose-lookups
+FILTERS_VERBOSE_LOOKUPS = {
+    # Both 'contains' and 'icontains' use the same label in the package's default settings
+    # Overriding 'icontains' to have a better distinction between those two lookups
+    "icontains": _("contains (case insensitive)"),
+}
+
 SHELL_PLUS_IMPORTS = (
     "import wat",
     "from core.tasks import test_task",
