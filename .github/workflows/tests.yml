@@ -10,8 +10,8 @@ on:
   pull_request: ~
 
 env:
-    PYTHON_VERSION: 3.13.1
-    UV_VERSION: 0.5.24
+    PYTHON_VERSION: 3.13.2
+    UV_VERSION: 0.5.31
 
 jobs:
   run-django-tests:
