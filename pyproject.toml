@@ -8,14 +8,14 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "celery[redis]==5.4",
-    "django==5.1.5",
+    "django==5.1.6",
     "django-admin-interface==0.29.4",
     "django-click==2.4",
     "django-debug-toolbar==5.0.1",
-    "django-dirtyfields==1.9.5",
+    "django-dirtyfields==1.9.6",
     "django-environ==0.12",
     "django-extensions",
-    "django-filter==24.3",
+    "django-filter==25.1",
     "django-jsonform==2.23.2",
     "django-removals==1.0.5",
     "djangorestframework==3.15.2",
@@ -26,9 +26,9 @@ dependencies = [
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.2.4",
     "rich==13.9.4",
-    "sentry-sdk==2.20",
+    "sentry-sdk==2.21.0",
     "uuid7==0.1",
-    "whitenoise==6.8.2",
+    "whitenoise==6.9.0",
 ]
 
 [dependency-groups]
@@ -39,12 +39,12 @@ dev = [
     "wat-inspector==0.4.3",
     # Formatters
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.9.4",
-    "django-upgrade==1.22.2",
+    "ruff==0.9.6",
+    "django-upgrade==1.23.1",
     # Quality check
     "pre-commit==4.1.0",
     # Testing
-    "factory-boy==3.3.1",
+    "factory-boy==3.3.3",
     "parameterized==0.9",
     "tblib==3",
     "xkcdpass==1.19.9",
