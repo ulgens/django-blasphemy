@@ -105,10 +105,6 @@ ignore = [
     "TID252",
 ]
 
-# I really don't know why ruff expects two different isort sections - @ulgens
-[lint.isort]
-known-first-party = ["api", "core", "snippets", "users"]
-
 [lint.per-file-ignores]
 # RUF012 is violated by Django-generated migrations.
 # Fixing them manually each time doesn't seem to add value.
