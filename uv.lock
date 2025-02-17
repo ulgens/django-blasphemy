@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = ">=3.13"
 
 [[package]]
@@ -170,16 +171,16 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "5.1.6"
+version = "5.2a1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asgiref" },
     { name = "sqlparse" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/e4/901f54ee114a080371a49bd08fa688d301aaffd9751febaf4ae855fc8fcd/Django-5.1.6.tar.gz", hash = "sha256:1e39eafdd1b185e761d9fab7a9f0b9fa00af1b37b25ad980a8aa0dac13535690", size = 10700620 }
+sdist = { url = "https://files.pythonhosted.org/packages/50/b3/a0d62ff4f7022640d9f66c4f0f6a96fd720116c3fca149247afcb74e2681/Django-5.2a1.tar.gz", hash = "sha256:ed895284801c58a415944f0efd6821e709260d029f5d74b93db9dccb650a8d50", size = 10814424 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/75/6f/d2c216d00975e2604b10940937b0ba6b2c2d9b3cc0cc633e414ae3f14b2e/Django-5.1.6-py3-none-any.whl", hash = "sha256:8d203400bc2952fbfb287c2bbda630297d654920c72a73cc82a9ad7926feaad5", size = 8277066 },
+    { url = "https://files.pythonhosted.org/packages/14/1a/0d9c26312161a2c4cd393cc6d61edd507b6a99d964e7da56baa743288f3b/Django-5.2a1-py3-none-any.whl", hash = "sha256:34b39e8508364f816415e3c8f032445a1bb49d37069db8aa300886ce821735e4", size = 8296448 },
 ]
 
 [[package]]
@@ -241,7 +242,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "celery", extras = ["redis"], specifier = "==5.4" },
-    { name = "django", specifier = "==5.1.6" },
+    { name = "django", specifier = "==5.2a1" },
     { name = "django-admin-interface", specifier = "==0.29.4" },
     { name = "django-click", specifier = "==2.4" },
     { name = "django-debug-toolbar", specifier = "==5.0.1" },
