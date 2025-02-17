@@ -52,10 +52,6 @@ dev = [
     "pydot==3.0.4", # For visualizing Django models with "graph_models --pydot"
 ]
 
-[tool.isort]
-# We don't use black directly but ruff uses the same profile name with isort.
-profile = "black"
-
 [tool.uv]
 package = false
 required-version = ">=0.5.0"
