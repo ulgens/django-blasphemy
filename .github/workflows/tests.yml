@@ -19,7 +19,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:17.2-alpine3.21
+        image: postgres:17.3-alpine3.21
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
