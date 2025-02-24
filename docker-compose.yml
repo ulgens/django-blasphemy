@@ -16,9 +16,11 @@ services:
       - "${DJANGO_HOST_FORWARD_PORT:-8000}:8000"
     stdin_open: true
     tty: true
+    # https://docs.docker.com/compose/how-tos/startup-order/#example
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       mailpit:
         condition: service_started
       redis:
@@ -37,6 +39,12 @@ services:
       - "${POSTGRES_HOST_FORWARD_PORT}:${POSTGRES_DB_PORT}"
     volumes:
       - dbdata:/var/lib/postgresql/data
+    # https://docs.docker.com/compose/how-tos/startup-order/#example
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_DB_USER} -d ${POSTGRES_DB_USER}" ]
+      interval: 1s
+      retries: 10
+      timeout: 10s
 
   mailpit:
     image: axllent/mailpit:v1.22.3
@@ -69,7 +77,8 @@ services:
     command: celery -A core.celery worker -E -l info
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       redis:
         condition: service_started
     stdin_open: true
@@ -86,7 +95,8 @@ services:
     command: celery -A core.celery beat -l info
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+        restart: true
       redis:
         condition: service_started
     stdin_open: true
