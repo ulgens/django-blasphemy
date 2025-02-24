@@ -22,8 +22,8 @@ build:
 	${ENV} --progress plain build
 up:
 	${ENV} up
-down:
-	${ENV} down
+stop:
+	${ENV} stop
 init_data:
 	${DJANGO_ENV} python manage.py init_data --dev
 
