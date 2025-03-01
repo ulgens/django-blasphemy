@@ -32,7 +32,7 @@ jobs:
         - 6379:6379
 
     steps:
-    - uses: actions/checkout@v4.2.2
+    - uses: actions/checkout@v4
       name: Checkout
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
