@@ -10,7 +10,7 @@ dependencies = [
     "celery[redis]==5.4",
     "django==5.2b1",
     "django-admin-interface==0.29.4",
-    "django-click==2.4",
+    "django-click==2.4.1",
     "django-debug-toolbar==5.0.1",
     "django-dirtyfields==1.9.6",
     "django-environ==0.12",
@@ -24,7 +24,7 @@ dependencies = [
     "gitpython==3.1.44",
     "gunicorn==23",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-    "psycopg[binary]==3.2.4",
+    "psycopg[binary]==3.2.5",
     "rich==13.9.4",
     "sentry-sdk==2.22.0",
     "uuid7==0.1",
