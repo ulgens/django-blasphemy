@@ -30,7 +30,7 @@ ENV UV_COMPILE_BYTECODE=1
 ENV UV_LINK_MODE=copy
 # https://github.com/astral-sh/uv/pull/6834#issuecomment-2319253359
 ENV UV_PROJECT_ENVIRONMENT="/usr/local/"
-ENV UV_PYTHON_PREFERENCE=system
+ENV UV_PYTHON_PREFERENCE=only-system
 
 # https://docs.astral.sh/uv/guides/integration/docker/#installing-uv
 # uv version can not be defined in an environment variable,
