@@ -17,16 +17,16 @@ dependencies = [
     "django-extensions",
     "django-filter==25.1",
     "django-jsonform==2.23.2",
-    "django-removals==1.0.5",
+    "django-removals==1.0.6",
     "djangorestframework==3.15.2",
     "drf-spectacular==0.28",
     "flower==2.0.1",
     "gitpython==3.1.44",
     "gunicorn==23",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-    "psycopg[binary]==3.2.5",
+    "psycopg[binary]==3.2.6",
     "rich==13.9.4",
-    "sentry-sdk==2.22.0",
+    "sentry-sdk==2.23.1",
     "uuid7==0.1",
     "whitenoise==6.9.0",
 ]
@@ -35,11 +35,11 @@ dependencies = [
 dev = [
     # Debugging
     "ipdb==0.13.13",
-    "ipython==9.0.1",
+    "ipython==9.0.2",
     "wat-inspector==0.4.3",
     # Formatters
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.9.9",
+    "ruff==0.11.0",
     "django-upgrade==1.23.1",
     # Quality check
     "pre-commit==4.1.0",
