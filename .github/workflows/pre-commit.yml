@@ -37,4 +37,8 @@ jobs:
         restore-keys: pre-commit-${{ runner.os }}-${{ env.PYTHON_VERSION }}-
 
     - name: Run pre-commit
-      run: uv run --no-sync --with-requirements .github/workflows/pre-commit-requirements.txt pre-commit run --all-files
+      run: >
+        uv run
+        --no-sync
+        --with-requirements .github/workflows/pre-commit-requirements.txt
+        pre-commit run --all-files
