@@ -28,6 +28,14 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
         version: ${{ env.UV_VERSION }}
 
+    - name: Install pre-commit
+      # FIXME:
+      #   Passing this step with a warm cache ends up with:
+      #   Failed to spawn: `pre-commit`
+      #     Caused by: No such file or directory (os error 2)
+      # if: steps.setup-uv.outputs.cache-hit != 'true'
+      run: uv pip install -r .github/workflows/pre-commit-requirements.txt
+
     - name: pre-commit cache
       id: precommit_cache
       uses: actions/cache@v4
@@ -40,5 +48,4 @@ jobs:
       run: >
         uv run
         --no-sync
-        --with-requirements .github/workflows/pre-commit-requirements.txt
         pre-commit run --all-files

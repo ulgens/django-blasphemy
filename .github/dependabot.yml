@@ -18,7 +18,7 @@ updates:
     - dependency-type: all
 
   - package-ecosystem: "pip"
-    directory: "/"
+    directory: ".github/workflows/"
     schedule:
       # TODO: Change this to something smaller in a real project
       interval: "monthly"
