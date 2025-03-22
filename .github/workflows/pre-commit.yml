@@ -42,7 +42,7 @@ jobs:
       uses: actions/cache@v4
       with:
         path: ~/.cache/pre-commit
-        key: pre-commit-${{ runner.os }}-${{ env.PYTHON_VERSION }}-${{ hashFiles('.pre-commit-config.yaml, **/pre-commit-requirements.txt') }}
+        key: pre-commit-${{ runner.os }}-${{ env.PYTHON_VERSION }}-${{ hashFiles('.pre-commit-config.yaml', '**/pre-commit-requirements.txt') }}
         restore-keys: pre-commit-${{ runner.os }}-${{ env.PYTHON_VERSION }}-
 
     - name: Run pre-commit
