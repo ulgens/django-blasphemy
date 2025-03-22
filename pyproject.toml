@@ -11,8 +11,8 @@ dependencies = [
     "Django==5.2b1",
     "django-admin-interface==0.29.4",
     "django-click==2.4.1",
-    "django-debug-toolbar==5.0.1",
-    "django-dirtyfields==1.9.6",
+    "django-debug-toolbar==5.1.0",
+    "django-dirtyfields==1.9.7",
     "django-environ==0.12",
     "django-extensions",
     "django-filter==25.1",
@@ -26,7 +26,7 @@ dependencies = [
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.2.6",
     "rich==13.9.4",
-    "sentry-sdk==2.23.1",
+    "sentry-sdk==2.24.0",
     "uuid7==0.1",
     "whitenoise==6.9.0",
 ]
