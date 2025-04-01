@@ -18,10 +18,9 @@ repos:
         name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.23.1
+    rev: 1.24.0
     hooks:
     -   id: django-upgrade
-        args: [--target-version, "5.2"]
 
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
