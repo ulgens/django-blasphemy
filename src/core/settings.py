@@ -289,7 +289,9 @@ if USE_SSL:
 
 # Sentry
 # https://docs.sentry.io/platforms/python/guides/django/
-if env.bool("ENABLE_SENTRY", default=False):
+# if env.bool("ENABLE_SENTRY", default=False):
+# Overriding the env for testing
+if True:
     import git
     import sentry_sdk
     from sentry_sdk.integrations.django import DjangoIntegration
@@ -312,4 +314,5 @@ if env.bool("ENABLE_SENTRY", default=False):
         send_default_pii=True,
         traces_sample_rate=1.0,
         profiles_sample_rate=1.0,
+        spotlight=True,
     )

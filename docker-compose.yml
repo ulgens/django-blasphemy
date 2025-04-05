@@ -10,6 +10,7 @@ services:
       # The default value is "xterm" and limits available color palette
       # https://stackoverflow.com/questions/10003136/what-is-the-difference-between-xterm-color-xterm-256color
       - TERM=xterm-256color
+      - SENTRY_SPOTLIGHT=1
     working_dir: /code/src
     command: python manage.py runserver 0:8000
     ports:
@@ -115,6 +116,12 @@ services:
     depends_on:
       redis:
         condition: service_started
+
+  spotlight:
+    image: ghcr.io/getsentry/spotlight:latest
+    container_name: blasphemy_spotlight
+    ports:
+      - "8969:8969"
 
 volumes:
   dbdata:
