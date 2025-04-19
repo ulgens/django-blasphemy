@@ -1,0 +1,28 @@
+name: "uv lock --check"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: ~
+
+env:
+  PYTHON_VERSION: 3.13.3
+  UV_VERSION: 0.6.14
+
+jobs:
+  run-uv-lock-check:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout
+
+    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+        python-version: ${{ env.PYTHON_VERSION }}
+        version: ${{ env.UV_VERSION }}
+
+    - name: Check uv.lock
+      run: uv lock --check
