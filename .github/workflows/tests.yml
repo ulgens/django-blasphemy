@@ -1,6 +1,6 @@
 # Adapted from https://docs.astral.sh/uv/guides/integration/github/#using-uv-in-github-actions
 
-name: "tests"
+name: "Tests"
 
 on:
   workflow_dispatch:
@@ -15,6 +15,7 @@ env:
 
 jobs:
   run-django-tests:
+    name: python manage.py test --parallel --shuffle
     runs-on: ubuntu-24.04
 
     services:
