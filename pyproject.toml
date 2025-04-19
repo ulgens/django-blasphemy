@@ -7,14 +7,14 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "celery[redis]==5.5.0",
+    "celery[redis]==5.5.1",
     "Django==5.2",
     "django-admin-interface==0.30.0",
     "django-click==2.4.1",
     "django-debug-toolbar==5.1.0",
     "django-dirtyfields==1.9.7",
     "django-environ==0.12",
-    "django-extensions",
+    "django-extensions==4.1",
     "django-filter==25.1",
     "django-jsonform==2.23.2",
     "django-removals==1.0.7",
@@ -26,7 +26,7 @@ dependencies = [
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.2.6",
     "rich==14.0.0",
-    "sentry-sdk==2.25.1",
+    "sentry-sdk==2.26.1",
     "uuid7==0.1",
     "whitenoise==6.9.0",
 ]
@@ -35,11 +35,11 @@ dependencies = [
 dev = [
     # Debugging
     "ipdb==0.13.13",
-    "ipython==9.0.2",
+    "ipython==9.1.0",
     "wat-inspector==0.4.3",
     # Formatters
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.11.4",
+    "ruff==0.11.6",
     "django-upgrade==1.24.0",
     # Quality check
     "pre-commit==4.2.0",
@@ -55,6 +55,3 @@ dev = [
 [tool.uv]
 package = false
 required-version = ">=0.5.0"
-
-[tool.uv.sources]
-django-extensions = { git = "https://github.com/ulgens/django-extensions.git", branch = "aiosmptd-mail_debug" }
