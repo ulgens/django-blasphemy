@@ -1,6 +1,6 @@
 # https://github.com/tox-dev/action-pre-commit-uv
 
-name: "pre-commit"
+name: "Lint & formatting check"
 
 on:
   push:
@@ -14,8 +14,9 @@ env:
 
 jobs:
   run-pre-commit:
-    name: Run pre-commit
+    name: pre-commit run --all-files
     runs-on: ubuntu-24.04
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4

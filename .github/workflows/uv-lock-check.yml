@@ -1,4 +1,4 @@
-name: "uv lock --check"
+name: "Lockfile check"
 
 on:
   push:
@@ -12,7 +12,9 @@ env:
 
 jobs:
   run-uv-lock-check:
+    name: uv lock --check
     runs-on: ubuntu-24.04
+
     steps:
     - uses: actions/checkout@v4
       name: Checkout
