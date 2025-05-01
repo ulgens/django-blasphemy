@@ -7,11 +7,11 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "celery[redis]==5.5.1",
+    "celery[redis]==5.5.2",
     "Django==5.2",
     "django-admin-interface==0.30.0",
     "django-click==2.4.1",
-    "django-debug-toolbar==5.1.0",
+    "django-debug-toolbar==5.2.0",
     "django-dirtyfields==1.9.7",
     "django-environ==0.12",
     "django-extensions==4.1",
@@ -24,9 +24,9 @@ dependencies = [
     "gitpython==3.1.44",
     "gunicorn==23",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-    "psycopg[binary]==3.2.6",
+    "psycopg[binary]==3.2.7",
     "rich==14.0.0",
-    "sentry-sdk==2.26.1",
+    "sentry-sdk==2.27.0",
     "uuid7==0.1",
     "whitenoise==6.9.0",
 ]
