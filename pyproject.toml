@@ -39,7 +39,7 @@ dev = [
     "wat-inspector==0.4.3",
     # Formatters
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.11.6",
+    "ruff==0.11.8",
     "django-upgrade==1.24.0",
     # Quality check
     "pre-commit==4.2.0",
