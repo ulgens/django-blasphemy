@@ -25,6 +25,8 @@ jobs:
       id: setup-uv
       uses: astral-sh/setup-uv@v6
       with:
+        # https://github.com/astral-sh/setup-uv/releases#activate-environment
+        # "uv pip" needs the environment to be activated.
         activate-environment: true
         enable-cache: true
         cache-dependency-glob: '**/pre-commit-requirements.txt'
