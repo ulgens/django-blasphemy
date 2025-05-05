@@ -37,8 +37,10 @@ jobs:
       name: Checkout
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@v6
       with:
+        # https://github.com/astral-sh/setup-uv/releases#activate-environment
+        activate-environment: true
         # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
         enable-cache: true
         # uv can install Python, no need for actions/setup-python

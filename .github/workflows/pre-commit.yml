@@ -23,8 +23,9 @@ jobs:
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
       id: setup-uv
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@v6
       with:
+        activate-environment: true
         enable-cache: true
         cache-dependency-glob: '**/pre-commit-requirements.txt'
         python-version: ${{ env.PYTHON_VERSION }}
