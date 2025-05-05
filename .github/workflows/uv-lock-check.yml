@@ -20,7 +20,7 @@ jobs:
       name: Checkout
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      uses: astral-sh/setup-uv@v5
+      uses: astral-sh/setup-uv@v6
       with:
         enable-cache: true
         python-version: ${{ env.PYTHON_VERSION }}
