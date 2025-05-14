@@ -16,6 +16,7 @@ class UserFactory(factory.django.DjangoModelFactory):
     password = factory.django.Password(
         factory.LazyAttribute(lambda _: fake.password(length=12)),
     )
+    full_name = factory.Faker("name")
     phone_number = factory.LazyAttribute(lambda _: fake.e164())
 
     @factory.lazy_attribute
