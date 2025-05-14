@@ -3,6 +3,7 @@ from gettext import gettext as _
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 from core.db.models import BaseModel
 
@@ -34,6 +35,13 @@ class User(BaseModel, AbstractUser):
         _("email address"),
         unique=True,
         db_collation="case_insensitive",
+    )
+    # > E.164 numbers are formatted [+] [country code] [subscriber number including area code]
+    # > and can have a maximum of fifteen digits.
+    # https://www.twilio.com/docs/glossary/what-e164
+    phone_number = PhoneNumberField(
+        blank=True,
+        max_length=16,
     )
     full_name = models.CharField(
         _("full name"),
