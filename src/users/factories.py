@@ -1,14 +1,15 @@
 import factory
+from django.contrib.auth import get_user_model
 from faker import Faker
 
 from core.faker_providers import E164Provider
-
-from .models import User
 
 __all__ = ("UserFactory",)
 
 fake = Faker()
 fake.add_provider(E164Provider)
+
+User = get_user_model()
 
 
 class UserFactory(factory.django.DjangoModelFactory):
