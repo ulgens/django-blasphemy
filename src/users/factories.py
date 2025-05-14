@@ -13,8 +13,10 @@ User = get_user_model()
 
 
 class UserFactory(factory.django.DjangoModelFactory):
+    password = factory.django.Password(
+        factory.LazyAttribute(lambda _: fake.password(length=12)),
+    )
     phone_number = factory.LazyAttribute(lambda _: fake.e164())
-    password = factory.django.Password(fake.password(length=16))
 
     @factory.lazy_attribute
     def email(self):
