@@ -14,6 +14,7 @@ class UserAdmin(BaseUserAdmin):
 
     search_fields = list(BaseUserAdmin.search_fields)  # noqa: RUF012
     search_fields.remove("username")
+    search_fields.append("phone_number")
 
     add_fieldsets = (
         (
@@ -22,6 +23,7 @@ class UserAdmin(BaseUserAdmin):
                 "classes": ("wide",),
                 "fields": (
                     "email",
+                    "phone_number",
                     "full_name",
                     "short_name",
                     "password1",
@@ -39,7 +41,13 @@ class UserAdmin(BaseUserAdmin):
         ),
         (
             _("Personal info"),
-            {"fields": ("full_name", "short_name")},
+            {
+                "fields": (
+                    "phone_number",
+                    "full_name",
+                    "short_name",
+                )
+            },
         ),
         (
             _("Permissions"),

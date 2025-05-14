@@ -17,6 +17,10 @@ dependencies = [
     "django-extensions==4.1",
     "django-filter==25.1",
     "django-jsonform==2.23.2",
+    # Why lite version?
+    # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
+    # Short answer: We don't need geocoder, carrier and timezone info
+    "django-phonenumber-field[phonenumberslite]==8.1.0",
     "django-removals==1.0.7",
     "djangorestframework==3.16.0",
     "drf-spectacular==0.28",
