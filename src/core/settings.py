@@ -105,6 +105,11 @@ if not TESTING:
     # https://whitenoise.readthedocs.io/en/stable/django.html#enable-whitenoise
     MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
+# https://django-debug-toolbar.readthedocs.io/en/latest/configuration.html#toolbar-options
+DEBUG_TOOLBAR_CONFIG = {
+    "SHOW_TOOLBAR_CALLBACK": "core.utils.show_debug_toolbar",
+}
+
 ROOT_URLCONF = "core.urls"
 
 TEMPLATES = [
