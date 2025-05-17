@@ -108,6 +108,7 @@ if not TESTING:
 # https://django-debug-toolbar.readthedocs.io/en/latest/configuration.html#toolbar-options
 DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK": "core.utils.show_debug_toolbar",
+    "UPDATE_ON_FETCH": True,
 }
 
 ROOT_URLCONF = "core.urls"
