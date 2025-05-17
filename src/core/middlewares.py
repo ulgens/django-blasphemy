@@ -43,6 +43,7 @@ class NonHtmlDebugToolbarMiddleware:
         if b"/__debug__/" in response.content or b'class="djdt-color"' in response.content:
             return response
 
+        # Build the highlighted JSON content
         content = json.dumps(
             json.loads(response.content),
             indent=2,
@@ -52,6 +53,15 @@ class NonHtmlDebugToolbarMiddleware:
             lexer=JsonLexer(),
             formatter=HtmlFormatter(style="monokai", full=True),
         )
-        response = HttpResponse(highlighted_content)
 
-        return response
+        # Build the response
+        headers = response.headers.copy()
+        headers["Content-Type"] = "text/html; charset=utf-8"
+
+        html_response = HttpResponse(
+            highlighted_content,
+            status=response.status_code,
+            headers=headers,
+        )
+
+        return html_response
