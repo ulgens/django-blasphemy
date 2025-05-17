@@ -6,7 +6,7 @@ These patches are applied when they are imported from core.__init__ during the D
 """
 
 import shutil
-import subprocess  # noqa: S404
+import subprocess
 import sys
 import traceback
 
