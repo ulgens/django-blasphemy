@@ -95,6 +95,8 @@ MIDDLEWARE = [
 ]
 if DEBUG and not TESTING:
     MIDDLEWARE.append("debug_toolbar.middleware.DebugToolbarMiddleware")
+    # NonHtmlDebugToolbarMiddleware should be added after DebugToolbarMiddleware
+    MIDDLEWARE.append("core.middlewares.NonHtmlDebugToolbarMiddleware")
 
 if not TESTING:
     # Having whitenoise enabled in tests cause

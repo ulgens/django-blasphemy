@@ -29,6 +29,7 @@ dependencies = [
     "gunicorn==23",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.2.9",
+    "pygments==2.19.1",
     "rich==14.0.0",
     "sentry-sdk==2.28.0",
     "uuid7==0.1",
