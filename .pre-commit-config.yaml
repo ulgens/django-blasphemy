@@ -22,6 +22,12 @@ repos:
     hooks:
     -   id: django-upgrade
 
+-   repo: https://github.com/instrumentl/pre-commit-just
+    rev: v0.1
+    hooks:
+    -   id: format-justfile
+        name: format justfile
+
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
