@@ -7,9 +7,9 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "celery[redis]==5.5.2",
-    "Django==5.2.1",
-    "django-admin-interface==0.30.0",
+    "celery[redis]==5.5.3",
+    "Django==5.2.3",
+    "django-admin-interface==0.30.1",
     "django-click==2.4.1",
     "django-debug-toolbar==5.2.0",
     "django-dirtyfields==1.9.7",
@@ -21,7 +21,7 @@ dependencies = [
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
     # Short answer: We don't need geocoder, carrier and timezone info
     "django-phonenumber-field[phonenumberslite]==8.1.0",
-    "django-removals==1.0.7",
+    "django-removals==1.0.9",
     "djangorestframework==3.16.0",
     "drf-spectacular==0.28",
     "flower==2.0.1",
@@ -31,7 +31,7 @@ dependencies = [
     "psycopg[binary]==3.2.9",
     "pygments==2.19.1",
     "rich==14.0.0",
-    "sentry-sdk==2.28.0",
+    "sentry-sdk==2.30.0",
     "uuid7==0.1",
     "whitenoise==6.9.0",
 ]
@@ -40,7 +40,7 @@ dependencies = [
 dev = [
     # Debugging
     "ipdb==0.13.13",
-    "ipython==9.2.0",
+    "ipython==9.3.0",
     "wat-inspector==0.4.3",
     # Formatters
     # Used by Django's find_formatters and run_formatters (with a monkey patch)
@@ -54,7 +54,7 @@ dev = [
     "tblib==3.1.0",
     "xkcdpass==1.20.0",
     # Visualization
-    "pydot==4.0.0", # For visualizing Django models with "graph_models --pydot"
+    "pydot==4.0.1", # For visualizing Django models with "graph_models --pydot"
 ]
 
 [tool.uv]
