@@ -67,6 +67,7 @@ THIRD_PARTY_APPS = [
     "django_extensions",
     "django_filters",
     "django_jsonform",
+    "django_migration_vis",
     "drf_spectacular",
     "rest_framework",
 ]

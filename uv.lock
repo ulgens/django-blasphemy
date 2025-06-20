@@ -227,6 +227,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "django-migration-vis" },
     { name = "django-upgrade" },
     { name = "factory-boy" },
     { name = "ipdb" },
@@ -269,6 +270,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "django-migration-vis", specifier = "==2.0.1" },
     { name = "django-upgrade", specifier = "==1.25.0" },
     { name = "factory-boy", specifier = "==3.3.3" },
     { name = "ipdb", specifier = "==0.13.13" },
@@ -374,6 +376,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/9b/a8/83c57acbc153b86615be279cee5a194ce1163b578f29a9f6d658f267785e/django_jsonform-2.23.2.tar.gz", hash = "sha256:6fa2ba7c082be51d738e6c66e35075a3cb9ebc2f941e3a477c988900a7fe3269", size = 108182, upload-time = "2025-01-29T22:31:34.093Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3a/8e/8766f4bc535917ccbc6b3dcb57caf82210a6bacd613c3d9dbaec81018935/django_jsonform-2.23.2-py3-none-any.whl", hash = "sha256:1b7f94c5a2bd22c844e035a9940a9c8586f7b8fc3346ef2a6a13ba608e0059d7", size = 109148, upload-time = "2025-01-29T22:31:31.186Z" },
+]
+
+[[package]]
+name = "django-migration-vis"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "graphviz" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/dc/24/08685f9f670b2727fcd25349ef13afc7e2b31768ad3434116c953f49af68/django-migration-vis-2.0.1.tar.gz", hash = "sha256:9cf960a3ffdcc41268bdd6640855f2871eb8f2235941fd677da0ef9fe5511fb8", size = 6231, upload-time = "2022-03-09T22:12:53.228Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/cd/020ecd6f4ec7d4a8e21ee4acdb79126deacf844e042a466ee6504c839b06/django_migration_vis-2.0.1-py3-none-any.whl", hash = "sha256:8869814560b427d4d234e9dccb89c7a49ac9291bb5f66991693738e653d76d6f", size = 3640, upload-time = "2022-03-09T22:12:51.363Z" },
 ]
 
 [[package]]
@@ -526,6 +541,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c0/89/37df0b71473153574a5cdef8f242de422a0f5d26d7a9e231e6f169b4ad14/gitpython-3.1.44.tar.gz", hash = "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269", size = 214196, upload-time = "2025-01-02T07:32:43.59Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1d/9a/4114a9057db2f1462d5c8f8390ab7383925fe1ac012eaa42402ad65c2963/GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110", size = 207599, upload-time = "2025-01-02T07:32:40.731Z" },
+]
+
+[[package]]
+name = "graphviz"
+version = "0.21"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/b3/3ac91e9be6b761a4b30d66ff165e54439dcd48b83f4e20d644867215f6ca/graphviz-0.21.tar.gz", hash = "sha256:20743e7183be82aaaa8ad6c93f8893c923bd6658a04c32ee115edb3c8a835f78", size = 200434, upload-time = "2025-06-15T09:35:05.824Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/4c/e0ce1ef95d4000ebc1c11801f9b944fa5910ecc15b5e351865763d8657f8/graphviz-0.21-py3-none-any.whl", hash = "sha256:54f33de9f4f911d7e84e4191749cac8cc5653f815b06738c54db9a15ab8b1e42", size = 47300, upload-time = "2025-06-15T09:35:04.433Z" },
 ]
 
 [[package]]

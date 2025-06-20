@@ -54,6 +54,7 @@ dev = [
     "tblib==3.1.0",
     "xkcdpass==1.20.0",
     # Visualization
+    "django-migration-vis==2.0.1",
     "pydot==4.0.1", # For visualizing Django models with "graph_models --pydot"
 ]
 
