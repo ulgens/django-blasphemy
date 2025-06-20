@@ -16,7 +16,7 @@ class AdminTestCase(TestCase):
             skip_msg = f"{cls.__name__} is an abstract base class"
             raise SkipTest(skip_msg)
         else:
-            super(__class__, cls).setUpClass()
+            super().setUpClass()
 
     def setUp(self) -> None:
         self.user = UserFactory(is_staff=True, is_superuser=True)
