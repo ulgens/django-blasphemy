@@ -1,0 +1,117 @@
+digraph {
+	"admin/0001_initial" [label="admin/0001_initial"]
+	"admin/0002_logentry_remove_auto_add" [label="admin/0002_logentry_remove_auto_add"]
+	"admin/0003_logentry_add_action_flag_choices" [label="admin/0003_logentry_add_action_flag_choices"]
+	"admin_interface/0001_initial" [label="admin_interface/0001_initial"]
+	"admin_interface/0002_add_related_modal" [label="admin_interface/0002_add_related_modal"]
+	"admin_interface/0003_add_logo_color" [label="admin_interface/0003_add_logo_color"]
+	"admin_interface/0004_rename_title_color" [label="admin_interface/0004_rename_title_color"]
+	"admin_interface/0005_add_recent_actions_visible" [label="admin_interface/0005_add_recent_actions_visible"]
+	"admin_interface/0006_bytes_to_str" [label="admin_interface/0006_bytes_to_str"]
+	"admin_interface/0007_add_favicon" [label="admin_interface/0007_add_favicon"]
+	"admin_interface/0008_change_related_modal_background_opacity_type" [label="admin_interface/0008_change_related_modal_background_opacity_type"]
+	"admin_interface/0009_add_enviroment" [label="admin_interface/0009_add_enviroment"]
+	"admin_interface/0010_add_localization" [label="admin_interface/0010_add_localization"]
+	"admin_interface/0011_add_environment_options" [label="admin_interface/0011_add_environment_options"]
+	"admin_interface/0012_update_verbose_names" [label="admin_interface/0012_update_verbose_names"]
+	"admin_interface/0013_add_related_modal_close_button" [label="admin_interface/0013_add_related_modal_close_button"]
+	"admin_interface/0014_name_unique" [label="admin_interface/0014_name_unique"]
+	"admin_interface/0015_add_language_chooser_active" [label="admin_interface/0015_add_language_chooser_active"]
+	"admin_interface/0016_add_language_chooser_display" [label="admin_interface/0016_add_language_chooser_display"]
+	"admin_interface/0017_change_list_filter_dropdown" [label="admin_interface/0017_change_list_filter_dropdown"]
+	"admin_interface/0018_theme_list_filter_sticky" [label="admin_interface/0018_theme_list_filter_sticky"]
+	"admin_interface/0019_add_form_sticky" [label="admin_interface/0019_add_form_sticky"]
+	"admin_interface/0020_module_selected_colors" [label="admin_interface/0020_module_selected_colors"]
+	"admin_interface/0021_file_extension_validator" [label="admin_interface/0021_file_extension_validator"]
+	"admin_interface/0022_add_logo_max_width_and_height" [label="admin_interface/0022_add_logo_max_width_and_height"]
+	"admin_interface/0023_theme_foldable_apps" [label="admin_interface/0023_theme_foldable_apps"]
+	"admin_interface/0024_remove_theme_css" [label="admin_interface/0024_remove_theme_css"]
+	"admin_interface/0025_theme_language_chooser_control" [label="admin_interface/0025_theme_language_chooser_control"]
+	"admin_interface/0026_theme_list_filter_highlight" [label="admin_interface/0026_theme_list_filter_highlight"]
+	"admin_interface/0027_theme_list_filter_removal_links" [label="admin_interface/0027_theme_list_filter_removal_links"]
+	"admin_interface/0028_theme_show_fieldsets_as_tabs_and_more" [label="admin_interface/0028_theme_show_fieldsets_as_tabs_and_more"]
+	"admin_interface/0029_theme_css_generic_link_active_color" [label="admin_interface/0029_theme_css_generic_link_active_color"]
+	"admin_interface/0030_theme_collapsible_stacked_inlines_and_more" [label="admin_interface/0030_theme_collapsible_stacked_inlines_and_more"]
+	"auth/0001_initial" [label="auth/0001_initial"]
+	"auth/0002_alter_permission_name_max_length" [label="auth/0002_alter_permission_name_max_length"]
+	"auth/0003_alter_user_email_max_length" [label="auth/0003_alter_user_email_max_length"]
+	"auth/0004_alter_user_username_opts" [label="auth/0004_alter_user_username_opts"]
+	"auth/0005_alter_user_last_login_null" [label="auth/0005_alter_user_last_login_null"]
+	"auth/0006_require_contenttypes_0002" [label="auth/0006_require_contenttypes_0002"]
+	"auth/0007_alter_validators_add_error_messages" [label="auth/0007_alter_validators_add_error_messages"]
+	"auth/0008_alter_user_username_max_length" [label="auth/0008_alter_user_username_max_length"]
+	"auth/0009_alter_user_last_name_max_length" [label="auth/0009_alter_user_last_name_max_length"]
+	"auth/0010_alter_group_name_max_length" [label="auth/0010_alter_group_name_max_length"]
+	"auth/0011_update_proxy_permissions" [label="auth/0011_update_proxy_permissions"]
+	"auth/0012_alter_user_first_name_max_length" [label="auth/0012_alter_user_first_name_max_length"]
+	"contenttypes/0001_initial" [label="contenttypes/0001_initial"]
+	"contenttypes/0002_remove_content_type_name" [label="contenttypes/0002_remove_content_type_name"]
+	"sessions/0001_initial" [label="sessions/0001_initial"]
+	"snippets/0001_initial" [label="snippets/0001_initial"]
+	"snippets/0002_alter_snippet_language" [label="snippets/0002_alter_snippet_language"]
+	"snippets/0003_alter_snippet_id" [label="snippets/0003_alter_snippet_id"]
+	"snippets/0004_alter_snippet_language" [label="snippets/0004_alter_snippet_language"]
+	"users/0001_initial" [label="users/0001_initial"]
+	"users/0002_alter_user_email" [label="users/0002_alter_user_email"]
+	"users/0003_ci_collation" [label="users/0003_ci_collation"]
+	"users/0004_alter_user_email" [label="users/0004_alter_user_email"]
+	"users/0005_alter_user_id" [label="users/0005_alter_user_id"]
+	"users/0006_user_phone_number" [label="users/0006_user_phone_number"]
+	"admin/0001_initial" -> "users/0001_initial"
+	"admin/0001_initial" -> "contenttypes/0001_initial"
+	"admin/0002_logentry_remove_auto_add" -> "admin/0001_initial"
+	"admin/0003_logentry_add_action_flag_choices" -> "admin/0002_logentry_remove_auto_add"
+	"admin_interface/0002_add_related_modal" -> "admin_interface/0001_initial"
+	"admin_interface/0003_add_logo_color" -> "admin_interface/0002_add_related_modal"
+	"admin_interface/0004_rename_title_color" -> "admin_interface/0003_add_logo_color"
+	"admin_interface/0005_add_recent_actions_visible" -> "admin_interface/0004_rename_title_color"
+	"admin_interface/0006_bytes_to_str" -> "admin_interface/0005_add_recent_actions_visible"
+	"admin_interface/0007_add_favicon" -> "admin_interface/0006_bytes_to_str"
+	"admin_interface/0008_change_related_modal_background_opacity_type" -> "admin_interface/0007_add_favicon"
+	"admin_interface/0009_add_enviroment" -> "admin_interface/0008_change_related_modal_background_opacity_type"
+	"admin_interface/0010_add_localization" -> "admin_interface/0009_add_enviroment"
+	"admin_interface/0011_add_environment_options" -> "admin_interface/0010_add_localization"
+	"admin_interface/0012_update_verbose_names" -> "admin_interface/0011_add_environment_options"
+	"admin_interface/0013_add_related_modal_close_button" -> "admin_interface/0012_update_verbose_names"
+	"admin_interface/0014_name_unique" -> "admin_interface/0013_add_related_modal_close_button"
+	"admin_interface/0015_add_language_chooser_active" -> "admin_interface/0014_name_unique"
+	"admin_interface/0016_add_language_chooser_display" -> "admin_interface/0015_add_language_chooser_active"
+	"admin_interface/0017_change_list_filter_dropdown" -> "admin_interface/0016_add_language_chooser_display"
+	"admin_interface/0018_theme_list_filter_sticky" -> "admin_interface/0017_change_list_filter_dropdown"
+	"admin_interface/0019_add_form_sticky" -> "admin_interface/0018_theme_list_filter_sticky"
+	"admin_interface/0020_module_selected_colors" -> "admin_interface/0019_add_form_sticky"
+	"admin_interface/0021_file_extension_validator" -> "admin_interface/0020_module_selected_colors"
+	"admin_interface/0022_add_logo_max_width_and_height" -> "admin_interface/0021_file_extension_validator"
+	"admin_interface/0023_theme_foldable_apps" -> "admin_interface/0022_add_logo_max_width_and_height"
+	"admin_interface/0024_remove_theme_css" -> "admin_interface/0023_theme_foldable_apps"
+	"admin_interface/0025_theme_language_chooser_control" -> "admin_interface/0024_remove_theme_css"
+	"admin_interface/0026_theme_list_filter_highlight" -> "admin_interface/0025_theme_language_chooser_control"
+	"admin_interface/0027_theme_list_filter_removal_links" -> "admin_interface/0026_theme_list_filter_highlight"
+	"admin_interface/0028_theme_show_fieldsets_as_tabs_and_more" -> "admin_interface/0027_theme_list_filter_removal_links"
+	"admin_interface/0029_theme_css_generic_link_active_color" -> "admin_interface/0028_theme_show_fieldsets_as_tabs_and_more"
+	"admin_interface/0030_theme_collapsible_stacked_inlines_and_more" -> "admin_interface/0029_theme_css_generic_link_active_color"
+	"auth/0001_initial" -> "contenttypes/0001_initial"
+	"auth/0002_alter_permission_name_max_length" -> "auth/0001_initial"
+	"auth/0003_alter_user_email_max_length" -> "auth/0002_alter_permission_name_max_length"
+	"auth/0004_alter_user_username_opts" -> "auth/0003_alter_user_email_max_length"
+	"auth/0005_alter_user_last_login_null" -> "auth/0004_alter_user_username_opts"
+	"auth/0006_require_contenttypes_0002" -> "auth/0005_alter_user_last_login_null"
+	"auth/0006_require_contenttypes_0002" -> "contenttypes/0002_remove_content_type_name"
+	"auth/0007_alter_validators_add_error_messages" -> "auth/0006_require_contenttypes_0002"
+	"auth/0008_alter_user_username_max_length" -> "auth/0007_alter_validators_add_error_messages"
+	"auth/0009_alter_user_last_name_max_length" -> "auth/0008_alter_user_username_max_length"
+	"auth/0010_alter_group_name_max_length" -> "auth/0009_alter_user_last_name_max_length"
+	"auth/0011_update_proxy_permissions" -> "auth/0010_alter_group_name_max_length"
+	"auth/0011_update_proxy_permissions" -> "contenttypes/0002_remove_content_type_name"
+	"auth/0012_alter_user_first_name_max_length" -> "auth/0011_update_proxy_permissions"
+	"contenttypes/0002_remove_content_type_name" -> "contenttypes/0001_initial"
+	"snippets/0002_alter_snippet_language" -> "snippets/0001_initial"
+	"snippets/0003_alter_snippet_id" -> "snippets/0002_alter_snippet_language"
+	"snippets/0004_alter_snippet_language" -> "snippets/0003_alter_snippet_id"
+	"users/0001_initial" -> "auth/0012_alter_user_first_name_max_length"
+	"users/0002_alter_user_email" -> "users/0001_initial"
+	"users/0003_ci_collation" -> "users/0002_alter_user_email"
+	"users/0004_alter_user_email" -> "users/0003_ci_collation"
+	"users/0005_alter_user_id" -> "users/0004_alter_user_email"
+	"users/0006_user_phone_number" -> "users/0005_alter_user_id"
+}
