@@ -6,7 +6,7 @@ set working-directory := 'src/'
 
 # List available commands
 default:
-    @just --list
+    @just --list --unsorted
 
 # Build the Docker containers
 [group("compose")]
@@ -23,11 +23,6 @@ up *ARGS:
 stop *ARGS:
     {{ COMPOSE_CMD }} stop {{ ARGS }}
 
-# Initialize the database with development data
-[group("django")]
-init_data:
-    {{ DJANGO_CMD }} python manage.py init_data --dev
-
 # Open a bash shell in the Django container
 [group("django")]
 bash:
@@ -42,6 +37,11 @@ manage *ARGS:
 [group("django")]
 shell:
     {{ DJANGO_CMD }} python manage.py shell_plus
+
+# Initialize the database with development data
+[group("django")]
+init_data:
+    {{ DJANGO_CMD }} python manage.py init_data --dev
 
 # Run Django tests
 [group("django")]
