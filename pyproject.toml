@@ -38,24 +38,18 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    # Debugging
+    "django-migration-vis==2.0.1",
+    "django-upgrade==1.25.0",
+    "factory-boy==3.3.3",
     "ipdb==0.13.13",
     "ipython==9.3.0",
-    "wat-inspector==0.4.3",
-    # Formatters
-    # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "ruff==0.12.0",
-    "django-upgrade==1.25.0",
-    # Quality check
-    "pre-commit==4.2.0",
-    # Testing
-    "factory-boy==3.3.3",
     "parameterized==0.9",
-    "tblib==3.1.0",
+    "pre-commit==4.2.0",
+    "pydot==4.0.1",  # For visualizing Django models with "graph_models --pydot"
+    "ruff==0.12.0",  # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "tblib==3.1.0",  # Enables proper tracebacks when Django tests fail with --parallel
+    "wat-inspector==0.4.3",
     "xkcdpass==1.20.0",
-    # Visualization
-    "django-migration-vis==2.0.1",
-    "pydot==4.0.1", # For visualizing Django models with "graph_models --pydot"
 ]
 
 [tool.uv]
