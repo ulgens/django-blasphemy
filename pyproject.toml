@@ -6,9 +6,13 @@ authors = [
     { name = "Ülgen Sarıkavak", email = "ulgensrkvk@gmail.com" },
 ]
 requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.13",
+]
 dependencies = [
     "celery[redis]==5.5.3",
-    "Django==5.2.3",
+    "django==5.2.3",
     "django-admin-interface==0.30.1",
     "django-click==2.4.1",
     "django-debug-toolbar==5.2.0",
@@ -45,9 +49,9 @@ dev = [
     "ipython==9.3.0",
     "parameterized==0.9",
     "pre-commit==4.2.0",
-    "pydot==4.0.1",  # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.12.0",  # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "tblib==3.1.0",  # Enables proper tracebacks when Django tests fail with --parallel
+    "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
+    "ruff==0.12.0",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "tblib==3.1.0",                # Enables proper tracebacks when Django tests fail with --parallel
     "wat-inspector==0.4.3",
     "xkcdpass==1.20.0",
 ]
