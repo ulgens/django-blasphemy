@@ -11,6 +11,8 @@ on:
 env:
   PYTHON_VERSION: 3.13.5
   UV_VERSION: 0.8.3
+  PRE_COMMIT_VERSION: 4.2.0
+  PRE_COMMIT_UV_VERSION: 4.1.4
 
 jobs:
   run-pre-commit:
@@ -25,21 +27,9 @@ jobs:
       id: setup-uv
       uses: astral-sh/setup-uv@v6
       with:
-        # https://github.com/astral-sh/setup-uv/releases#activate-environment
-        # "uv pip" needs the environment to be activated.
-        activate-environment: true
         enable-cache: true
-        cache-dependency-glob: '**/pre-commit-requirements.txt'
         python-version: ${{ env.PYTHON_VERSION }}
         version: ${{ env.UV_VERSION }}
-
-    - name: Install pre-commit
-      # FIXME:
-      #   Passing this step with a warm cache ends up with:
-      #   Failed to spawn: `pre-commit`
-      #     Caused by: No such file or directory (os error 2)
-      # if: steps.setup-uv.outputs.cache-hit != 'true'
-      run: uv pip install -r .github/workflows/pre-commit-requirements.txt
 
     - name: Cache pre-commit
       id: cache-precommit
@@ -50,14 +40,18 @@ jobs:
           pre-commit-
           ${{ runner.os }}-
           ${{ env.PYTHON_VERSION }}-
-          ${{ hashFiles('.pre-commit-config.yaml', '**/pre-commit-requirements.txt') }}
+          ${{ env.PRE_COMMIT_VERSION }}-
+          ${{ hashFiles('.pre-commit-config.yaml') }}
         restore-keys: >
           pre-commit-
           ${{ runner.os }}-
           ${{ env.PYTHON_VERSION }}-
+          ${{ env.PRE_COMMIT_VERSION }}-
 
     - name: Run pre-commit
       run: >
         uv run
         --no-sync
+        --with pre-commit==${{ env.PRE_COMMIT_VERSION }}
+        --with pre-commit-uv==${{ env.PRE_COMMIT_UV_VERSION }}
         pre-commit run --all-files
