@@ -39,12 +39,14 @@ jobs:
         key: >
           pre-commit-
           ${{ runner.os }}-
+          ${{ env.UV_VERSION }}-
           ${{ env.PYTHON_VERSION }}-
           ${{ env.PRE_COMMIT_VERSION }}-
           ${{ hashFiles('.pre-commit-config.yaml') }}
         restore-keys: >
           pre-commit-
           ${{ runner.os }}-
+          ${{ env.UV_VERSION }}-
           ${{ env.PYTHON_VERSION }}-
           ${{ env.PRE_COMMIT_VERSION }}-
 
