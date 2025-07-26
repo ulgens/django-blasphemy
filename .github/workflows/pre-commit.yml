@@ -12,7 +12,6 @@ env:
   PYTHON_VERSION: 3.13.5
   UV_VERSION: 0.8.3
   PRE_COMMIT_VERSION: 4.2.0
-  PRE_COMMIT_UV_VERSION: 4.1.4
 
 jobs:
   run-pre-commit:
@@ -35,7 +34,5 @@ jobs:
       run: >
         uv run
         --no-sync
-        --with uv==${{ env.UV_VERSION }}
         --with pre-commit==${{ env.PRE_COMMIT_VERSION }}
-        --with pre-commit-uv==${{ env.PRE_COMMIT_UV_VERSION }}
         pre-commit run --all-files
