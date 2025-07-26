@@ -36,5 +36,4 @@ jobs:
         uv run
         --no-sync
         --with pre-commit==${{ env.PRE_COMMIT_VERSION }}
-        --with pre-commit-uv==${{ env.PRE_COMMIT_UV_VERSION }}
         pre-commit run --all-files
