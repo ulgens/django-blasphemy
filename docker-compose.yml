@@ -28,7 +28,7 @@ services:
 
   db:
     env_file: .env
-    image: postgres:17.5-alpine3.21
+    image: postgres:17.5-alpine3.21@sha256:5d004e058f520673f1f6edbad6b1603d5dab4c818e257c041889ef64672a8cc4
     container_name: blasphemy_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB_NAME}
@@ -58,7 +58,7 @@ services:
 
   redis:
     env_file: .env
-    image: redis:8.0.2-alpine3.21
+    image: redis:8.0.2-alpine3.21@sha256:48501c5ad00d5563bc30c075c7bcef41d7d98de3e9a1e6c752068c66f0a8463b
     container_name: blasphemy_redis
     ports:
       # TODO: Check if internal port is configurable

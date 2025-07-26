@@ -2,7 +2,7 @@
 # * https://github.com/astral-sh/uv-docker-example/blob/main/Dockerfile
 # * https://github.com/wemake-services/wemake-django-template/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/docker/django/Dockerfile
 
-FROM python:3.13.5-slim-bookworm
+FROM python:3.13.5-slim-bookworm@sha256:4c2cf9917bd1cbacc5e9b07320025bdb7cdf2df7b0ceaccb55e9dd7e30987419
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
@@ -36,7 +36,7 @@ ENV UV_PYTHON_PREFERENCE=only-system
 # uv version can not be defined in an environment variable,
 # because COPY --from doesn't support variable expansion
 # https://github.com/moby/moby/issues/34482
-COPY --from=ghcr.io/astral-sh/uv:0.7.13 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.7.13@sha256:6c1e19020ec221986a210027040044a5df8de762eb36d5240e382bc41d7a9043 /uv /uvx /bin/
 
 # https://github.com/astral-sh/uv-docker-example/blob/a14ebc89e3a5e5b33131284968d8969ae054ed0d/Dockerfile#L13
 RUN --mount=type=cache,target=/root/.cache/uv \
