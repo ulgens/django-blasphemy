@@ -1,0 +1,61 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    // https://docs.renovatebot.com/presets-default/#assignandreviewarg0
+    ":assignAndReview(ulgens)",
+
+    // https://docs.renovatebot.com/presets-default/#configmigration
+    ":configMigration",
+
+    // https://docs.renovatebot.com/presets-default/#dependencydashboard
+    ":dependencyDashboard",
+
+    // https://docs.renovatebot.com/presets-default/#pindependencies
+    ":pinDependencies",
+
+    // https://docs.renovatebot.com/presets-default/#pindevdependencies
+    ":pinDevDependencies",
+
+    // https://docs.renovatebot.com/presets-default/#semanticprefixfixdepschoreothers
+    // TODO: Revisit - reconsider this preset
+    ":semanticPrefixFixDepsChoreOthers",
+
+    // https://docs.renovatebot.com/presets-docker/#dockerpindigests
+    "docker:pinDigests",
+
+    // https://docs.renovatebot.com/presets-mergeConfidence/#mergeconfidenceall-badges
+    "mergeConfidence:all-badges",
+
+    // https://docs.renovatebot.com/presets-replacements/#replacementsall
+    "replacements:all",
+
+    // https://docs.renovatebot.com/presets-schedule/#schedulemonthly
+    "schedule:monthly",
+
+    // https://docs.renovatebot.com/presets-workarounds/#workaroundsall
+    "workarounds:all",
+  ],
+  "labels": [
+    "dependencies",
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["*"],
+      "abandonmentThreshold": "1 year"
+    },
+    {
+      "matchDatasources": [
+        "pypi",
+        "python-version"
+      ],
+      "groupName": "Python Dependencies",
+      "enabled": true
+    }
+  ],
+  "pre-commit": {
+    "enabled": true,
+  }
+}
