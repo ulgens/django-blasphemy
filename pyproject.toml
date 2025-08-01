@@ -58,5 +58,5 @@ dev = [
 
 [tool.uv]
 package = false
-# The earliest version that supports the current lock file version
-required-version = ">=0.7.0"
+# The earliest version that supports the current lock file revision
+required-version = ">=0.8.4"
