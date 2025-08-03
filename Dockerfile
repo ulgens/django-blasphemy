@@ -15,7 +15,8 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
         # For development purposes
         curl nano
 
-ENV PYTHONFAULTHANDLER=1 \
+ENV PYTHONBREAKPOINT="ipdb.set_trace" \
+    PYTHONFAULTHANDLER=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONHASHSEED=random \
     PYTHONDONTWRITEBYTECODE=True
