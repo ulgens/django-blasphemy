@@ -10,7 +10,7 @@ on:
 
 env:
   PYTHON_VERSION: 3.13.5
-  UV_VERSION: 0.8.6
+  UV_VERSION: 0.8.8
   PRE_COMMIT_VERSION: 4.2.0
   PRE_COMMIT_UV_VERSION: 4.1.4
 
@@ -51,13 +51,11 @@ jobs:
           ${{ env.PRE_COMMIT_VERSION }}-
 
     - name: Run pre-commit
-      # FIXME:
-      #   https://github.com/tox-dev/pre-commit-uv/issues/70
-      #   Try to add back the following line when the issue is fixed:
-      #   --with pre-commit-uv==${{ env.PRE_COMMIT_UV_VERSION }}
       run: >
         uv run
         --no-sync
         --with uv==${{ env.UV_VERSION }}
         --with pre-commit==${{ env.PRE_COMMIT_VERSION }}
+        --with pre-commit-uv==${{ env.PRE_COMMIT_UV_VERSION }}
+        --with uv==${{ env.UV_VERSION }}
         pre-commit run --all-files
