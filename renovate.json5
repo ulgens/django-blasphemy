@@ -23,6 +23,9 @@
     // https://docs.renovatebot.com/presets-docker/#dockerpindigests
     "docker:pinDigests",
 
+    // https://docs.renovatebot.com/presets-helpers/#helperspingithubactiondigests
+    "helpers:pinGitHubActionDigests",
+
     // https://docs.renovatebot.com/presets-mergeConfidence/#mergeconfidenceall-badges
     "mergeConfidence:all-badges",
 
