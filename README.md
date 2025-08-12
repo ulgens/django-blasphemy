@@ -1,5 +1,3 @@
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/ulgens/django-blasphemy/badge)](https://scorecard.dev/viewer/?uri=github.com/ulgens/django-blasphemy)
-
 # django-blasphemy
 
 Django development playground. It's for when you need to try something but the project in front of you is too complex / big / important to test stuff on it. Can be used as project starter if you have that kind of energy.
