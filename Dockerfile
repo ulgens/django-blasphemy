@@ -2,7 +2,7 @@
 # * https://github.com/astral-sh/uv-docker-example/blob/main/Dockerfile
 # * https://github.com/wemake-services/wemake-django-template/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/docker/django/Dockerfile
 
-FROM python:3.13.6-slim-bookworm@sha256:b7ac0b5eec195c545c50d261131cc0dfa6058c58ddd656a3d5ff0412b6f408c6
+FROM python:3.13.6-slim-trixie
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
@@ -13,7 +13,7 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
         # graph_models command
         graphviz \
         # For development purposes
-        curl nano
+        just nano
 
 ENV PYTHONBREAKPOINT="ipdb.set_trace" \
     PYTHONFAULTHANDLER=1 \
@@ -44,9 +44,3 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv sync --frozen --no-install-project
-
-ENV JUST_VERSION=1.40.0
-ENV JUST_INSTALLER_URL="https://raw.githubusercontent.com/casey/just/3884a4e68395b46c4b3eed694b09955f65b79fcc/www/install.sh"
-ADD --checksum=sha256:2f811850e7833bf2191df55683f861d09b8a9cd2d1aac5f2adff597b3d675aa4 ${JUST_INSTALLER_URL} install.sh
-RUN chmod +x install.sh && ./install.sh --tag ${JUST_VERSION} --to /usr/local/bin
-RUN just --completions bash > ~/.bashrc
