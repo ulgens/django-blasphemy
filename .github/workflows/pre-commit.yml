@@ -1,51 +1,13 @@
-# https://github.com/tox-dev/action-pre-commit-uv
-
-name: "Lint & formatting check"
+name: pre-commit
 
 on:
+  pull_request:
   push:
-    branches:
-      - main
-  pull_request: ~
-
-env:
-  PYTHON_VERSION: 3.13.6
-  UV_VERSION: 0.8.9
+    branches: [main]
 
 jobs:
-  run-pre-commit:
-    name: pre-commit run --all-files
-    runs-on: ubuntu-24.04
-
+  pre-commit:
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
-
-    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      id: setup-uv
-      uses: astral-sh/setup-uv@v6
-      with:
-        enable-cache: true
-        python-version: ${{ env.PYTHON_VERSION }}
-        version: ${{ env.UV_VERSION }}
-
-    - name: Cache pre-commit
-      id: cache-precommit
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pre-commit
-        key: >
-          pre-commit-
-          ${{ runner.os }}-
-          ${{ hashFiles('pyproject.toml') }}
-          ${{ hashFiles('.pre-commit-config.yaml') }}
-        restore-keys: >
-          pre-commit-
-          ${{ runner.os }}-
-
-    - name: Run pre-commit
-      run: >
-        uv run
-        --no-managed-python
-        --only-group pre-commit
-        pre-commit run --all-files
+    - uses: actions/checkout@v4
+    - uses: tox-dev/action-pre-commit-uv@v1
