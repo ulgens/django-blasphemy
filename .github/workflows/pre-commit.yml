@@ -25,6 +25,7 @@ jobs:
       id: setup-uv
       uses: astral-sh/setup-uv@v6
       with:
+        activate-environment: true
         enable-cache: true
         python-version: ${{ env.PYTHON_VERSION }}
         version: ${{ env.UV_VERSION }}
@@ -48,6 +49,5 @@ jobs:
     - name: Run pre-commit
       run: >
         uv run
-        --python=${{ env.PYTHON_LOCATION }}
         --only-group pre-commit
         pre-commit run --all-files
