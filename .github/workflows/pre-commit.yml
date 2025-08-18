@@ -29,6 +29,8 @@ jobs:
         python-version: ${{ env.PYTHON_VERSION }}
         version: ${{ env.UV_VERSION }}
 
+    - run: uv run --isolated --no-sync true && echo "PYTHON_LOCATION=$(uv python find)" >>$GITHUB_ENV
+
     - name: Cache pre-commit
       id: cache-precommit
       uses: actions/cache@v4
@@ -46,6 +48,6 @@ jobs:
     - name: Run pre-commit
       run: >
         uv run
-        --no-managed-python
+        --python=${{ env.PYTHON_LOCATION }}
         --only-group pre-commit
         pre-commit run --all-files
