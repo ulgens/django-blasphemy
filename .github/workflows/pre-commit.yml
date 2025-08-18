@@ -46,5 +46,6 @@ jobs:
     - name: Run pre-commit
       run: >
         uv run
+        --no-managed-python
         --only-group pre-commit
         pre-commit run --all-files
