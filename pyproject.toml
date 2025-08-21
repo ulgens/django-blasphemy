@@ -48,12 +48,17 @@ dev = [
     "ipdb==0.13.13",
     "ipython==9.4.0",
     "parameterized==0.9",
-    "pre-commit==4.3.0",
-    "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.12.8",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
-    "tblib==3.1.0",                # Enables proper tracebacks when Django tests fail with --parallel
+    "pydot==4.0.1",                   # For visualizing Django models with "graph_models --pydot"
+    "ruff==0.12.8",                   # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "tblib==3.1.0",                   # Enables proper tracebacks when Django tests fail with --parallel
     "wat-inspector==0.4.3",
     "xkcdpass==1.20.0",
+    { include-group = "pre-commit" },
+]
+pre-commit = [
+    "pre-commit==4.3.0",
+    "pre-commit-uv==4.1.4",
+    "uv==0.8.11",           # Required by pre-commit-uv, explicitly defined to pin the version
 ]
 
 [tool.uv]
