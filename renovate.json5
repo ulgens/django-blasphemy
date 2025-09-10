@@ -58,6 +58,13 @@
     },
     {
       "matchDatasources": [
+        "pre-commit",
+      ],
+      "groupName": "pre-commit Dependencies",
+      "enabled": true
+    },
+    {
+      "matchDatasources": [
         "pypi",
         "python-version"
       ],
