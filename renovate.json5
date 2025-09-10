@@ -57,7 +57,7 @@
       "enabled": true
     },
     {
-      "matchDatasources": [
+      "matchManagers": [
         "pre-commit",
       ],
       "groupName": "pre-commit Dependencies",
