@@ -10,7 +10,7 @@ on:
   pull_request: ~
 
 env:
-    PYTHON_VERSION: 3.13.6
+    PYTHON_VERSION: 3.13.7
     UV_VERSION: 0.8.16
 
 jobs:
