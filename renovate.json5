@@ -51,6 +51,13 @@
     },
     {
       "matchDatasources": [
+        "docker",
+      ],
+      "groupName": "Docker Dependencies",
+      "enabled": true
+    },
+    {
+      "matchDatasources": [
         "pypi",
         "python-version"
       ],
