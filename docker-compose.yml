@@ -28,7 +28,7 @@ services:
 
   db:
     env_file: .env
-    image: postgres:17.5-alpine3.21@sha256:5d004e058f520673f1f6edbad6b1603d5dab4c818e257c041889ef64672a8cc4
+    image: postgres:17.6-alpine3.21@sha256:5207e8137ac9db276dbe98b1d006cca69380e9c7d59ef8454bd92ba12c49f903
     container_name: blasphemy_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB_NAME}
@@ -47,7 +47,7 @@ services:
       timeout: 10s
 
   mailpit:
-    image: axllent/mailpit:v1.27.4@sha256:df6c2541907e1be6fac21f509927cf6ed771617a1f4b361ef66d97bd05593d2d
+    image: axllent/mailpit:v1.27.7@sha256:cae83a33cd9b9598e4acb210be673dda7e741d5271ed4045310ab456950a136a
     container_name: blasphemy_mailpit
     ports:
       - "8025:8025"
