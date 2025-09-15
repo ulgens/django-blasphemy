@@ -6,7 +6,7 @@ Django development playground. It's for when you need to try something but the p
 - A terminal emulator.
 - [Docker & Docker Compose](https://docs.docker.com/get-docker/)
 - [just](https://just.systems/man/en/)
-- [pre-commit](https://pre-commit.com/#install)
+- [prek](https://github.com/j178/prek?tab=readme-ov-file#installation)
 - [git-lfs](https://git-lfs.github.com/)
 - A modern web browser.
 
@@ -30,4 +30,4 @@ The project homepage can be accessed at `http://localhost:8000/`.
   * Files are pulled successfully, by using `git lfs pull`.
 
 # Contribution
-Install pre-commit hooks by `pre-commit install`
+Install git hooks by `prek install`
