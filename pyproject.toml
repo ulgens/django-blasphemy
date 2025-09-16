@@ -36,7 +36,6 @@ dependencies = [
     "pygments==2.19.2",
     "rich==14.1.0",
     "sentry-sdk==2.38.0",
-    "uuid7==0.1",
     "whitenoise==6.10.0",
 ]
 

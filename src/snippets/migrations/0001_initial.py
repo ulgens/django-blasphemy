@@ -1,6 +1,7 @@
+import uuid
+
 from dirtyfields import DirtyFieldsMixin
 from django.db import migrations, models
-from uuid_extensions import uuid7
 
 
 class Migration(migrations.Migration):
@@ -15,7 +16,7 @@ class Migration(migrations.Migration):
                 (
                     "id",
                     models.UUIDField(
-                        default=uuid7,
+                        default=uuid.uuid7,
                         editable=False,
                         primary_key=True,
                         serialize=False,

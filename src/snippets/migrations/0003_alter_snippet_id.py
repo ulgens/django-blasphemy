@@ -1,4 +1,5 @@
-import uuid_extensions.uuid7
+import uuid
+
 from django.db import migrations, models
 
 
@@ -12,7 +13,7 @@ class Migration(migrations.Migration):
             model_name="snippet",
             name="id",
             field=models.UUIDField(
-                default=uuid_extensions.uuid7,
+                default=uuid.uuid7,
                 editable=False,
                 help_text="The unique identifier of the record, in UUIDv7 format.",
                 primary_key=True,
