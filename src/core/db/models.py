@@ -1,10 +1,12 @@
-import uuid_extensions
+import struct
+from datetime import datetime
+from uuid import uuid7
+
 from dirtyfields import DirtyFieldsMixin
 from django.db import models
+from django.utils.timezone import get_current_timezone
 
 __all__ = ("BaseModel",)
-
-from uuid_extensions import uuid_to_datetime
 
 
 # TODO:
@@ -12,7 +14,7 @@ from uuid_extensions import uuid_to_datetime
 #    * Check RandomUUID for Postgres: https://docs.djangoproject.com/en/dev/ref/contrib/postgres/functions/#randomuuid
 class UUIDModel(models.Model):
     id = models.UUIDField(
-        default=uuid_extensions.uuid7,
+        default=uuid7,
         editable=False,
         primary_key=True,
         verbose_name="ID",
@@ -21,6 +23,44 @@ class UUIDModel(models.Model):
 
     class Meta:
         abstract = True
+
+    # TODO: Try to make use of `models.GeneratedField`
+    # TODO: Consider using this method to replace `created_at` field
+    def get_created_at_from_id(self):
+        # > UUIDv7 features a time-ordered value field derived from the widely implemented and well-known
+        # > Unix Epoch timestamp source, the number of milliseconds since midnight 1 Jan 1970 UTC, leap seconds excluded.
+        # https://www.rfc-editor.org/rfc/rfc9562.html#name-uuid-version-7
+        epoch_ms = self.id.time
+
+        # Unix time (timestamp) is defined in seconds
+        # https://developer.mozilla.org/en-US/docs/Glossary/Unix_time
+        timestamp = epoch_ms / 1000
+
+        created_at = datetime.fromtimestamp(
+            timestamp,
+            tz=get_current_timezone(),
+        )
+
+        # uuid7 (uuid_extensions) package was using an outdated implementation for UUIDv7
+        # There is no clear way to detect which UUID values are generated via the package.
+        # During the manual discovery, 2025-09-18 was converted as 2198-03-14 so roughly speaking,
+        # any result beyond year 2195 can be accepted as wrong.
+        # This block can be removed when all stored buggy UUID values are replaced or deleted.
+        # https://github.com/stevesimmons/uuid7/issues/1
+        if created_at.year > 2195:
+            # Adapted from uuid_extensions buggy version
+            # https://github.com/stevesimmons/uuid7/blob/7cd40cd9be0affa1cd09e7476e29af555c678220/uuid_extensions/uuid7.py#L262
+            bits = struct.unpack(">IHHHHI", self.id.bytes)
+            whole_secs = (bits[0] << 4) + (bits[1] >> 12)
+            frac_binary = ((bits[1] & 0x0FFF) << 26) + ((bits[2] & 0x0FFF) << 14) + (bits[3] & 0x3FFF)
+            frac_ns, _ = divmod(frac_binary * 1_000_000_000, 1 << 38)
+            epoch_ns = whole_secs * 1_000_000_000 + frac_ns
+
+            timestamp = epoch_ns / 1_000_000_000
+
+            created_at = datetime.fromtimestamp(timestamp, tz=get_current_timezone())
+
+        return created_at
 
 
 class TimeStampedModel(models.Model):
@@ -35,11 +75,6 @@ class TimeStampedModel(models.Model):
 class BaseModel(DirtyFieldsMixin, TimeStampedModel, UUIDModel):
     class Meta:
         abstract = True
-
-    # TODO: Try to make use of GeneratedField
-    # TODO: Use this method to replace created_at fieldd
-    def get_created_at_from_uuid(self):
-        return uuid_to_datetime(self.id)
 
     def save_dirty_fields(self):
         """
