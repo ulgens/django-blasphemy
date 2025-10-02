@@ -8,7 +8,7 @@ on:
 
 env:
   PYTHON_VERSION: 3.14.0rc2
-  UV_VERSION: 0.8.17
+  UV_VERSION: 0.8.22
   PREK_VERSION: 0.2.1
 
 jobs:
