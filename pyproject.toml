@@ -26,6 +26,8 @@ dependencies = [
     # Short answer: We don't need geocoder, carrier and timezone info
     "django-phonenumber-field[phonenumberslite]==8.2.0",
     "django-removals==1.0.9",
+    # TODO: Consider moving to dev dependencies
+    "django-watchfiles==1.4.0",
     "djangorestframework==3.16.1",
     "drf-spectacular==0.28",
     "flower==2.0.1",
