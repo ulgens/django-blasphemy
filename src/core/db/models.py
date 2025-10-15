@@ -8,6 +8,8 @@ from django.utils.timezone import get_current_timezone
 
 __all__ = ("BaseModel",)
 
+NANOSECONDS_PER_SECOND = 1_000_000_000
+
 
 # TODO:
 #    * Make use of db_default: https://docs.djangoproject.com/en/dev/ref/models/fields/#db-default
@@ -53,10 +55,10 @@ class UUIDModel(models.Model):
             bits = struct.unpack(">IHHHHI", self.id.bytes)
             whole_secs = (bits[0] << 4) + (bits[1] >> 12)
             frac_binary = ((bits[1] & 0x0FFF) << 26) + ((bits[2] & 0x0FFF) << 14) + (bits[3] & 0x3FFF)
-            frac_ns, _ = divmod(frac_binary * 1_000_000_000, 1 << 38)
-            epoch_ns = whole_secs * 1_000_000_000 + frac_ns
+            frac_ns, _ = divmod(frac_binary * NANOSECONDS_PER_SECOND, 1 << 38)
+            epoch_ns = whole_secs * NANOSECONDS_PER_SECOND + frac_ns
 
-            timestamp = epoch_ns / 1_000_000_000
+            timestamp = epoch_ns / NANOSECONDS_PER_SECOND
 
             created_at = datetime.fromtimestamp(timestamp, tz=get_current_timezone())
 
