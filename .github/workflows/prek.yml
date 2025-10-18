@@ -7,7 +7,7 @@ on:
   pull_request: ~
 
 env:
-  PYTHON_VERSION: 3.14.0rc2
+  PYTHON_VERSION: 3.14.0
   UV_VERSION: 0.9.3
   PREK_VERSION: 0.2.9
 
