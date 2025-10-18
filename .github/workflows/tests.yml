@@ -21,7 +21,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:18.0-alpine3.21@sha256:1462de31d2f24b925452f1570a4e6c16f968e44c1f2454f5a83b6e2c7e9628a2
+        image: postgres:18.0-alpine3.21@sha256:e767c63ea09dd3b8513ff219fa6f66bd1a6c342fcd73a09a5bb19e215363c0ca
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -29,7 +29,7 @@ jobs:
         ports:
         - 5432:5432
       redis:
-        image: redis:8.0.3-alpine3.21@sha256:25c0ae32c6c2301798579f5944af53729766a18eff5660bbef196fc2e6214a9c
+        image: redis:8.0.4-alpine3.21@sha256:c33b0a1a99597b333dbf4ddb6be24630f74d7eaa9d6387a741b537ef8e482719
         ports:
         - 6379:6379
 
@@ -38,7 +38,7 @@ jobs:
       name: Checkout
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      uses: astral-sh/setup-uv@eb1897b8dc4b5d5bfe39a428a8f2304605e0983c # v7.0.0
+      uses: astral-sh/setup-uv@3259c6206f993105e3a61b142c2d97bf4b9ef83d # v7.1.0
       with:
         # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
         enable-cache: true
