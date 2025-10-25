@@ -20,6 +20,9 @@
     // TODO: Revisit - reconsider this preset
     ":semanticPrefixFixDepsChoreOthers",
 
+    // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
+    "customManagers:githubActionsVersions",
+
     // https://docs.renovatebot.com/presets-docker/#dockerpindigests
     "docker:pinDigests",
 
