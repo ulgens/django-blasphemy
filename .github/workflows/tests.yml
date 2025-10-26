@@ -40,7 +40,7 @@ jobs:
       name: Checkout
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      uses: astral-sh/setup-uv@2ddd2b9cb38ad8efd50337e8ab201519a34c9f24 # v7.1.1
+      uses: astral-sh/setup-uv@85856786d1ce8acfbcc2f13a5f3fbd6b938f9f41 # v7.1.2
       with:
         # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
         enable-cache: true
