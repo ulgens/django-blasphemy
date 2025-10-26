@@ -10,9 +10,9 @@ on:
   pull_request: ~
 
 env:
-    # renovate: datasource=python-version depName: python
+    # renovate: datasource=python-version depName=python
     PYTHON_VERSION: 3.14.0
-    # renovate: datasource=pypi depName: uv
+    # renovate: datasource=pypi depName=uv
     UV_VERSION: 0.9.3
 
 jobs:
