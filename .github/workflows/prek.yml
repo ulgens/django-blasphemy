@@ -12,7 +12,7 @@ env:
   # renovate: datasource=pypi depName=uv
   UV_VERSION: 0.9.5
   # renovate: datasource=pypi depName=prek
-  PREK_VERSION: 0.2.11
+  PREK_VERSION: 0.2.12
 
 jobs:
   run-prek:
