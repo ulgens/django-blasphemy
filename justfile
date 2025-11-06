@@ -43,6 +43,11 @@ shell:
 init_data:
     {{ DJANGO_CMD }} python manage.py init_data --dev
 
+# Report test coverage
+[group("django")]
+coverage *ARGS:
+    {{ DJANGO_CMD }} coverage run manage.py test --shuffle --parallel=auto {{ ARGS }} && coverage report && coverage xml
+
 # Run Django tests
 [group("django")]
 test *ARGS:

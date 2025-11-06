@@ -69,4 +69,11 @@ jobs:
       run: |
         uv run python manage.py wait_for_db
         uv run python manage.py wait_for_cache
-        uv run python manage.py test --parallel --shuffle
+        uv run coverage run manage.py test --parallel --shuffle
+        uv run coverage report
+        uv run coverage xml
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v5.5.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
