@@ -46,6 +46,7 @@ digraph {
 	"auth/0012_alter_user_first_name_max_length" [label="auth/0012_alter_user_first_name_max_length"]
 	"contenttypes/0001_initial" [label="contenttypes/0001_initial"]
 	"contenttypes/0002_remove_content_type_name" [label="contenttypes/0002_remove_content_type_name"]
+	"debug_toolbar/0001_initial" [label="debug_toolbar/0001_initial"]
 	"sessions/0001_initial" [label="sessions/0001_initial"]
 	"snippets/0001_initial" [label="snippets/0001_initial"]
 	"snippets/0002_alter_snippet_language" [label="snippets/0002_alter_snippet_language"]
