@@ -13,7 +13,7 @@ env:
     # renovate: datasource=python-version depName=python
     PYTHON_VERSION: 3.14.0
     # renovate: datasource=pypi depName=uv
-    UV_VERSION: 0.9.8
+    UV_VERSION: 0.9.13
 
 jobs:
   run-django-tests:
