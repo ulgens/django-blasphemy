@@ -53,6 +53,14 @@
       "abandonmentThreshold": "1 year"
     },
     {
+      "matchPackageNames": ["uv"],
+      "groupName": "uv",
+    },
+    {
+      "matchPackageNames": ["ruff"],
+      "groupName": "ruff",
+    },
+    {
       "matchCategories": [
         "ci",
       ],
