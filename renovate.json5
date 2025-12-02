@@ -85,7 +85,7 @@
       "groupName": "uv",
     },
     {
-      "matchPackageNames": ["ruff"],
+      "matchPackageNames": ["ruff", "ruff-pre-commit"],
       "groupName": "ruff",
     },
   ],
