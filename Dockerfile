@@ -11,7 +11,7 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
         # required by gitpython
         git \
         # graph_models command
-        graphviz \
+        gcc graphviz graphviz-dev \
         # For development purposes
         just nano
 
