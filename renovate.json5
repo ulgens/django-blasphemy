@@ -53,14 +53,6 @@
       "abandonmentThreshold": "1 year"
     },
     {
-      "matchPackageNames": ["uv"],
-      "groupName": "uv",
-    },
-    {
-      "matchPackageNames": ["ruff"],
-      "groupName": "ruff",
-    },
-    {
       "matchCategories": [
         "ci",
       ],
@@ -87,7 +79,15 @@
       ],
       "groupName": "Python Dependencies",
       "enabled": true
-    }
+    },
+    {
+      "matchPackageNames": ["uv"],
+      "groupName": "uv",
+    },
+    {
+      "matchPackageNames": ["ruff"],
+      "groupName": "ruff",
+    },
   ],
   "pre-commit": {
     "enabled": true,
