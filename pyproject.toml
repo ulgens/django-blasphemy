@@ -13,7 +13,7 @@ classifiers = [
 dependencies = [
     "celery[redis]==5.6.0",
     "django==6.0",
-    "django-admin-interface==0.31.0",
+    "django-admin-interface==0.31.1",
     "django-click==2.4.1",
     "django-debug-toolbar==6.1.0",
     "django-dirtyfields==1.9.8",
@@ -34,10 +34,10 @@ dependencies = [
     "gitpython==3.1.45",
     "gunicorn==23",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-    "psycopg[binary]==3.3.0",
+    "psycopg[binary]==3.3.1",
     "pygments==2.19.2",
     "rich==14.2.0",
-    "sentry-sdk==2.46.0",
+    "sentry-sdk==2.47.0",
     "whitenoise==6.11.0",
 ]
 
@@ -48,7 +48,7 @@ dev = [
     "django-upgrade==1.29.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
-    "ipython==9.7.0",
+    "ipython==9.8.0",
     "parameterized==0.9",
     "prek==0.2.19",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
