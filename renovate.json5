@@ -89,6 +89,10 @@
       "groupName": "uv",
     },
     {
+      "matchPackageNames": ["prek"],
+      "groupName": "prek",
+    },
+    {
       "matchPackageNames": ["ruff", "astral-sh/ruff-pre-commit"],
       "groupName": "ruff",
     },
