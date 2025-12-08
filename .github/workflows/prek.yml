@@ -10,7 +10,7 @@ env:
   # renovate: datasource=python-version depName=python
   PYTHON_VERSION: 3.14.1
   # renovate: datasource=pypi depName=uv
-  UV_VERSION: 0.9.15
+  UV_VERSION: 0.9.16
   # renovate: datasource=pypi depName=prek
   PREK_VERSION: 0.2.19
 
@@ -26,7 +26,7 @@ jobs:
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
       id: setup-uv
-      uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244 # v7.1.4
+      uses: astral-sh/setup-uv@ed21f2f24f8dd64503750218de024bcf64c7250a # v7.1.5
       with:
         enable-cache: true
         python-version: ${{ env.PYTHON_VERSION }}
