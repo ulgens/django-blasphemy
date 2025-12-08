@@ -49,7 +49,9 @@
   },
   "packageRules": [
     {
-      "matchPackageNames": ["*"],
+      "matchPackageNames": [
+        "*"
+      ],
       "abandonmentThreshold": "1 year"
     },
     {
@@ -78,11 +80,16 @@
     },
     {
       "groupName": "prek",
-      "matchPackageNames": ["prek"],
+      "matchPackageNames": [
+        "prek"
+      ],
     },
     {
       "groupName": "ruff",
-      "matchPackageNames": ["ruff", "astral-sh/ruff-pre-commit"],
+      "matchPackageNames": [
+        "ruff",
+        "astral-sh/ruff-pre-commit"
+      ],
     },
     {
       "groupName": "uv",
