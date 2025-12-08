@@ -53,44 +53,44 @@
       "abandonmentThreshold": "1 year"
     },
     {
+      "groupName": "CI Dependencies",
       "matchCategories": [
         "ci",
       ],
-      "groupName": "CI Dependencies",
     },
     {
+      "groupName": "Docker Dependencies",
       "matchCategories": [
         "docker",
       ],
-      "groupName": "Docker Dependencies",
     },
     {
+      "groupName": "pre-commit Dependencies",
       "matchManagers": [
         "pre-commit",
       ],
-      "groupName": "pre-commit Dependencies",
     },
     {
+      "groupName": "Python Dependencies",
       "matchCategories": [
         "python",
       ],
-      "groupName": "Python Dependencies",
     },
     {
-      "matchPackageNames": ["prek"],
       "groupName": "prek",
+      "matchPackageNames": ["prek"],
     },
     {
-      "matchPackageNames": ["ruff", "astral-sh/ruff-pre-commit"],
       "groupName": "ruff",
+      "matchPackageNames": ["ruff", "astral-sh/ruff-pre-commit"],
     },
     {
+      "groupName": "uv",
       "matchPackageNames": [
         "uv",
         "astral-sh/setup-uv",
         "ghcr.io/astral-sh/uv",
       ],
-      "groupName": "uv",
     }
   ],
   "pre-commit": {
