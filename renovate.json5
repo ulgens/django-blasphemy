@@ -81,7 +81,11 @@
       "enabled": true
     },
     {
-      "matchPackageNames": ["uv"],
+      "matchPackageNames": [
+        "uv",
+        "astral-sh/setup-uv",
+        "ghcr.io/astral-sh/uv",
+      ],
       "groupName": "uv",
     },
     {
