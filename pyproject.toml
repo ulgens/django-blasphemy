@@ -50,7 +50,7 @@ dev = [
     "ipdb==0.13.13",
     "ipython==9.8.0",
     "parameterized==0.9",
-    "prek==0.2.19",
+    "prek==0.2.20",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
     "ruff==0.14.7",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
