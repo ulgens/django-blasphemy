@@ -41,6 +41,7 @@
     // https://docs.renovatebot.com/presets-workarounds/#workaroundsall
     "workarounds:all",
   ],
+  "abandonmentThreshold": "1 year",
   "labels": [
     "dependencies",
   ],
@@ -48,12 +49,6 @@
     "enabled": true,
   },
   "packageRules": [
-    {
-      "matchPackageNames": [
-        "*"
-      ],
-      "abandonmentThreshold": "1 year"
-    },
     {
       "groupName": "CI Dependencies",
       "matchCategories": [
