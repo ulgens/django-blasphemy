@@ -89,7 +89,7 @@
       "groupName": "uv",
     },
     {
-      "matchPackageNames": ["ruff", "ruff-pre-commit"],
+      "matchPackageNames": ["ruff", "astral-sh/ruff-pre-commit"],
       "groupName": "ruff",
     },
   ],
