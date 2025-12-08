@@ -81,14 +81,6 @@
       "enabled": true
     },
     {
-      "matchPackageNames": [
-        "uv",
-        "astral-sh/setup-uv",
-        "ghcr.io/astral-sh/uv",
-      ],
-      "groupName": "uv",
-    },
-    {
       "matchPackageNames": ["prek"],
       "groupName": "prek",
     },
@@ -96,6 +88,14 @@
       "matchPackageNames": ["ruff", "astral-sh/ruff-pre-commit"],
       "groupName": "ruff",
     },
+    {
+      "matchPackageNames": [
+        "uv",
+        "astral-sh/setup-uv",
+        "ghcr.io/astral-sh/uv",
+      ],
+      "groupName": "uv",
+    }
   ],
   "pre-commit": {
     "enabled": true,
