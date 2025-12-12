@@ -72,6 +72,9 @@
       "matchCategories": [
         "python",
       ],
+    },
+    {
+      "groupName": "Python Dependencies",
       "matchPackageNames": [
         "prek",
         "ruff", "astral-sh/ruff-pre-commit",
