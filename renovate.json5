@@ -72,12 +72,11 @@
       "matchCategories": [
         "python",
       ],
-    },
-    {
-      "groupName": "prek",
       "matchPackageNames": [
-        "prek"
-      ],
+        "prek",
+        "ruff", "astral-sh/ruff-pre-commit",
+        "uv", "astral-sh/setup-uv", "ghcr.io/astral-sh/uv",
+      ]
     },
     {
       "groupName": "Python",
@@ -85,21 +84,7 @@
         "python",
       ],
     },
-    {
-      "groupName": "ruff",
-      "matchPackageNames": [
-        "ruff",
-        "astral-sh/ruff-pre-commit"
-      ],
-    },
-    {
-      "groupName": "uv",
-      "matchPackageNames": [
-        "uv",
-        "astral-sh/setup-uv",
-        "ghcr.io/astral-sh/uv",
-      ],
-    }
+
   ],
   "pre-commit": {
     "enabled": true,
