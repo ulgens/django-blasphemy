@@ -80,6 +80,12 @@
       ],
     },
     {
+      "groupName": "Python",
+      "matchPackageNames": [
+        "python",
+      ],
+    },
+    {
       "groupName": "ruff",
       "matchPackageNames": [
         "ruff",
