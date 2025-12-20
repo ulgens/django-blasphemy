@@ -6,14 +6,6 @@ on:
       - main
   pull_request: ~
 
-env:
-  # renovate: datasource=python-version depName=python
-  PYTHON_VERSION: 3.14.2
-  # renovate: datasource=pypi depName=uv
-  UV_VERSION: 0.9.17
-  # renovate: datasource=pypi depName=prek
-  PREK_VERSION: 0.2.21
-
 jobs:
   run-prek:
     name: prek run --all-files
@@ -24,39 +16,5 @@ jobs:
     - name: Checkout
       uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      id: setup-uv
-      uses: astral-sh/setup-uv@ed21f2f24f8dd64503750218de024bcf64c7250a # v7.1.5
-      with:
-        enable-cache: true
-        python-version: ${{ env.PYTHON_VERSION }}
-        version: ${{ env.UV_VERSION }}
-
-    - name: Cache prek
-      id: cache-precommit
-      uses: actions/cache@a7833574556fa59680c1b7cb190c1735db73ebf0 # v5.0.0
-      with:
-        path: ~/.cache/prek
-        key: >
-          prek-
-          ${{ runner.os }}-
-          ${{ env.UV_VERSION }}-
-          ${{ env.PYTHON_VERSION }}-
-          ${{ env.PRE_COMMIT_VERSION }}-
-          ${{ hashFiles('.pre-commit-config.yaml') }}
-        restore-keys: >
-          prek-
-          ${{ runner.os }}-
-          ${{ env.UV_VERSION }}-
-          ${{ env.PYTHON_VERSION }}-
-          ${{ env.PRE_COMMIT_VERSION }}-
-
     - name: Run prek
-      # TODO:
-      #   Try to separate the installation of prek
-      #   without hurting the cache.
-      run: >
-        uv run
-        --no-sync
-        --with prek==${{ env.PREK_VERSION }}
-        prek run --all-files
+      uses: j178/prek-action@v1.0.11
