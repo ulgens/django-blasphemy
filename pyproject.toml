@@ -13,7 +13,7 @@ classifiers = [
 dependencies = [
     "celery[redis]==5.6.0",
     "django==6.0",
-    "django-admin-interface==0.31.1",
+    "django-admin-interface==0.32.0",
     "django-click==2.4.1",
     "django-debug-toolbar==6.1.0",
     "django-dirtyfields==1.9.8",
@@ -25,7 +25,7 @@ dependencies = [
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
     # Short answer: We don't need geocoder, carrier and timezone info
     "django-phonenumber-field[phonenumberslite]==8.4.0",
-    "django-removals==1.1.5",
+    "django-removals==1.1.6",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
     "djangorestframework==3.16.1",
@@ -37,7 +37,7 @@ dependencies = [
     "psycopg[binary]==3.3.2",
     "pygments==2.19.2",
     "rich==14.2.0",
-    "sentry-sdk==2.47.0",
+    "sentry-sdk==2.48.0",
     "whitenoise==6.11.0",
 ]
 
@@ -50,9 +50,9 @@ dev = [
     "ipdb==0.13.13",
     "ipython==9.8.0",
     "parameterized==0.9",
-    "prek==0.2.21",
+    "prek==0.2.23",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.14.9",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "ruff==0.14.10",               # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
     "wat-inspector==0.4.3",
     "xkcdpass==1.20.0",
