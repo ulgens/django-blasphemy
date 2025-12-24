@@ -18,15 +18,10 @@ repos:
             "--max-supported-python", "3.14",
         ]
 
-# Inspired from https://til.unessa.net/git/pre-commit-hook/
--   repo: local
+-   repo: https://github.com/ulgens/uv-lock-check
+    rev: v0.1.0
     hooks:
     -   id: uv-lock-check
-        name: uv lock --check
-        entry: uv lock --check
-        language: python
-        files: '^(pyproject.toml|uv.lock)$'
-        pass_filenames: false
         additional_dependencies:
           - uv==0.9.18
 
