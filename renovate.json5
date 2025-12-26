@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     // https://github.com/ulgens/renovate-presets
-    "github>ulgens/renovate-presets:all.json5",
+    "github>ulgens/renovate-presets:all.json5#v0.0.2",
 
     // https://docs.renovatebot.com/presets-default/#assignandreviewarg0
     ":assignAndReview(ulgens)"
