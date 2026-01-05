@@ -1,52 +1,59 @@
+---
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
-    -   id: check-case-conflict
-    -   id: check-merge-conflict
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
 
--   repo: https://github.com/tox-dev/pyproject-fmt
+  - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.11.1
     hooks:
-    -   id: pyproject-fmt
-        args: [
-            "--indent", "4",
-            "--keep-full-version",
-            "--max-supported-python", "3.14",
-        ]
+      - id: pyproject-fmt
+        args: [--indent, '4', --keep-full-version, --max-supported-python, '3.14']
 
--   repo: https://github.com/ulgens/uv-lock-check
+  - repo: https://github.com/ulgens/uv-lock-check
     rev: v0.1.0
     hooks:
-    -   id: uv-lock-check
+      - id: uv-lock-check
         additional_dependencies:
           - uv==0.9.18
 
--   repo: https://github.com/astral-sh/ruff-pre-commit
+  - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.10
     hooks:
-    -   id: ruff-check
+      - id: ruff-check
         name: ruff lint
-        args: ["--fix"]
-    -   id: ruff-format
+        args: [--fix]
+      - id: ruff-format
         name: ruff format
 
--   repo: https://github.com/adamchainz/django-upgrade
+  - repo: https://github.com/adamchainz/django-upgrade
     rev: 1.29.1
     hooks:
-    -   id: django-upgrade
+      - id: django-upgrade
 
--   repo: https://github.com/instrumentl/pre-commit-just
+  - repo: https://github.com/instrumentl/pre-commit-just
     rev: v0.1
     hooks:
-    -   id: format-justfile
+      - id: format-justfile
         name: format justfile
 
--   repo: https://github.com/codespell-project/codespell
+    # TODO:
+    #   Consider using with yamllint
+    #   https://github.com/jumanjihouse/pre-commit-hook-yamlfmt?tab=readme-ov-file#combine-with-yamllint
+  - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+    rev: 0.2.3
+    hooks:
+      - id: yamlfmt
+        # Matching config for `prek sample-config` output
+        args: [--mapping, '2', --sequence, '4', --offset, '2']
+
+  - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
-    -   id: codespell
-        args: ["--ignore-words-list", "ABL, wast"]
+      - id: codespell
+        args: [--ignore-words-list, 'ABL, wast']
