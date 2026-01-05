@@ -45,6 +45,20 @@ repos:
     -   id: format-justfile
         name: format justfile
 
+-   repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.31.0
+    hooks:
+    # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
+    -   id: check-jsonschema
+        name: "Check GitHub Workflows set timeout-minutes"
+        files: ^\.github/workflows/[^/]+$
+        types: [ yaml ]
+        args: [ "--builtin-schema", "github-workflows-require-timeout" ]
+    -   id: check-github-workflows
+    -   id: check-renovate
+        additional_dependencies:
+          - pyjson5==2.0.0
+
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
