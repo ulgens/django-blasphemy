@@ -45,6 +45,16 @@ repos:
     -   id: format-justfile
         name: format justfile
 
+    # TODO:
+    #   Consider using with yamllint
+    #   https://github.com/jumanjihouse/pre-commit-hook-yamlfmt?tab=readme-ov-file#combine-with-yamllint
+-   repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+    rev: 0.2.3
+    hooks:
+    -   id: yamlfmt
+        # Matching config for `prek sample-config` output
+        args: [--mapping, '2', --sequence, '4', --offset, '2']
+
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
