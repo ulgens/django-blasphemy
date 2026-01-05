@@ -1,3 +1,4 @@
+---
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -22,7 +23,7 @@ repos:
     rev: v0.14.11
     hooks:
     -   id: ruff-check
-        args: ["--fix"]
+        args: [--fix]
     -   id: ruff-format
 
 -   repo: https://github.com/adamchainz/django-upgrade
@@ -41,16 +42,16 @@ repos:
     hooks:
     # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
     -   id: check-jsonschema
-        name: "Check GitHub Workflows set timeout-minutes"
+        name: Check GitHub Workflows set timeout-minutes
         files: ^\.github/workflows/[^/]+$
-        types: [ yaml ]
-        args: [ "--builtin-schema", "github-workflows-require-timeout" ]
+        types: [yaml]
+        args: [--builtin-schema, github-workflows-require-timeout]
     -   id: check-github-workflows
     -   id: check-renovate
         files: ^renovate.json5$
         language: python
         additional_dependencies:
-          - pyjson5==2.0.0
+        -   pyjson5==2.0.0
 
 -   repo: https://github.com/renovatebot/pre-commit-hooks
     rev: 42.78.2
@@ -63,7 +64,7 @@ repos:
     rev: v1.20.0
     hooks:
     -   id: zizmor
-        args: ["--no-progress", "--persona=auditor"]
+        args: [--no-progress, --persona=auditor]
 
     # TODO:
     #   Consider using with yamllint
@@ -74,11 +75,10 @@ repos:
     -   id: yamlfmt
         # TODO: Consider applying to all YAML files
         files: .pre-commit-config.yaml
-        # Matching config for `prek sample-config` output
-        args: [--mapping, '2', --sequence, '4', --offset, '2']
+        args: [--mapping, '0', --sequence, '4', --offset, '0']
 
 -   repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
     -   id: codespell
-        args: ["--ignore-words-list", "ABL, wast"]
+        args: [--ignore-words-list, 'ABL, wast']
