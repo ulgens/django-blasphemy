@@ -9,6 +9,8 @@ on:
       - main
   pull_request: ~
 
+permissions: {}
+
 env:
     # renovate: datasource=python-version depName=python
     PYTHON_VERSION: 3.14.2
@@ -38,6 +40,8 @@ jobs:
     steps:
     - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       name: Checkout
+      with:
+        persist-credentials: false
 
     - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
       uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867 # v7.1.6
