@@ -46,7 +46,7 @@ repos:
         name: format justfile
 
 -   repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.31.0
+    rev: 0.36.0
     hooks:
     # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
     -   id: check-jsonschema
