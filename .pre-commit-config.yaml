@@ -22,6 +22,7 @@ repos:
     rev: v0.1.0
     hooks:
     -   id: uv-lock-check
+        language: python
         additional_dependencies:
           - uv==0.9.18
 
@@ -56,6 +57,7 @@ repos:
         args: [ "--builtin-schema", "github-workflows-require-timeout" ]
     -   id: check-github-workflows
     -   id: check-renovate
+        language: python
         additional_dependencies:
           - pyjson5==2.0.0
 
