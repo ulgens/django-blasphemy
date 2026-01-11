@@ -62,3 +62,8 @@ dev = [
 package = false
 # The earliest version that supports the current lock file revision
 required-version = ">=0.8.4"
+
+[tool.pyproject-fmt]
+indent = 4
+keep_full_version = true
+max_supported_python = "3.14"
