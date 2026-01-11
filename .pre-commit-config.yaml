@@ -13,13 +13,10 @@ repos:
     hooks:
     -   id: pyproject-fmt
 
--   repo: https://github.com/ulgens/uv-lock-check
-    rev: v0.1.0
+-   repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.9.24
     hooks:
-    -   id: uv-lock-check
-        language: python
-        additional_dependencies:
-          - uv==0.9.24
+    -   id: uv-lock
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.11
