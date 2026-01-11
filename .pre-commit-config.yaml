@@ -24,7 +24,7 @@ repos:
     -   id: uv-lock-check
         language: python
         additional_dependencies:
-          - uv==0.9.18
+          - uv==0.9.24
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.11
