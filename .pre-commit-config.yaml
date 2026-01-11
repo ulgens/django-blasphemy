@@ -25,10 +25,8 @@ repos:
     rev: v0.14.11
     hooks:
     -   id: ruff-check
-        name: ruff lint
         args: ["--fix"]
     -   id: ruff-format
-        name: ruff format
 
 -   repo: https://github.com/adamchainz/django-upgrade
     rev: 1.29.1
