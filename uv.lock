@@ -313,7 +313,7 @@ dev = [
     { name = "ruff", specifier = "==0.14.11" },
     { name = "tblib", specifier = "==3.2.2" },
     { name = "wat-inspector", specifier = "==0.4.3" },
-    { name = "xkcdpass", specifier = "==1.20.0" },
+    { name = "xkcdpass", specifier = "==1.30.0" },
 ]
 
 [[package]]
@@ -1351,6 +1351,6 @@ wheels = [
 
 [[package]]
 name = "xkcdpass"
-version = "1.20.0"
+version = "1.30.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/13/14/14e01bd10d69fda3bd739f5f8b91a27905e5d75fd85165e156eec912e21f/xkcdpass-1.20.0.tar.gz", hash = "sha256:b5abfd7d2b59cdda59f937fb22210ac4649ad0d2e09e1f87bfe74a54e23ad18a", size = 2722027, upload-time = "2025-03-03T23:16:25.391Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/18/98/bdd7df66d995eab38887a8eb0afb023750b0c590eb7d8545a7b722f683ef/xkcdpass-1.30.0.tar.gz", hash = "sha256:8a3a6b60255da40d0e5c812458280278c82d2c1cb90e48afbd6777dbbf8795c3", size = 2763380, upload-time = "2026-01-11T16:09:15.567Z" }
