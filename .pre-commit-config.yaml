@@ -51,6 +51,13 @@ repos:
         additional_dependencies:
           - pyjson5==2.0.0
 
+-   repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 42.78.2
+    hooks:
+    -   id: renovate-config-validator
+        files: ^renovate.json5$
+        args: [--strict]
+
 -   repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: v1.20.0
     hooks:
