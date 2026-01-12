@@ -1,7 +1,40 @@
+// Python related settings
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    // https://github.com/ulgens/renovate-presets
-    "github>ulgens/renovate-presets:all.json5#v0.0.3",
+  "packageRules": [
+    {
+      "groupName": "Python",
+      "matchPackageNames": ["python"],
+    },
+    {
+      "groupName": "Python Dependencies",
+      "matchCategories": ["python"],
+    },
+    // Include Python packages with custom definitions
+    {
+      "groupName": "Python Dependencies",
+      "matchDatasources": ["pypi"]
+    },
+    // Include Python & Python-related dependencies from non-PyPI sources
+    {
+      "groupName": "Python Dependencies",
+      "matchPackageNames": [
+        // Ruff related dependencies
+        // git hooks
+        // https://github.com/astral-sh/ruff-pre-commit
+        "astral-sh/ruff-pre-commit",
+
+        // uv related dependencies
+        // Docker image
+        // https://docs.astral.sh/uv/guides/integration/docker/
+        "ghcr.io/astral-sh/uv",
+        // GitHub Actions layer
+        // https://github.com/astral-sh/setup-uv
+        "astral-sh/setup-uv",
+        // git hooks
+        // https://github.com/astral-sh/uv-pre-commit
+        "astral-sh/uv-pre-commit",
+      ],
+    },
   ],
 }
