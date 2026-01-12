@@ -17,7 +17,7 @@ concurrency:
 
 env:
   # renovate: datasource=python-version depName=python
-  PYTHON_VERSION: 3.14.3
+  PYTHON_VERSION: 3.15.0a3
   # renovate: datasource=pypi depName=uv
   UV_VERSION: 0.10.2
 
@@ -25,7 +25,7 @@ jobs:
   run-django-tests:
     name: python manage.py test --parallel --shuffle
     runs-on: ubuntu-24.04
-    timeout-minutes: 1
+    timeout-minutes: 5
 
     services:
       postgres:
@@ -57,6 +57,11 @@ jobs:
           # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#python-version
           python-version: ${{ env.PYTHON_VERSION }}
           version: ${{ env.UV_VERSION }}
+
+      - name: Install 3.15 dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gcc libc6-dev zlib1g-dev libjpeg-dev
 
       - name: Install packages
         run: uv sync --frozen --no-install-project

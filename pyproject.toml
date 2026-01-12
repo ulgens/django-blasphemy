@@ -16,6 +16,7 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
 ]
@@ -36,14 +37,17 @@ dependencies = [
     "django-phonenumber-field[phonenumberslite]==8.4.0",
     "django-removals==1.1.6",
     # TODO: Consider moving to dev dependencies
-    "django-watchfiles==1.4.0",
+    # django-watchfiles > watchfiles is not compatible with Python 3.15 yet
+    # "django-watchfiles==1.4.0",
     "djangorestframework==3.16.1",
-    "drf-spectacular==0.29.0",
+    # drf-spectacular > jsonchema > rdps-py is not 3.15 compatible yet
+    # https://github.com/crate-py/rpds/pull/211
+    # "drf-spectacular==0.29.0",
     "flower==2.0.1",
     "gitpython==3.1.46",
     "gunicorn==25.1.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-    "psycopg[binary]==3.3.2",
+    "psycopg==3.3.2",
     "pygments==2.19.2",
     "rich==14.3.2",
     "sentry-sdk==2.52.0",
@@ -73,4 +77,4 @@ package = false
 [tool.pyproject-fmt]
 indent = 4
 keep_full_version = true
-max_supported_python = "3.14"
+max_supported_python = "3.15"
