@@ -2,7 +2,7 @@
 # * https://github.com/astral-sh/uv-docker-example/blob/main/Dockerfile
 # * https://github.com/wemake-services/wemake-django-template/blob/master/%7B%7Bcookiecutter.project_name%7D%7D/docker/django/Dockerfile
 
-FROM python:3.14.3-slim-trixie@sha256:9006fc63e3eaedc00ebc81193c99528575a2f9b9e3fb36d95e94814c23f31f47
+FROM python:3.15.0a6-slim-trixie
 
 RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
     apt update && \
@@ -14,6 +14,11 @@ RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/
         graphviz \
         # For development purposes
         just nano
+
+RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
+    apt install -y --no-install-recommends \
+      # Required for 3.15 build
+      gcc libc6-dev zlib1g-dev libjpeg-dev
 
 ENV PYTHONBREAKPOINT="ipdb.set_trace" \
     PYTHONFAULTHANDLER=1 \
