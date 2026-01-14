@@ -24,5 +24,10 @@ jobs:
       with:
         persist-credentials: false
 
+    - name: Install go (for checkmake)
+      uses: actions/setup-go@v6.2.0
+      with:
+        go-version: 1.25.5
+
     - name: Run prek
       uses: j178/prek-action@91fd7d7cf70ae1dee9f4f44e7dfa5d1073fe6623 # v1.0.11
