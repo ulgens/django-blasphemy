@@ -70,3 +70,9 @@ repos:
     hooks:
     -   id: codespell
         args: ["--ignore-words-list", "ABL, wast"]
+
+-   repo: https://github.com/checkmake/checkmake.git
+    # Or another commit hash or version
+    rev: v0.3.2
+    hooks:
+    -   id: checkmake
