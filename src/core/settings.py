@@ -70,8 +70,8 @@ THIRD_PARTY_APPS = [
     "django_migration_vis",
     # TODO: Consider making "django_watchfiles" dev-only
     # TODO: Add benchmark details - reasoning: https://github.com/adamchainz/django-watchfiles/issues/174
-    "django_watchfiles",
-    "drf_spectacular",
+    # "django_watchfiles",
+    # "drf_spectacular",
     "rest_framework",
 ]
 
