@@ -1,77 +1,77 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
-    -   id: check-case-conflict
-    -   id: check-merge-conflict
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
 
--   repo: https://github.com/tox-dev/pyproject-fmt
+  - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.11.1
     hooks:
-    -   id: pyproject-fmt
+      - id: pyproject-fmt
 
--   repo: https://github.com/astral-sh/uv-pre-commit
+  - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.9.24
     hooks:
-    -   id: uv-lock
+      - id: uv-lock
 
--   repo: https://github.com/astral-sh/ruff-pre-commit
+  - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.11
     hooks:
-    -   id: ruff-check
+      - id: ruff-check
         args: ["--fix"]
-    -   id: ruff-format
+      - id: ruff-format
 
--   repo: https://github.com/adamchainz/django-upgrade
+  - repo: https://github.com/adamchainz/django-upgrade
     rev: 1.29.1
     hooks:
-    -   id: django-upgrade
+      - id: django-upgrade
 
--   repo: https://github.com/instrumentl/pre-commit-just
+  - repo: https://github.com/instrumentl/pre-commit-just
     rev: v0.1
     hooks:
-    -   id: format-justfile
+      - id: format-justfile
         name: format justfile
 
--   repo: https://github.com/google/yamlfmt
+  - repo: https://github.com/google/yamlfmt
     rev: v0.19.0
     hooks:
       - id: yamlfmt
 
--   repo: https://github.com/python-jsonschema/check-jsonschema
+  - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.36.0
     hooks:
-    # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
-    -   id: check-jsonschema
+      # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
+      - id: check-jsonschema
         name: "Check GitHub Workflows set timeout-minutes"
         files: ^\.github/workflows/[^/]+$
-        types: [ yaml ]
-        args: [ "--builtin-schema", "github-workflows-require-timeout" ]
-    -   id: check-github-workflows
-    -   id: check-renovate
+        types: [yaml]
+        args: ["--builtin-schema", "github-workflows-require-timeout"]
+      - id: check-github-workflows
+      - id: check-renovate
         files: ^renovate.json5$
         language: python
         additional_dependencies:
           - pyjson5==2.0.0
 
--   repo: https://github.com/renovatebot/pre-commit-hooks
+  - repo: https://github.com/renovatebot/pre-commit-hooks
     rev: 42.78.2
     hooks:
-    -   id: renovate-config-validator
+      - id: renovate-config-validator
         files: ^renovate.json5$
         args: [--strict]
 
--   repo: https://github.com/zizmorcore/zizmor-pre-commit
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: v1.20.0
     hooks:
-    -   id: zizmor
+      - id: zizmor
         args: ["--no-progress", "--persona=auditor"]
 
--   repo: https://github.com/codespell-project/codespell
+  - repo: https://github.com/codespell-project/codespell
     rev: v2.4.1
     hooks:
-    -   id: codespell
+      - id: codespell
         args: ["--ignore-words-list", "ABL, wast"]
