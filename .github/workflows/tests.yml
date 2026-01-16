@@ -16,10 +16,10 @@ concurrency:
   cancel-in-progress: true
 
 env:
-    # renovate: datasource=python-version depName=python
-    PYTHON_VERSION: 3.14.2
-    # renovate: datasource=pypi depName=uv
-    UV_VERSION: 0.9.24
+  # renovate: datasource=python-version depName=python
+  PYTHON_VERSION: 3.14.2
+  # renovate: datasource=pypi depName=uv
+  UV_VERSION: 0.9.24
 
 jobs:
   run-django-tests:
@@ -35,53 +35,53 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
         ports:
-        - 5432:5432
+          - 5432:5432
       redis:
         image: redis:8.0.5-alpine3.21@sha256:862134b1b4ebe820d8b72ab090d30f8868467bc4d7fecd23422efb5596554efc
         ports:
-        - 6379:6379
+          - 6379:6379
 
     steps:
-    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-      name: Checkout
-      with:
-        persist-credentials: false
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8  # v6.0.1
+        name: Checkout
+        with:
+          persist-credentials: false
 
-    - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-      uses: astral-sh/setup-uv@61cb8a9741eeb8a550a1b8544337180c0fc8476b # v7.2.0
-      with:
-        # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
-        enable-cache: true
-        # uv can install Python, no need for actions/setup-python
-        # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#do-i-still-need-actionssetup-python-alongside-setup-uv
-        # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#python-version
-        python-version: ${{ env.PYTHON_VERSION }}
-        version: ${{ env.UV_VERSION }}
+      - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
+        uses: astral-sh/setup-uv@61cb8a9741eeb8a550a1b8544337180c0fc8476b  # v7.2.0
+        with:
+          # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
+          enable-cache: true
+          # uv can install Python, no need for actions/setup-python
+          # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#do-i-still-need-actionssetup-python-alongside-setup-uv
+          # https://github.com/astral-sh/setup-uv?tab=readme-ov-file#python-version
+          python-version: ${{ env.PYTHON_VERSION }}
+          version: ${{ env.UV_VERSION }}
 
-    - name: Install packages
-      run: uv sync --frozen --no-install-project
+      - name: Install packages
+        run: uv sync --frozen --no-install-project
 
-    - name: Run tests
-      working-directory: ./src
-      env:
-        APP_REDIS_URL: "redis://localhost:${{ job.services.redis.ports[6379] }}/1"
-        CELERY_BROKER_URL: ""
-        CELERY_RESULT_BACKEND: ""
-        DATABASE_HOST: "localhost"
-        DATABASE_NAME: "postgres"
-        DATABASE_USER: "postgres"
-        DATABASE_PASSWORD: "postgres"
-        DATABASE_PORT: "${{ job.services.postgres.ports[5432] }}"
-        SECRET_KEY: ""
-        USE_SSL: "false"
-      run: |
-        uv run python manage.py wait_for_db
-        uv run python manage.py wait_for_cache
-        uv run coverage run manage.py test --parallel --shuffle
-        uv run coverage report
-        uv run coverage xml
+      - name: Run tests
+        working-directory: ./src
+        env:
+          APP_REDIS_URL: "redis://localhost:${{ job.services.redis.ports[6379] }}/1"
+          CELERY_BROKER_URL: ""
+          CELERY_RESULT_BACKEND: ""
+          DATABASE_HOST: "localhost"
+          DATABASE_NAME: "postgres"
+          DATABASE_USER: "postgres"
+          DATABASE_PASSWORD: "postgres"
+          DATABASE_PORT: "${{ job.services.postgres.ports[5432] }}"
+          SECRET_KEY: ""
+          USE_SSL: "false"
+        run: |
+          uv run python manage.py wait_for_db
+          uv run python manage.py wait_for_cache
+          uv run coverage run manage.py test --parallel --shuffle
+          uv run coverage report
+          uv run coverage xml
 
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5.5.2
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de  # v5.5.2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
