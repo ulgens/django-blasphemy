@@ -14,12 +14,12 @@ repos:
       - id: pyproject-fmt
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.24
+    rev: 0.9.26
     hooks:
       - id: uv-lock
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.11
+    rev: v0.14.13
     hooks:
       - id: ruff-check
         args: ["--fix"]
