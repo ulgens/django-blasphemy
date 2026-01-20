@@ -47,7 +47,7 @@ services:
       timeout: 10s
 
   mailpit:
-    image: axllent/mailpit:v1.28.2@sha256:28a161f4a39c70671d0fb771a6e7a3abe6d2144c0e2a595ff72767ab63cd14f6
+    image: axllent/mailpit:v1.28.3@sha256:27cfb8893806ed676042a00f4db70325a0d57cc5217349d210b6dd903e1a7e67
     container_name: blasphemy_mailpit
     ports:
       - "8025:8025"
