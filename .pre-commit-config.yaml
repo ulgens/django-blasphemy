@@ -44,6 +44,10 @@ repos:
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.36.1
     hooks:
+      # TODO:
+      #   Consider migration to actionlint
+      #   https://github.com/python-jsonschema/check-jsonschema/issues/586
+      #   https://github.com/rhysd/actionlint
       - id: check-github-workflows
       # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
       - id: check-jsonschema
