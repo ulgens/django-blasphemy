@@ -34,7 +34,6 @@ repos:
     rev: v0.1
     hooks:
       - id: format-justfile
-        name: format justfile
 
   - repo: https://github.com/google/yamlfmt
     rev: v0.21.0
