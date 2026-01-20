@@ -51,11 +51,6 @@ repos:
         types: [yaml]
         args: ["--builtin-schema", "github-workflows-require-timeout"]
       - id: check-github-workflows
-      - id: check-renovate
-        files: ^renovate.json5$
-        language: python
-        additional_dependencies:
-          - pyjson5==2.0.0
 
   - repo: https://github.com/renovatebot/pre-commit-hooks
     rev: 43.0.6
