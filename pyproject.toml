@@ -32,7 +32,7 @@ dependencies = [
     "drf-spectacular==0.29.0",
     "flower==2.0.1",
     "gitpython==3.1.46",
-    "gunicorn==23",
+    "gunicorn==24.1.1",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.2",
     "pygments==2.19.2",
