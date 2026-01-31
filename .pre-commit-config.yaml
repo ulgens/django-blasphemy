@@ -2,10 +2,14 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
+      - id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
+      - id: check-toml
       - id: check-yaml
+      - id: detect-private-key
       - id: end-of-file-fixer
+      - id: no-commit-to-branch
       - id: trailing-whitespace
 
   - repo: https://github.com/tox-dev/pyproject-fmt
