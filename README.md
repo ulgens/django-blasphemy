@@ -1,4 +1,26 @@
+<div align="center">
+
 # django-blasphemy
+
+[![Python](https://img.shields.io/badge/python-3.14-306998?logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/django-6.0-0C4B33?&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-18-0064a5?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/docker-ready-1D63ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+[![prek](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/j178/prek/master/docs/assets/badge-v0.json)](https://github.com/j178/prek)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Renovate](https://img.shields.io/badge/renovate-enabled-328be4?logo=renovate)](https://github.com/renovatebot/renovate)
+
+[![Git Hooks](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/prek.yml?logo=github&label=Git%20Hooks)](https://github.com/ulgens/django-blasphemy/actions/workflows/prek.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/tests.yml?logo=github&label=Tests)](https://github.com/ulgens/django-blasphemy/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/ulgens/django-blasphemy/graph/badge.svg?token=EBNHI3IK23)](https://codecov.io/gh/ulgens/django-blasphemy)
+
+</div>
+
+<!--
+# They make it look too crowded. Consider enabling them later.
+
+-->
 
 An opinionated Django project template for experimentation and prototyping. Useful as a development playground or project starter.
 
