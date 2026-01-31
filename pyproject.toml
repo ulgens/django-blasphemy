@@ -1,7 +1,7 @@
 [project]
 name = "django-blasphemy"
 version = "0.1.0"
-description = ""
+description = "An opinionated Django project template for experimentation and prototyping."
 license = "BSD-3-Clause"
 authors = [
     { name = "Ülgen Sarıkavak", email = "ulgensrkvk@gmail.com" },

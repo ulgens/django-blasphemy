@@ -1,6 +1,6 @@
 # django-blasphemy
 
-Django development playground. It's for when you need to try something but the project in front of you is too complex / big / important to test stuff on it. Can be used as project starter if you have that kind of energy.
+An opinionated Django project template for experimentation and prototyping. Useful as a development playground or project starter.
 
 ## Prerequisites
 - A terminal emulator.
