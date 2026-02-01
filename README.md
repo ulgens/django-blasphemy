@@ -2,14 +2,14 @@
 
 # django-blasphemy
 
-[![Python](https://img.shields.io/badge/python-3.14-306998?logo=python&logoColor=white)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/django-6.0-0C4B33?&logo=django&logoColor=white)](https://www.djangoproject.com/)
-[![PostgreSQL](https://img.shields.io/badge/postgresql-18-0064a5?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/docker-ready-1D63ED?logo=docker&logoColor=white)](https://www.docker.com/)
-[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
-[![prek](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/j178/prek/master/docs/assets/badge-v0.json)](https://github.com/j178/prek)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Renovate](https://img.shields.io/badge/renovate-enabled-328be4?logo=renovate)](https://github.com/renovatebot/renovate)
+[![Python](https://img.shields.io/badge/python-3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/django-6.0-092E20?&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-18-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/-docker-2496ED?logo=docker&labelColor=555)](https://www.docker.com/)
+[![uv](https://img.shields.io/badge/-uv-DE5FE9?logo=uv&labelColor=555)](https://github.com/astral-sh/uv)
+[![prek](https://img.shields.io/badge/-prek-F54327?logo=prek&labelColor=555)](https://github.com/j178/prek)
+[![Ruff](https://img.shields.io/badge/-ruff-D7FF64?logo=ruff&labelColor=555)](https://github.com/astral-sh/ruff)
+[![Renovate](https://img.shields.io/badge/-renovate-308BE3?logo=renovate&labelColor=555)](https://github.com/renovatebot/renovate)
 
 [![Git Hooks](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/prek.yml?logo=github&label=Git%20Hooks)](https://github.com/ulgens/django-blasphemy/actions/workflows/prek.yml)
 [![Tests](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/tests.yml?logo=github&label=Tests)](https://github.com/ulgens/django-blasphemy/actions/workflows/tests.yml)
