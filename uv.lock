@@ -259,7 +259,6 @@ dependencies = [
 dev = [
     { name = "coverage" },
     { name = "django-migration-vis" },
-    { name = "django-upgrade" },
     { name = "factory-boy" },
     { name = "ipdb" },
     { name = "ipython" },
@@ -303,7 +302,6 @@ requires-dist = [
 dev = [
     { name = "coverage", specifier = "==7.13.2" },
     { name = "django-migration-vis", specifier = "==2.0.1" },
-    { name = "django-upgrade", specifier = "==1.29.1" },
     { name = "factory-boy", specifier = "==3.3.3" },
     { name = "ipdb", specifier = "==0.13.13" },
     { name = "ipython", specifier = "==9.9.0" },
@@ -450,18 +448,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/2f/d2/c418abb518959f04a35955612b309da613e581aeb7f3991e2da23e3c06b1/django_removals-1.1.6.tar.gz", hash = "sha256:c452cabe5b2353f019c5b2731d24f3e1b308a5234f08124112dd5f66e623db24", size = 100278, upload-time = "2025-12-16T11:23:06.639Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fd/eb/7eece749fee293ac7fc54219131eb8a2aa90b982a520bfd1007ac9e2b87e/django_removals-1.1.6-py3-none-any.whl", hash = "sha256:cb2643a6e927574eb792e0ea28e41d5d8bb20c8dc1ec917db50b904e0d0cadd7", size = 6793, upload-time = "2025-12-16T11:23:05.569Z" },
-]
-
-[[package]]
-name = "django-upgrade"
-version = "1.29.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "tokenize-rt" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/dc/8242d9fbf0ae64feccbdd781fa741db5cf0521127a26ed9361e5f2f31f1b/django_upgrade-1.29.1.tar.gz", hash = "sha256:8c53b6bcd326a638a5dc908a707f26d71593bad5789b33775c90a8dc8a76afd5", size = 39638, upload-time = "2025-10-23T16:34:57.003Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/f0/b0/c9fe7b4dbfcacb2402169f8189d4f7fa1609237317d714f01143d167db1c/django_upgrade-1.29.1-py3-none-any.whl", hash = "sha256:39a4d71365189ce8a5ccab534b2d1f0ed69c71bea7f1ef4c46041918d5247e64", size = 68847, upload-time = "2025-10-23T16:34:55.511Z" },
 ]
 
 [[package]]
@@ -1201,15 +1187,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/ab/e2/e9a00f0ccb71718418230718b3d900e71a5d16e701a3dae079a21e9cd8f8/text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93", size = 76885, upload-time = "2019-08-30T21:36:45.405Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a6/a5/c0b6468d3824fe3fde30dbb5e1f687b291608f9473681bbf7dabbf5a87d7/text_unidecode-1.3-py2.py3-none-any.whl", hash = "sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8", size = 78154, upload-time = "2019-08-30T21:37:03.543Z" },
-]
-
-[[package]]
-name = "tokenize-rt"
-version = "6.2.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/69/ed/8f07e893132d5051d86a553e749d5c89b2a4776eb3a579b72ed61f8559ca/tokenize_rt-6.2.0.tar.gz", hash = "sha256:8439c042b330c553fdbe1758e4a05c0ed460dbbbb24a606f11f0dee75da4cad6", size = 5476, upload-time = "2025-05-23T23:48:00.035Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/33/f0/3fe8c6e69135a845f4106f2ff8b6805638d4e85c264e70114e8126689587/tokenize_rt-6.2.0-py2.py3-none-any.whl", hash = "sha256:a152bf4f249c847a66497a4a95f63376ed68ac6abf092a2f7cfb29d044ecff44", size = 6004, upload-time = "2025-05-23T23:47:58.812Z" },
 ]
 
 [[package]]
