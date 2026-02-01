@@ -1,4 +1,4 @@
-name: "Lint & formatting check"
+name: "Git Hooks"
 
 on:
   push:
