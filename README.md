@@ -11,7 +11,7 @@
 [![Ruff](https://img.shields.io/badge/-ruff-D7FF64?logo=ruff&labelColor=555)](https://github.com/astral-sh/ruff)
 [![Renovate](https://img.shields.io/badge/-renovate-308BE3?logo=renovate&labelColor=555)](https://github.com/renovatebot/renovate)
 
-[![Git Hooks](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/prek.yml?logo=github&label=Git%20Hooks)](https://github.com/ulgens/django-blasphemy/actions/workflows/prek.yml)
+[![Git Hooks](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/git-hooks.yml?logo=github&label=Git%20Hooks)](https://github.com/ulgens/django-blasphemy/actions/workflows/git-hooks.yml)
 [![Tests](https://img.shields.io/github/actions/workflow/status/ulgens/django-blasphemy/tests.yml?logo=github&label=Tests)](https://github.com/ulgens/django-blasphemy/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/ulgens/django-blasphemy/graph/badge.svg?token=EBNHI3IK23)](https://codecov.io/gh/ulgens/django-blasphemy)
 
