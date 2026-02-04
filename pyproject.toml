@@ -21,7 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "celery[redis]==5.6.2",
-    "django==6.0.1",
+    "django==6.0.2",
     "django-admin-interface==0.32.0",
     "django-click==2.5.0",
     "django-debug-toolbar==6.2.0",
@@ -52,14 +52,14 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "coverage==7.13.2",
+    "coverage==7.13.3",
     "django-migration-vis==2.0.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
-    "ipython==9.9.0",
+    "ipython==9.10.0",
     "parameterized==0.9",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.14.14",               # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "ruff==0.15.0",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
     "wat-inspector==0.4.3",
     "xkcdpass==1.30.0",
