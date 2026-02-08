@@ -41,12 +41,12 @@ dependencies = [
     "drf-spectacular==0.29.0",
     "flower==2.0.1",
     "gitpython==3.1.46",
-    "gunicorn==25.0.1",
+    "gunicorn==25.0.3",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.2",
     "pygments==2.19.2",
     "rich==14.3.2",
-    "sentry-sdk==2.51.0",
+    "sentry-sdk==2.52.0",
     "whitenoise==6.11.0",
 ]
 
