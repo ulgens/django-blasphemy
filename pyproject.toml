@@ -66,9 +66,9 @@ dev = [
 ]
 
 [tool.uv]
-package = false
 # The earliest version that supports the current lock file revision
 required-version = ">=0.8.4"
+package = false
 
 [tool.pyproject-fmt]
 indent = 4
