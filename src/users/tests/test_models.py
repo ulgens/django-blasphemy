@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import IntegrityError
 from django.test import TestCase
 from faker import Faker
-from parameterized import parameterized
+from unittest_parametrize import ParametrizedTestCase, parametrize
 
 from core.tests.utils import CASE_FUNCTIONS
 
@@ -13,7 +13,7 @@ fake = Faker()
 User = get_user_model()
 
 
-class UserEmailTestCase(TestCase):
+class UserEmailTestCase(ParametrizedTestCase, TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.email = fake.email()
@@ -21,7 +21,10 @@ class UserEmailTestCase(TestCase):
             email=cls.email,
         )
 
-    @parameterized.expand(CASE_FUNCTIONS.values())
+    @parametrize(
+        argnames="case_method",
+        argvalues=CASE_FUNCTIONS.values(),
+    )
     def test_normalize(self, case_method):
         """
         User.email should be normalized.
@@ -38,7 +41,7 @@ class UserEmailTestCase(TestCase):
         domain = user.email.split("@")[1]
         self.assertEqual(domain, domain.lower())
 
-    @parameterized.expand(CASE_FUNCTIONS.values())
+    @parametrize(argnames="case_method", argvalues=CASE_FUNCTIONS.values())
     def test_ci_lookup(self, case_method):
         """
         User.email lookup should be case-insensitive.
@@ -51,7 +54,7 @@ class UserEmailTestCase(TestCase):
         )
         self.assertEqual(User.objects.get(email=cased_email), self.user)
 
-    @parameterized.expand(CASE_FUNCTIONS.values())
+    @parametrize(argnames="case_method", argvalues=CASE_FUNCTIONS.values())
     def test_ci_unique(self, case_method):
         """
         User.email uniqueness should be case-insensitive.
