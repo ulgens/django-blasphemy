@@ -1,7 +1,8 @@
 from io import StringIO
 
 from django.core.management import call_command
-from django.test import TestCase
+
+from core.testcases import TestCase
 
 
 # Thanks to https://adamj.eu/tech/2024/06/23/django-test-pending-migrations/
