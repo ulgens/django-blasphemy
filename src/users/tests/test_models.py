@@ -1,9 +1,9 @@
 from django.contrib.auth import get_user_model
 from django.db import IntegrityError
-from django.test import TestCase
 from faker import Faker
-from unittest_parametrize import ParametrizedTestCase, parametrize
+from unittest_parametrize import parametrize
 
+from core.testcases import TestCase
 from core.tests.utils import CASE_FUNCTIONS
 
 from ..factories import UserFactory
@@ -13,7 +13,7 @@ fake = Faker()
 User = get_user_model()
 
 
-class UserEmailTestCase(ParametrizedTestCase, TestCase):
+class UserEmailTestCase(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.email = fake.email()

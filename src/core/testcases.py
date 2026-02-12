@@ -1,9 +1,16 @@
 from unittest import SkipTest
 
-from django.test import Client, TestCase
+from django.test import Client
+from django.test import TestCase as BaseTestCase
 from django.urls import reverse
+from rest_framework.test import APITestCase as BaseAPITestCase
+from unittest_parametrize import ParametrizedTestCase
 
 from users.factories import UserFactory
+
+
+class TestCase(ParametrizedTestCase, BaseTestCase):
+    pass
 
 
 class AdminTestCase(TestCase):
@@ -57,3 +64,7 @@ class AdminTestCase(TestCase):
             response.status_code,
             200,
         )
+
+
+class APITestCase(ParametrizedTestCase, BaseAPITestCase):
+    pass

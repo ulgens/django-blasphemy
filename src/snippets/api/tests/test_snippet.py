@@ -4,7 +4,8 @@ from random import randint
 from django.test import tag
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APITestCase
+
+from core.testcases import APITestCase
 
 from ...factories import SnippetFactory
 
