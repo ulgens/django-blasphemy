@@ -57,17 +57,24 @@ dev = [
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
     "ipython==9.10.0",
-    "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
     "ruff==0.15.1",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
     "unittest-parametrize==1.8.0",
     "wat-inspector==0.4.3",
     "xkcdpass==1.30.0",
 ]
+graph = [
+    # For visualizing Django models with "graph_models --pydot"
+    "pydot==4.0.1",
+    # Testing all available options with graph_models
+    "pydotplus==2.0.2",
+    "pygraphviz==1.14",
+]
 
 [tool.uv]
 # The earliest version that supports the current lock file revision
 required-version = ">=0.8.4"
+default-groups = [ "dev", "graph" ]
 package = false
 
 [tool.pyproject-fmt]

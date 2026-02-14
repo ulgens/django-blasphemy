@@ -266,12 +266,16 @@ dev = [
     { name = "factory-boy" },
     { name = "ipdb" },
     { name = "ipython" },
-    { name = "pydot" },
     { name = "ruff" },
     { name = "tblib" },
     { name = "unittest-parametrize" },
     { name = "wat-inspector" },
     { name = "xkcdpass" },
+]
+graph = [
+    { name = "pydot" },
+    { name = "pydotplus" },
+    { name = "pygraphviz" },
 ]
 
 [package.metadata]
@@ -308,12 +312,16 @@ dev = [
     { name = "factory-boy", specifier = "==3.3.3" },
     { name = "ipdb", specifier = "==0.13.13" },
     { name = "ipython", specifier = "==9.10.0" },
-    { name = "pydot", specifier = "==4.0.1" },
     { name = "ruff", specifier = "==0.15.1" },
     { name = "tblib", specifier = "==3.2.2" },
     { name = "unittest-parametrize", specifier = "==1.8.0" },
     { name = "wat-inspector", specifier = "==0.4.3" },
     { name = "xkcdpass", specifier = "==1.30.0" },
+]
+graph = [
+    { name = "pydot", specifier = "==4.0.1" },
+    { name = "pydotplus", specifier = "==2.0.2" },
+    { name = "pygraphviz", specifier = "==1.14" },
 ]
 
 [[package]]
@@ -912,6 +920,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pydotplus"
+version = "2.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyparsing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/60/bf/62567830b700d9f6930e9ab6831d6ba256f7b0b730acb37278b0ccdffacf/pydotplus-2.0.2.tar.gz", hash = "sha256:91e85e9ee9b85d2391ead7d635e3d9c7f5f44fd60a60e59b13e2403fa66505c4", size = 278677, upload-time = "2014-12-09T00:53:49.515Z" }
+
+[[package]]
 name = "pygments"
 version = "2.19.2"
 source = { registry = "https://pypi.org/simple" }
@@ -919,6 +936,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b014
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b", size = 1225217, upload-time = "2025-06-21T13:39:07.939Z" },
 ]
+
+[[package]]
+name = "pygraphviz"
+version = "1.14"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/66/ca/823d5c74a73d6b8b08e1f5aea12468ef334f0732c65cbb18df2a7f285c87/pygraphviz-1.14.tar.gz", hash = "sha256:c10df02377f4e39b00ae17c862f4ee7e5767317f1c6b2dfd04cea6acc7fc2bea", size = 106003, upload-time = "2024-09-29T18:31:12.471Z" }
 
 [[package]]
 name = "pyparsing"
