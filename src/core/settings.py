@@ -70,8 +70,8 @@ THIRD_PARTY_APPS = [
     "django_migration_vis",
     # TODO: Consider making "django_watchfiles" dev-only
     # TODO: Add benchmark details - reasoning: https://github.com/adamchainz/django-watchfiles/issues/174
-    "django_watchfiles",
-    "drf_spectacular",
+    # "django_watchfiles",
+    # "drf_spectacular",
     "rest_framework",
 ]
 
@@ -225,7 +225,7 @@ if DEBUG:
 # Admin related
 # https://github.com/fabiocaccamo/django-admin-interface#installation
 X_FRAME_OPTIONS = "SAMEORIGIN"
-# SILENCED_SYSTEM_CHECKS = ["security.W019"]  # noqa: ERA001
+# SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 # DRF
 REST_FRAMEWORK = {
@@ -235,7 +235,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "api.paginations.CursorPagination",
     "PAGE_SIZE": 20,
     "EXCEPTION_HANDLER": "api.exception_handler.exception_handler",
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    # "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 SPECTACULAR_SETTINGS = {

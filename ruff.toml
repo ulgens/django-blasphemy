@@ -101,6 +101,8 @@ ignore = [
     # Absolute imports are not always better than relative imports.
     # https://docs.astral.sh/ruff/rules/relative-imports/
     "TID252",
+    # Temporarily ignore commented out code till 3.15 support is working.
+    "ERA001",
 ]
 
 [lint.per-file-ignores]
