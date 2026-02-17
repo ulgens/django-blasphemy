@@ -17,7 +17,7 @@ repos:
       - id: pyproject-fmt
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.10.2
+    rev: 0.10.3
     hooks:
       - id: uv-lock
 
