@@ -46,7 +46,7 @@ dependencies = [
     "psycopg[binary]==3.3.2",
     "pygments==2.19.2",
     "rich==14.3.2",
-    "sentry-sdk==2.52.0",
+    "sentry-sdk==2.53.0",
     "whitenoise==6.11.0",
 ]
 
