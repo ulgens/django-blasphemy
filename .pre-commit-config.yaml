@@ -44,7 +44,7 @@ repos:
       - id: yamlfmt
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.1
+    rev: 0.36.2
     hooks:
       # TODO:
       #   Consider migration to actionlint
