@@ -26,7 +26,7 @@ dependencies = [
     "django-click==2.5.0",
     "django-debug-toolbar==6.2.0",
     "django-dirtyfields==1.9.9",
-    "django-environ==0.12.1",
+    "django-environ==0.13.0",
     "django-extensions==4.1",
     "django-filter==25.2",
     "django-jsonform==2.23.2",
@@ -43,9 +43,9 @@ dependencies = [
     "gitpython==3.1.46",
     "gunicorn==25.1.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
-    "psycopg[binary]==3.3.2",
+    "psycopg[binary]==3.3.3",
     "pygments==2.19.2",
-    "rich==14.3.2",
+    "rich==14.3.3",
     "sentry-sdk==2.53.0",
     "whitenoise==6.11.0",
 ]
@@ -58,7 +58,7 @@ dev = [
     "ipdb==0.13.13",
     "ipython==9.10.0",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.15.1",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "ruff==0.15.2",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
     "unittest-parametrize==1.8.0",
     "wat-inspector==0.4.3",
