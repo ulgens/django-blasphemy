@@ -29,7 +29,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:18.1-alpine3.21@sha256:44d837eb4c2ed263474a95f0cc24745413c50924df60dd73ed6c4c3e36b84259
+        image: postgres:18.2-alpine3.22
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
