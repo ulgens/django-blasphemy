@@ -37,7 +37,7 @@ jobs:
         ports:
           - 5432:5432
       redis:
-        image: redis:8.0.5-alpine3.21@sha256:6c8e66693fa71bad36ae06c75c990446ad01dbd4b081dd847eb9869f20d7c6ee
+        image: redis:8.0.6-alpine3.21@sha256:7aaf1bdc3a7879acc00f86d7be3d33536a5879a03cf592570ef2523e7334f4b8
         ports:
           - 6379:6379
 
