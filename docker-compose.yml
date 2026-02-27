@@ -28,7 +28,7 @@ services:
 
   db:
     env_file: .env
-    image: postgres:18.2-alpine3.22@sha256:cf70b3d7aeb0f399ba29e94ce081380ccade1f4c38e203309068a30f49548417
+    image: postgres:18.3-alpine3.22@sha256:b23dbd0e555ca2aeaeec1e0e2ff8b650711b3882725ea0d40bae2efbc0ca8ba2
     container_name: blasphemy_postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB_NAME}
