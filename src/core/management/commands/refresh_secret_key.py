@@ -22,7 +22,7 @@ def refresh_secret_key(length):
     Create a new random secret key and update the .env file with it.
     """
     if not env_path.exists():
-        error_msg = f".env file found not at {env_path}"
+        error_msg = f".env file not found at {env_path}"
         raise CommandError(error_msg)
 
     content = env_path.read_text()
