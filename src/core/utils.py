@@ -16,8 +16,8 @@ __all__ = (
 # * # (comment)
 # * $ (variable expansion),
 # * " ' ` (quoting)
-# \ (escape)
-# = (separator)
+# * \ (escape)
+# * = (separator)
 ENV_UNSAFE_CHARS = "#$\"'`\\="
 ENV_SAFE_CHARS = string.ascii_letters + string.digits + "".join(set(string.punctuation) - set(ENV_UNSAFE_CHARS))
 
