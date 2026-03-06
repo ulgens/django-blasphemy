@@ -48,6 +48,11 @@ init_data:
 coverage *ARGS:
     {{ DJANGO_CMD }} coverage run manage.py test --shuffle --parallel=auto {{ ARGS }} && coverage report && coverage xml
 
+# Refresh the Django secret key in the .env file
+[group("django")]
+refresh_secret_key:
+    {{ DJANGO_CMD }} python manage.py refresh_secret_key
+
 # Run Django tests
 [group("django")]
 test *ARGS:

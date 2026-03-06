@@ -1,14 +1,40 @@
 import socket
+import string
 
 from django.conf import settings
+from django.utils.crypto import get_random_string
 
 __all__ = (
     "TRUE_VALUES",
+    "generate_secret_key",
     "parse_bool",
     "show_debug_toolbar",
 )
 
+
+# Exclude characters that break .env parsing:
+# * # (comment)
+# * $ (variable expansion),
+# * " ' ` (quoting)
+# \ (escape)
+# = (separator)
+ENV_UNSAFE_CHARS = "#$\"'`\\="
+ENV_SAFE_CHARS = string.ascii_letters + string.digits + "".join(set(string.punctuation) - set(ENV_UNSAFE_CHARS))
+
 TRUE_VALUES = ("t", "true", "1", 1, True)
+
+
+def generate_secret_key(
+    allowed_chars: str = ENV_SAFE_CHARS,
+    length: int = 64,
+) -> str:
+    """
+    Return a securely generated secret key to use with django.conf.settings.SECRET_KEY.
+
+    Django's original get_random_secret_key doesn't allow specifying the available chars and the length.
+    """
+
+    return get_random_string(allowed_chars=allowed_chars, length=length)
 
 
 def parse_bool(value):

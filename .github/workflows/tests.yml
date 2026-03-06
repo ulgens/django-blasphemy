@@ -72,7 +72,7 @@ jobs:
           DATABASE_USER: "postgres"
           DATABASE_PASSWORD: "postgres"
           DATABASE_PORT: "${{ job.services.postgres.ports[5432] }}"
-          SECRET_KEY: ""
+          SECRET_KEY: "unsecure_secret_key_for_tests"
           USE_SSL: "false"
         run: |
           uv run python manage.py wait_for_db

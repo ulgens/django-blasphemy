@@ -36,6 +36,7 @@ An opinionated Django project template for experimentation and prototyping. Usef
 > Make sure that you have an up to date version of Docker and [just](https://just.systems/man/en/) is installed.
 
 * Copy `.env.dist` to `.env` and update it as you need.
+  * Run `just refresh_secret_key` to generate a unique secret key for your environment.
 * Run `just build` to build docker compose services.
 * Run `just init_data` to initialize the database and create a superuser.
 * Run `just up` to start the project.
