@@ -213,7 +213,7 @@ if TESTING:
 
 
 # Django debug toolbar
-if DEBUG:
+if DEBUG:  # pragma: no cover
     import socket
 
     hostname, aliases, ips = socket.gethostbyname_ex(socket.gethostname())
