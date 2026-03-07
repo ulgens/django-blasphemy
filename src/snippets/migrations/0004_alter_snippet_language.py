@@ -2,11 +2,9 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-    dependencies = [
-        ("snippets", "0003_alter_snippet_id"),
-    ]
+    dependencies = (("snippets", "0003_alter_snippet_id"),)
 
-    operations = [
+    operations = (
         migrations.AlterField(
             model_name="snippet",
             name="language",
@@ -618,4 +616,4 @@ class Migration(migrations.Migration):
                 max_length=128,
             ),
         ),
-    ]
+    )

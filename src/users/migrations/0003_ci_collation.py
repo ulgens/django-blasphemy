@@ -10,15 +10,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-    dependencies = [
-        ("users", "0002_alter_user_email"),
-    ]
+    dependencies = (("users", "0002_alter_user_email"),)
 
-    operations = [
+    operations = (
         CreateCollation(
             "case_insensitive",
             provider="icu",
             locale="und-u-ks-level2",
             deterministic=False,
         ),
-    ]
+    )

@@ -4,11 +4,9 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-    dependencies = [
-        ("users", "0004_alter_user_email"),
-    ]
+    dependencies = (("users", "0004_alter_user_email"),)
 
-    operations = [
+    operations = (
         migrations.AlterField(
             model_name="user",
             name="id",
@@ -21,4 +19,4 @@ class Migration(migrations.Migration):
                 verbose_name="ID",
             ),
         ),
-    ]
+    )
