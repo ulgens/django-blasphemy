@@ -7,9 +7,9 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
     initial = True
 
-    dependencies = []
+    dependencies = ()
 
-    operations = [
+    operations = (
         migrations.CreateModel(
             name="Snippet",
             fields=[
@@ -689,4 +689,4 @@ class Migration(migrations.Migration):
             },
             bases=(DirtyFieldsMixin, models.Model),
         ),
-    ]
+    )
