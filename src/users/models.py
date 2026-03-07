@@ -1,6 +1,5 @@
 from gettext import gettext as _
 
-from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
@@ -69,5 +68,5 @@ class User(BaseModel, AbstractUser):
         super().clean()
         self.email = self.__class__.objects.normalize_email(self.email)
 
-    class Meta(AbstractBaseUser.Meta):
+    class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"
