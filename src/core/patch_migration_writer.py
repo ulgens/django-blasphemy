@@ -6,13 +6,13 @@ MIGRATION_TEMPLATE = """\
 class Migration(migrations.Migration):
     %(replaces_str)s%(initial_str)s%(atomic_str)s%(run_before_str)s
 
-    dependencies = [
+    dependencies = (
         %(dependencies)s\
-    ]
+    )
 
-    operations = [
+    operations = (
         %(operations)s\
-    ]
+    )
 """
 
 writer.MIGRATION_TEMPLATE = MIGRATION_TEMPLATE
