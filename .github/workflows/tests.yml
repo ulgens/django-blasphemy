@@ -25,6 +25,7 @@ jobs:
   run-django-tests:
     name: python manage.py test --parallel --shuffle
     runs-on: ubuntu-24.04
+    environment: gha-tests
     timeout-minutes: 1
 
     services:
