@@ -248,8 +248,8 @@ FILTERS_VERBOSE_LOOKUPS = {
     "icontains": _("contains (case insensitive)"),
 }
 
+# FIXME: These imports are not tested.
 SHELL_PLUS_IMPORTS = (
-    "import wat",
     "from core.tasks import test_task",
     "from users.factories import UserFactory",
     "from snippets.factories import SnippetFactory",
