@@ -4,6 +4,8 @@ from core.db.models import BaseModel
 
 from .choices import LANGUAGE_CHOICES, STYLE_CHOICES
 
+__all__ = ("Snippet",)
+
 
 class Snippet(BaseModel):
     title = models.CharField(max_length=128)
