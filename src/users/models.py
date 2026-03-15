@@ -8,6 +8,8 @@ from core.db.models import BaseModel
 
 from .managers import UserManager
 
+__all__ = ("User",)
+
 
 class User(BaseModel, AbstractUser):
     """
