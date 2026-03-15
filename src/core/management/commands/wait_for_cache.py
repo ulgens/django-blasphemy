@@ -15,18 +15,17 @@ from redis.exceptions import ConnectionError as RedisConnectionError
 def wait_for_cache():
     click.secho("Waiting for the cache to be available...", fg="yellow")
 
+    cache = caches["default"]
+    client = cache._cache.get_client()
+
     while True:
         try:
-            cache = caches["default"]
-            client = cache._cache.get_client()
             client.ping()
-
-            click.secho("Cache available!", fg="green")
-
-            break
-
         except RedisConnectionError as e:
             click.secho(f"Error with cache: {e}", fg="red")
             click.secho("Cache unavailable, waiting 1 second...", fg="yellow")
 
             time.sleep(1)
+        else:
+            click.secho("Cache available!", fg="green")
+            break

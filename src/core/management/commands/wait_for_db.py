@@ -15,17 +15,16 @@ from django.db.utils import OperationalError
 def wait_for_db():
     click.secho("Waiting for the database to be available...", fg="yellow")
 
+    connection = connections[DEFAULT_DB_ALIAS]
+
     while True:
         try:
-            connection = connections[DEFAULT_DB_ALIAS]
             connection.ensure_connection()
-
-            click.secho("Database available!", fg="green")
-
-            break
-
         except OperationalError as e:
             click.secho(f"Error with database: {e}", fg="red")
             click.secho("Database unavailable, waiting 1 second...", fg="yellow")
 
             time.sleep(1)
+        else:
+            click.secho("Database available!", fg="green")
+            break
