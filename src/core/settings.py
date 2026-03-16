@@ -12,11 +12,11 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 # use case and/or further implementation, and the code should stay there. Think it like a .gitkeep file.
 import logging
 import sys
-from gettext import gettext as _
 from pathlib import Path
 
 import environ
 from celery.schedules import crontab
+from django.utils.translation import gettext_lazy as _
 
 # TODO:
 #  Compare with dynaconf
