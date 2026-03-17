@@ -19,7 +19,7 @@ env:
   # renovate: datasource=python-version depName=python
   PYTHON_VERSION: 3.14.3
   # renovate: datasource=pypi depName=uv
-  UV_VERSION: 0.10.10
+  UV_VERSION: 0.10.11
 
 jobs:
   run-django-tests:
@@ -49,7 +49,7 @@ jobs:
           persist-credentials: false
 
       - name: Install uv ${{ env.UV_VERSION }} & Python ${{ env.PYTHON_VERSION }}
-        uses: astral-sh/setup-uv@e06108dd0aef18192324c70427afc47652e63a82  # v7.5.0
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78  # v7.6.0
         with:
           # The default value is "auto" and it resolves to "true" in Github-hosted runners, but explicit is better.
           enable-cache: true
