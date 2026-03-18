@@ -7,9 +7,6 @@ __all__ = ("SnippetFilter",)
 
 
 class SnippetFilter(FilterSet):
-    # FIXME:
-    #   Fields with `lookup_expr="icontains"` have labels with "...contains..." (without the initial "i").
-    #   This is a django-filter issue, but still better to be fixed.
     title = filters.CharFilter(lookup_expr="icontains")
     code = filters.CharFilter(lookup_expr="icontains")
     language = filters.ChoiceFilter(choices=LANGUAGE_CHOICES)
