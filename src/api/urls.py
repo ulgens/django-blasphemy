@@ -5,6 +5,8 @@ from rest_framework.reverse import reverse_lazy
 
 from snippets.urls import urlpatterns as snippets_urlpatterns
 
+__all__ = ("urlpatterns",)
+
 app_name = "api"
 swagger_patterns = [
     path(

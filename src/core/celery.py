@@ -2,6 +2,8 @@ import os
 
 from celery import Celery
 
+__all__ = ("app",)
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 
 app = Celery("blasphemy")

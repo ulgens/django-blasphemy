@@ -1,5 +1,7 @@
 from django.contrib.auth.models import UserManager as BaseUserManager
 
+__all__ = ("UserManager",)
+
 
 class UserManager(BaseUserManager):
     def _create_user(self, email, password, **extra_fields):

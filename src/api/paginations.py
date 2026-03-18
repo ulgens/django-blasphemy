@@ -1,5 +1,7 @@
 from rest_framework.pagination import CursorPagination as BasePagination
 
+__all__ = ("CursorPagination",)
+
 
 class CursorPagination(BasePagination):
     ordering = "-id"
