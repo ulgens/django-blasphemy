@@ -69,5 +69,5 @@ class User(BaseModel, AbstractUser):
         super().clean()
         self.email = self.__class__.objects.normalize_email(self.email)
 
-    class Meta(AbstractUser.Meta):
+    class Meta(BaseModel.Meta, AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"

@@ -72,10 +72,11 @@ class TimeStampedModel(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ("-created_at",)
 
 
 class BaseModel(DirtyFieldsMixin, TimeStampedModel, UUIDModel):
-    class Meta:
+    class Meta(TimeStampedModel.Meta):
         abstract = True
 
     def save_dirty_fields(self):
