@@ -1,5 +1,7 @@
 from xkcdpass import xkcd_password
 
+__all__ = ("generate_readable_password",)
+
 PASSWORD_WORDLIST = xkcd_password.generate_wordlist(min_length=6, max_length=15)
 
 

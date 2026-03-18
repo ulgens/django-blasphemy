@@ -3,6 +3,8 @@ from django_filters.rest_framework import FilterSet, filters
 from ..choices import LANGUAGE_CHOICES, STYLE_CHOICES
 from ..models import Snippet
 
+__all__ = ("SnippetFilter",)
+
 
 class SnippetFilter(FilterSet):
     # FIXME:

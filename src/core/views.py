@@ -4,6 +4,12 @@ Test views
 
 import logging
 
+__all__ = (
+    "error",
+    "manual_flat_log",
+    "manual_log",
+)
+
 logger = logging.getLogger(__name__)
 
 

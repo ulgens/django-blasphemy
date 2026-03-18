@@ -1,3 +1,6 @@
+__all__ = ("denormalize_email",)
+
+
 def denormalize_email(email, case_method):
     """
     Denormalize the email address by applying a case method to the domain part of it.

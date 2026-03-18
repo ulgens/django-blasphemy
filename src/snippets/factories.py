@@ -4,6 +4,8 @@ from factory import fuzzy
 from .choices import LANGUAGE_CHOICES, STYLE_CHOICES
 from .models import Snippet
 
+__all__ = ("SnippetFactory",)
+
 LANGUAGE_VALUES = [value for value, _ in LANGUAGE_CHOICES]
 STYLE_VALUES = [value for value, _ in STYLE_CHOICES]
 

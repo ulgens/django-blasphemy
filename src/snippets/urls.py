@@ -3,6 +3,8 @@ from rest_framework.routers import DefaultRouter
 
 from .api.views import SnippetViewSet
 
+__all__ = ("urlpatterns",)
+
 router = DefaultRouter()
 router.register("", SnippetViewSet, basename="snippet")
 

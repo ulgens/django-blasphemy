@@ -4,6 +4,8 @@ from ..models import Snippet
 from .filters import SnippetFilter
 from .serializers import SnippetSerializer
 
+__all__ = ("SnippetViewSet",)
+
 
 class SnippetViewSet(ModelViewSet):
     queryset = Snippet.objects.all()

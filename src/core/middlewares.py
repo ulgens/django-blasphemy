@@ -8,6 +8,8 @@ from pygments.lexers import JsonLexer
 
 from core.utils import parse_bool
 
+__all__ = ("NonHtmlDebugToolbarMiddleware",)
+
 
 class NonHtmlDebugToolbarMiddleware:
     """

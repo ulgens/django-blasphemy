@@ -8,6 +8,12 @@ from unittest_parametrize import ParametrizedTestCase
 
 from users.factories import UserFactory
 
+__all__ = (
+    "APITestCase",
+    "AdminTestCase",
+    "TestCase",
+)
+
 
 class TestCase(ParametrizedTestCase, BaseTestCase):
     pass
