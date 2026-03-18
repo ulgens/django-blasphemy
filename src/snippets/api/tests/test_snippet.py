@@ -46,7 +46,9 @@ class SnippetAPITests(APITestCase):
         super().setUpClass()
 
         cls.detail_url = cls.get_detail_url(pk=cls.instance.pk)
+        cls.detail_not_allowed_methods = ["POST", "PUT", "PATCH", "DELETE"]
         cls.list_url = cls.get_list_url()
+        cls.list_not_allowed_methods = ["POST"]
 
     def test_detail_url(self):
         self.assertEqual(self.detail_url, f"/api/snippets/{self.instance.pk}/")
