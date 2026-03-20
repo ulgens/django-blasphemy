@@ -248,6 +248,7 @@ dependencies = [
     { name = "django-removals" },
     { name = "django-watchfiles" },
     { name = "djangorestframework" },
+    { name = "drf-nested-routers" },
     { name = "drf-spectacular" },
     { name = "flower" },
     { name = "gitpython" },
@@ -289,6 +290,7 @@ requires-dist = [
     { name = "django-removals", specifier = "==1.1.6" },
     { name = "django-watchfiles", specifier = "==1.4.0" },
     { name = "djangorestframework", specifier = "==3.17.0" },
+    { name = "drf-nested-routers", specifier = "==0.95.0" },
     { name = "drf-spectacular", specifier = "==0.29.0" },
     { name = "flower", specifier = "==2.0.1" },
     { name = "gitpython", specifier = "==3.1.46" },
@@ -473,6 +475,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b1/46/615ad5425c7b941e6fd3f382d25b1aca680022200d8e5b87bfc665c4425d/djangorestframework-3.17.0.tar.gz", hash = "sha256:456fd992a33f9e64c9d0f47e85d9787db0efb44f894c1e513315b5e74765bd4c", size = 905671, upload-time = "2026-03-18T20:33:42.861Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5f/ee/01dfe0e712d37007a4417bf7ba518a9e6830d4de009ed4bfdfebd45b99cf/djangorestframework-3.17.0-py3-none-any.whl", hash = "sha256:d84fe85f30b7ac6e8c0076ce9ff635e4eaedca5912f8d7d2926ce448c08533ba", size = 898818, upload-time = "2026-03-18T20:33:41.335Z" },
+]
+
+[[package]]
+name = "drf-nested-routers"
+version = "0.95.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "djangorestframework" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ff/b2/070908ccd41bd6f025f5507d7f6e50009abe8be48393cc697d159b539f0b/drf_nested_routers-0.95.0.tar.gz", hash = "sha256:815978f802e578fd7035c74040c104909cbe97615de89a275d77e928f4029891", size = 23318, upload-time = "2025-09-09T02:01:58.201Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3e/61/69d951a6e8031389f5feade38531432325019e1047b23d5c6036a86c5e8f/drf_nested_routers-0.95.0-py2.py3-none-any.whl", hash = "sha256:dd489c33d667aaa81383ffaa8c74781d2b353d8f0795716ae37fc59ee297b7c4", size = 36407, upload-time = "2025-09-09T02:01:56.999Z" },
 ]
 
 [[package]]

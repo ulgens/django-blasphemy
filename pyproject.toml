@@ -38,6 +38,7 @@ dependencies = [
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
     "djangorestframework==3.17.0",
+    "drf-nested-routers==0.95.0",
     "drf-spectacular==0.29.0",
     "flower==2.0.1",
     "gitpython==3.1.46",

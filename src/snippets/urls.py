@@ -8,6 +8,8 @@ __all__ = ("urlpatterns",)
 router = SimpleRouter()
 router.register("", SnippetViewSet, basename="snippet")
 
+# TODO: Add nested router example
+
 urlpatterns = [
     path("", include(router.urls)),
 ]
