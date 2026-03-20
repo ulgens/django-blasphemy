@@ -8,6 +8,7 @@ from rest_framework import status
 from core.testcases import APITestCase
 
 from ...factories import SnippetFactory
+from ...models import Snippet
 
 
 @tag("api", "snippet")
@@ -31,10 +32,10 @@ class SnippetAPITests(APITestCase):
         cls.instance = random.choice(instances)  # noqa: S311
 
     @classmethod
-    def get_detail_url(cls, pk):
+    def get_detail_url(cls, instance: Snippet):
         return reverse(
             "api:snippet-detail",
-            kwargs={"pk": pk},
+            kwargs={"pk": instance.pk},
         )
 
     @classmethod
@@ -45,7 +46,7 @@ class SnippetAPITests(APITestCase):
     def setUpClass(cls):
         super().setUpClass()
 
-        cls.detail_url = cls.get_detail_url(pk=cls.instance.pk)
+        cls.detail_url = cls.get_detail_url(instance=cls.instance)
         cls.detail_not_allowed_methods = ["POST", "PUT", "PATCH", "DELETE"]
         cls.list_url = cls.get_list_url()
         cls.list_not_allowed_methods = ["POST"]
