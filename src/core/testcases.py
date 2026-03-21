@@ -110,16 +110,20 @@ class APITestCase(ParametrizedTestCase, BaseAPITestCase):
             self.assertEqual(len(db_ctx), 0)
 
     # TODO: Can this be parameterized?
-    # TODO: What happens when not allowed method list is empty? Still showing on the test report?
     def test_detail_not_allowed_methods(self):
+        if not self.detail_not_allowed_methods:
+            self.skipTest("Not allowed methods list is empty.")
+
         self._assert_not_allowed_methods(
             url=self.detail_url,
             methods=self.detail_not_allowed_methods,
         )
 
     # TODO: Can this be parameterized?
-    # TODO: What happens when not allowed method list is empty? Still showing on the test report?
     def test_list_not_allowed_methods(self):
+        if not self.list_not_allowed_methods:
+            self.skipTest("Not allowed methods list is empty.")
+
         self._assert_not_allowed_methods(
             url=self.list_url,
             methods=self.list_not_allowed_methods,
