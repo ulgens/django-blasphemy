@@ -93,38 +93,33 @@ class APITestCase(ParametrizedTestCase, BaseAPITestCase):
         cls.list_url: str = ""
         cls.list_not_allowed_methods: list[checked_methods_type] = []
 
-    def _assert_not_allowed_methods(
+    def _assert_not_allowed_method(
         self,
         url: str,
-        methods: list[checked_methods_type],
+        method: checked_methods_type,
     ) -> None:
-        for method in methods:
-            with CaptureQueriesContext(connection) as db_ctx:
-                # Run the request
-                resp = self.client.generic(method, url)
+        with CaptureQueriesContext(connection) as db_ctx:
+            # Run the request
+            resp = self.client.generic(method, url)
 
-            # Check the response
-            self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
+        # Check the response
+        self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
-            # Check the db queries
-            self.assertEqual(len(db_ctx), 0)
+        # Check the db queries
+        self.assertEqual(len(db_ctx), 0)
 
-    # TODO: Can this be parameterized?
     def test_detail_not_allowed_methods(self):
         if not self.detail_not_allowed_methods:
             self.skipTest("Not allowed methods list is empty.")
 
-        self._assert_not_allowed_methods(
-            url=self.detail_url,
-            methods=self.detail_not_allowed_methods,
-        )
+        for method in self.detail_not_allowed_methods:
+            with self.subTest(method=method):
+                self._assert_not_allowed_method(url=self.detail_url, method=method)
 
-    # TODO: Can this be parameterized?
     def test_list_not_allowed_methods(self):
         if not self.list_not_allowed_methods:
             self.skipTest("Not allowed methods list is empty.")
 
-        self._assert_not_allowed_methods(
-            url=self.list_url,
-            methods=self.list_not_allowed_methods,
-        )
+        for method in self.list_not_allowed_methods:
+            with self.subTest(method=method):
+                self._assert_not_allowed_method(url=self.list_url, method=method)
