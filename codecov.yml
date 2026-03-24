@@ -1,4 +1,8 @@
 ignore:
+  # Migrations are code too, but they are always run by the test command.
+  # Adding them into the coverage score feels misleading.
+  # TODO: Is there any chance tests could be run without running the migrations?
+  - "**/migrations/**"
   # I don't know the correct answer here, but including tests in the coverage score feels misleading.
   # https://about.codecov.io/blog/should-i-include-test-files-in-code-coverage-calculations/
   - "**/tests/**"
