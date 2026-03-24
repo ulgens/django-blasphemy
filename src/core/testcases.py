@@ -19,7 +19,23 @@ __all__ = (
 )
 
 
-class TestCase(ParametrizedTestCase, BaseTestCase):
+# TODO: Should this inherit from BaseTestCase?
+class AssertResponseStatusMixin:
+    def assertResponseStatus(self, response, status_code, msg=None):  # noqa: N802
+        """
+        Assert that the response has the expected status code.
+        """
+        if not msg:
+            msg = response.content.decode("utf-8")
+
+        self.assertEqual(response.status_code, status_code, msg=msg)
+
+
+class TestCase(
+    AssertResponseStatusMixin,
+    ParametrizedTestCase,
+    BaseTestCase,
+):
     pass
 
 
@@ -56,10 +72,7 @@ class AdminTestCase(TestCase):
     def test_add(self):
         response = self.client.get(self.add_url)
 
-        self.assertEqual(
-            response.status_code,
-            200,
-        )
+        self.assertResponseStatus(response, 200)
 
     def test_changelist_url(self):
         self.assertEqual(
@@ -70,10 +83,7 @@ class AdminTestCase(TestCase):
     def test_changelist(self):
         response = self.client.get(self.changelist_url)
 
-        self.assertEqual(
-            response.status_code,
-            200,
-        )
+        self.assertResponseStatus(response, 200)
 
 
 checked_methods_type = Literal["GET", "POST", "PUT", "PATCH", "DELETE"]
@@ -104,7 +114,7 @@ class APITestCase(TestCase, BaseAPITestCase):
             resp = self.client.generic(method, url)
 
         # Check the response
-        self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
+        self.assertResponseStatus(resp, status.HTTP_405_METHOD_NOT_ALLOWED)
 
         # Check the db queries
         self.assertEqual(len(db_ctx), 0)

@@ -60,7 +60,7 @@ class SnippetAPITests(APITestCase):
             resp = self.client.get(self.detail_url)
 
         # Check the response
-        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        self.assertResponseStatus(resp, status.HTTP_200_OK)
 
         data = resp.json()
         api_response_keys = data.keys()
@@ -75,7 +75,7 @@ class SnippetAPITests(APITestCase):
             resp = self.client.get(self.list_url)
 
         # Check the response
-        self.assertEqual(resp.status_code, status.HTTP_200_OK)
+        self.assertResponseStatus(resp, status.HTTP_200_OK)
 
         data = resp.json()
         # Assumes self.instance_number < settings.REST_FRAMEWORK["PAGE_SIZE"]
