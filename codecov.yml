@@ -2,3 +2,4 @@ ignore:
   # I don't know the correct answer here, but including tests in the coverage score feels misleading.
   # https://about.codecov.io/blog/should-i-include-test-files-in-code-coverage-calculations/
   - "**/tests/**"
+  - "**/testcase*.py"
