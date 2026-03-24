@@ -79,7 +79,8 @@ class AdminTestCase(TestCase):
 checked_methods_type = Literal["GET", "POST", "PUT", "PATCH", "DELETE"]
 
 
-class APITestCase(ParametrizedTestCase, BaseAPITestCase):
+# TODO: Check the MRO and whether the final self.client uses the correct class
+class APITestCase(TestCase, BaseAPITestCase):
     @classmethod
     def setUpClass(cls):
         if cls.__name__ == "APITestCase":
