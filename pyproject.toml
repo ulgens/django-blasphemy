@@ -20,7 +20,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Application Frameworks",
 ]
 dependencies = [
-    "celery[redis]==5.6.2",
+    "celery[redis]==5.6.3",
     "django==6.0.3",
     "django-admin-interface==0.32.0",
     "django-click==2.5.0",
@@ -37,17 +37,17 @@ dependencies = [
     "django-removals==1.1.6",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
-    "djangorestframework==3.17.0",
+    "djangorestframework==3.17.1",
     "drf-nested-routers==0.95.0",
     "drf-spectacular==0.29.0",
     "flower==2.0.1",
     "gitpython==3.1.46",
-    "gunicorn==25.1.0",
+    "gunicorn==25.2.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.3",
     "pygments==2.19.2",
     "rich==14.3.3",
-    "sentry-sdk==2.55.0",
+    "sentry-sdk==2.56.0",
     "whitenoise==6.12.0",
 ]
 
