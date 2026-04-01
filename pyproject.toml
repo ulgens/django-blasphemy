@@ -34,7 +34,7 @@ dependencies = [
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
     # Short answer: We don't need geocoder, carrier and timezone info
     "django-phonenumber-field[phonenumberslite]==8.4.0",
-    "django-removals==1.1.7",
+    "django-removals==1.1.8",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
     "djangorestframework==3.17.1",
@@ -47,7 +47,7 @@ dependencies = [
     "psycopg[binary]==3.3.3",
     "pygments==2.20.0",
     "rich==14.3.3",
-    "sentry-sdk==2.56.0",
+    "sentry-sdk==2.57.0",
     "whitenoise==6.12.0",
 ]
 

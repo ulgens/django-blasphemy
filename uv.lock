@@ -287,7 +287,7 @@ requires-dist = [
     { name = "django-filter", specifier = "==25.2" },
     { name = "django-jsonform", specifier = "==2.23.2" },
     { name = "django-phonenumber-field", extras = ["phonenumberslite"], specifier = "==8.4.0" },
-    { name = "django-removals", specifier = "==1.1.7" },
+    { name = "django-removals", specifier = "==1.1.8" },
     { name = "django-watchfiles", specifier = "==1.4.0" },
     { name = "djangorestframework", specifier = "==3.17.1" },
     { name = "drf-nested-routers", specifier = "==0.95.0" },
@@ -298,7 +298,7 @@ requires-dist = [
     { name = "psycopg", extras = ["binary"], specifier = "==3.3.3" },
     { name = "pygments", specifier = "==2.20.0" },
     { name = "rich", specifier = "==14.3.3" },
-    { name = "sentry-sdk", specifier = "==2.56.0" },
+    { name = "sentry-sdk", specifier = "==2.57.0" },
     { name = "whitenoise", specifier = "==6.12.0" },
 ]
 
@@ -442,14 +442,14 @@ phonenumberslite = [
 
 [[package]]
 name = "django-removals"
-version = "1.1.7"
+version = "1.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/63/8e/580492305ace11ab138f949fcde84ff3a36189629983eb368c80845a9019/django_removals-1.1.7.tar.gz", hash = "sha256:0633b06da6c7f20962c6ffa6542d029eda6aa91fdb68266f0f5bb468faf82549", size = 110855, upload-time = "2026-03-30T09:58:39.925Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8d/21/199e4aecf086704cfa793a9546c524d954c57abdec3693cf8df5eae5a6d8/django_removals-1.1.8.tar.gz", hash = "sha256:2a90b5abe08e64f0c7f4bf6755a2d920e10e6c3602dab45d5c0761ba0e9ec527", size = 111086, upload-time = "2026-03-30T16:07:24.93Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/99/db/fb0eec929235a5f34269ed7d55f4879438ff34f98debd5aec114dd92a92e/django_removals-1.1.7-py3-none-any.whl", hash = "sha256:0b222634ae4e542fd080b988cbe2dac8699de0e2943744f7612961326026ebbc", size = 6964, upload-time = "2026-03-30T09:58:38.54Z" },
+    { url = "https://files.pythonhosted.org/packages/a8/14/4d17fb89425872495499d5a5d2b63ded69f77c25176e6533bf0663f6c1c5/django_removals-1.1.8-py3-none-any.whl", hash = "sha256:8c1aa153d99908d3fb5e36eead15dc797f59252693b63e140317ec738bd8c3f3", size = 6962, upload-time = "2026-03-30T16:07:23.665Z" },
 ]
 
 [[package]]
@@ -1100,15 +1100,15 @@ wheels = [
 
 [[package]]
 name = "sentry-sdk"
-version = "2.56.0"
+version = "2.57.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/de/df/5008954f5466085966468612a7d1638487596ee6d2fd7fb51783a85351bf/sentry_sdk-2.56.0.tar.gz", hash = "sha256:fdab72030b69625665b2eeb9738bdde748ad254e8073085a0ce95382678e8168", size = 426820, upload-time = "2026-03-24T09:56:36.575Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/87/46c0406d8b5ddd026f73adaf5ab75ce144219c41a4830b52df4b9ab55f7f/sentry_sdk-2.57.0.tar.gz", hash = "sha256:4be8d1e71c32fb27f79c577a337ac8912137bba4bcbc64a4ec1da4d6d8dc5199", size = 435288, upload-time = "2026-03-31T09:39:29.264Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cd/1a/b3a3e9f6520493fed7997af4d2de7965d71549c62f994a8fd15f2ecd519e/sentry_sdk-2.56.0-py2.py3-none-any.whl", hash = "sha256:5afafb744ceb91d22f4cc650c6bd048ac6af5f7412dcc6c59305a2e36f4dbc02", size = 451568, upload-time = "2026-03-24T09:56:34.807Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/64/982e07b93219cb52e1cca5d272cb579e2f3eb001956c9e7a9a6d106c9473/sentry_sdk-2.57.0-py2.py3-none-any.whl", hash = "sha256:812c8bf5ff3d2f0e89c82f5ce80ab3a6423e102729c4706af7413fd1eb480585", size = 456489, upload-time = "2026-03-31T09:39:27.524Z" },
 ]
 
 [[package]]
