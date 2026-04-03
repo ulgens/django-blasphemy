@@ -26,6 +26,39 @@ services:
       redis:
         condition: service_started
 
+  # gunicorn doesn't start by default, needs to be started with:
+  # docker compose --profile gunicorn up
+  gunicorn:
+    build: .
+    image: blasphemy_gunicorn
+    container_name: blasphemy_gunicorn
+    volumes:
+      - .:/code
+    env_file: .env
+    environment:
+      # The default value is "xterm" and limits available color palette
+      # https://stackoverflow.com/questions/10003136/what-is-the-difference-between-xterm-color-xterm-256color
+      - TERM=xterm-256color
+    working_dir: /code/src
+    # TODO: Revisit the worker count.
+    command: python -m gunicorn --access-logfile - --bind 0:8001 --timeout 120 --workers 2 core.wsgi:application
+    ports:
+      - "${GUNICORN_HOST_FORWARD_PORT:-8001}:8001"
+    stdin_open: true
+    tty: true
+    # https://docs.docker.com/compose/how-tos/startup-order/#example
+    depends_on:
+      db:
+        condition: service_healthy
+        restart: true
+      mailpit:
+        condition: service_started
+      redis:
+        condition: service_started
+    profiles:
+      - gunicorn
+
+
   db:
     env_file: .env
     image: postgres:18.3-alpine3.23@sha256:4da1a4828be12604092fa55311276f08f9224a74a62dcb4708bd7439e2a03911
