@@ -47,7 +47,7 @@ dependencies = [
     "psycopg[binary]==3.3.3",
     "pygments==2.20.0",
     "rich==15.0.0",
-    "sentry-sdk==2.57.0",
+    "sentry-sdk==2.58.0",
     "whitenoise==6.12.0",
 ]
 
@@ -59,7 +59,7 @@ dev = [
     "ipdb==0.13.13",
     "ipython==9.12.0",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.15.9",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "ruff==0.15.10",               # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
     "unittest-parametrize==1.8.0",
     "xkcdpass==1.30.0",
