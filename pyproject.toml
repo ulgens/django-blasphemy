@@ -46,7 +46,7 @@ dependencies = [
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.3",
     "pygments==2.20.0",
-    "rich==14.3.3",
+    "rich==15.0.0",
     "sentry-sdk==2.57.0",
     "whitenoise==6.12.0",
 ]
