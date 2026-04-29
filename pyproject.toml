@@ -41,7 +41,7 @@ dependencies = [
     "drf-nested-routers==0.95.0",
     "drf-spectacular==0.29.0",
     "flower==2.0.1",
-    "gitpython==3.1.46",
+    "gitpython==3.1.47",
     "gunicorn==25.3.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.3",
@@ -57,9 +57,9 @@ dev = [
     "django-migration-vis==2.0.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
-    "ipython==9.12.0",
+    "ipython==9.13.0",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
-    "ruff==0.15.10",               # Used by Django's find_formatters and run_formatters (with a monkey patch)
+    "ruff==0.15.12",               # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
     "unittest-parametrize==1.8.0",
     "xkcdpass==1.30.0",
