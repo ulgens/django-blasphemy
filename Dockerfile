@@ -37,7 +37,7 @@ ENV UV_PYTHON_PREFERENCE=only-system
 # uv version can not be defined in an environment variable,
 # because COPY --from doesn't support variable expansion
 # https://github.com/moby/moby/issues/34482
-COPY --from=ghcr.io/astral-sh/uv:0.11.5@sha256:555ac94f9a22e656fc5f2ce5dfee13b04e94d099e46bb8dd3a73ec7263f2e484 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.11.11@sha256:798712e57f879c5393777cbda2bb309b29fcdeb0532129d4b1c3125c5385975a /uv /uvx /bin/
 
 # https://github.com/astral-sh/uv-docker-example/blob/a14ebc89e3a5e5b33131284968d8969ae054ed0d/Dockerfile#L13
 RUN --mount=type=cache,target=/root/.cache/uv \
