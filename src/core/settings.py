@@ -234,6 +234,10 @@ REST_FRAMEWORK = {
     "PAGE_SIZE": 20,
     "EXCEPTION_HANDLER": "api.exception_handler.exception_handler",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_RENDERER_CLASSES": (
+        "rest_framework.renderers.JSONRenderer",
+        "api.renderers.BrowsableHtmlRenderer",
+    ),
 }
 
 SPECTACULAR_SETTINGS = {
