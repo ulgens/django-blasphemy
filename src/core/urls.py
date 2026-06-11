@@ -18,6 +18,11 @@ urlpatterns = [
     path("manual_log/", manual_log),
     path("manual_flat_log/", manual_flat_log),
     path("api/", include(api_urls)),
+    # https://www.django-rest-framework.org/topics/browsable-api/#authentication
+    path(
+        route="browsable-api-auth/",
+        view=include("rest_framework.urls", namespace="rest_framework"),
+    ),
     # Don't leave the homepage empty
     path(
         route="",
