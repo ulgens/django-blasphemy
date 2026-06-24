@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 
 # "noqa: ERA001" in this file means the related line added as an example for an alternative
 # use case and/or further implementation, and the code should stay there. Think it like a .gitkeep file.
-import logging
 import sys
 from pathlib import Path
 
@@ -298,28 +297,7 @@ if USE_SSL:
     CSRF_COOKIE_SECURE = True
 
 # Sentry
-# https://docs.sentry.io/platforms/python/guides/django/
 if env.bool("ENABLE_SENTRY", default=False):
-    import git
-    import sentry_sdk
-    from sentry_sdk.integrations.django import DjangoIntegration
-    from sentry_sdk.integrations.logging import LoggingIntegration
+    from .sentry import init_sentry
 
-    repo = git.Repo(search_parent_directories=True)
-    sha = repo.head.object.hexsha
-
-    sentry_sdk.init(
-        dsn=env.str("SENTRY_DSN"),
-        environment=env.str("SENTRY_ENVIRONMENT", "development"),
-        release=sha,
-        # Enabled integrations can be checked via `sentry = sentry_sdk.init(...); sentry._client.integrations`
-        # https://docs.sentry.io/platforms/python/configuration/options/#auto-enabling-integrations
-        auto_enabling_integrations=True,
-        integrations=[
-            DjangoIntegration(cache_spans=True),
-            LoggingIntegration(event_level=logging.WARNING),
-        ],
-        send_default_pii=True,
-        traces_sample_rate=1.0,
-        profiles_sample_rate=1.0,
-    )
+    init_sentry(env)
