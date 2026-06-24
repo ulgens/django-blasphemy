@@ -8,7 +8,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "core.settings")
 
 app = Celery("blasphemy")
 
-# Configure Celery using settings from Django settings.py.
+# Configure Celery using settings from Django.
 app.config_from_object("django.conf:settings", namespace="CELERY")
 
 # Load tasks
