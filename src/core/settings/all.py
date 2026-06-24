@@ -297,7 +297,10 @@ if USE_SSL:
     CSRF_COOKIE_SECURE = True
 
 # Sentry
-if env.bool("ENABLE_SENTRY", default=False):
+ENABLE_SENTRY = env.bool("ENABLE_SENTRY", default=False)
+ENABLE_SENTRY = ENABLE_SENTRY and not TESTING
+
+if ENABLE_SENTRY:
     from .sentry import init_sentry
 
     init_sentry(env)
