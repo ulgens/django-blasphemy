@@ -4,6 +4,8 @@ Test views
 
 import logging
 
+from django.http import HttpRequest
+
 __all__ = (
     "error",
     "manual_flat_log",
@@ -13,11 +15,11 @@ __all__ = (
 logger = logging.getLogger(__name__)
 
 
-def error(request):
+def error(request: HttpRequest):
     return 1 / 0
 
 
-def manual_log(request):
+def manual_log(request: HttpRequest):
     try:
         return 1 / 0
     except ZeroDivisionError:
@@ -25,7 +27,7 @@ def manual_log(request):
         raise
 
 
-def manual_flat_log(request):
+def manual_flat_log(request: HttpRequest):
     try:
         return 1 / 0
     except ZeroDivisionError as e:
