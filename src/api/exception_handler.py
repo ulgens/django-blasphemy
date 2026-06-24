@@ -3,13 +3,14 @@ from collections.abc import Mapping
 from django.core import exceptions as django_exceptions
 from rest_framework import exceptions as drf_exceptions
 from rest_framework.fields import get_error_detail
+from rest_framework.response import Response
 from rest_framework.settings import api_settings as drf_settings
 from rest_framework.views import exception_handler as orig_exception_handler
 
 __all__ = ("exception_handler",)
 
 
-def convert_django_permission_denied(exc):
+def convert_django_permission_denied(exc: django_exceptions.PermissionDenied) -> drf_exceptions.PermissionDenied:
     """
     Converts Django's PermissionDenied exception to DRF's PermissionDenied exception.
     """
@@ -18,7 +19,7 @@ def convert_django_permission_denied(exc):
     return drf_exceptions.PermissionDenied(detail=str(exc))
 
 
-def convert_django_validation_error(exc):
+def convert_django_validation_error(exc: django_exceptions.ValidationError) -> drf_exceptions.ValidationError:
     """
     Converts Django's ValidationError exception to DRF's ValidationError exception.
 
@@ -52,7 +53,7 @@ def convert_django_validation_error(exc):
     return drf_exceptions.ValidationError(detail=details)
 
 
-def exception_handler(exc, context):
+def exception_handler(exc: Exception, context: dict) -> Response:
     """
     Automatically converts Django's model layer PermissionDenied
     and ValidationError exceptions to their DRF counterparts.

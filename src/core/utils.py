@@ -37,7 +37,7 @@ def generate_secret_key(
     return get_random_string(allowed_chars=allowed_chars, length=length)
 
 
-def parse_bool(value):
+def parse_bool(value) -> bool:
     if isinstance(value, str):
         value = value.strip().lower()
 
