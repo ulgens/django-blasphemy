@@ -1,4 +1,3 @@
-import struct
 from datetime import datetime
 from uuid import uuid7
 
@@ -42,25 +41,6 @@ class UUIDModel(models.Model):
             timestamp,
             tz=get_current_timezone(),
         )
-
-        # uuid7 (uuid_extensions) package was using an outdated implementation for UUIDv7
-        # There is no clear way to detect which UUID values are generated via the package.
-        # During the manual discovery, 2025-09-18 was converted as 2198-03-14 so roughly speaking,
-        # any result beyond year 2195 can be accepted as wrong.
-        # This block can be removed when all stored buggy UUID values are replaced or deleted.
-        # https://github.com/stevesimmons/uuid7/issues/1
-        if created_at.year > 2195:
-            # Adapted from uuid_extensions buggy version
-            # https://github.com/stevesimmons/uuid7/blob/7cd40cd9be0affa1cd09e7476e29af555c678220/uuid_extensions/uuid7.py#L262
-            bits = struct.unpack(">IHHHHI", self.id.bytes)
-            whole_secs = (bits[0] << 4) + (bits[1] >> 12)
-            frac_binary = ((bits[1] & 0x0FFF) << 26) + ((bits[2] & 0x0FFF) << 14) + (bits[3] & 0x3FFF)
-            frac_ns, _ = divmod(frac_binary * NANOSECONDS_PER_SECOND, 1 << 38)
-            epoch_ns = whole_secs * NANOSECONDS_PER_SECOND + frac_ns
-
-            timestamp = epoch_ns / NANOSECONDS_PER_SECOND
-
-            created_at = datetime.fromtimestamp(timestamp, tz=get_current_timezone())
 
         return created_at
 
