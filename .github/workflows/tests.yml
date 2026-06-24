@@ -65,6 +65,7 @@ jobs:
       - name: Run tests
         working-directory: ./src
         env:
+          ALLOWED_HOSTS: "*"
           APP_REDIS_URL: "redis://localhost:${{ job.services.redis.ports[6379] }}/1"
           CELERY_BROKER_URL: ""
           CELERY_RESULT_BACKEND: ""
