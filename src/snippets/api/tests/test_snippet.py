@@ -1,14 +1,14 @@
-import random
-from random import randint
-
 from django.test import tag
 from django.urls import reverse
+from faker import Faker
 from rest_framework import status
 
 from core.testcases import APITestCase
 
 from ...factories import SnippetFactory
 from ...models import Snippet
+
+fake = Faker()
 
 
 @tag("api", "snippet")
@@ -26,10 +26,10 @@ class SnippetAPITests(APITestCase):
         super().setUpTestData()
 
         # Create sample objects
-        cls.instance_number = randint(10, 20)  # noqa: S311
+        cls.instance_number = fake.random_int(10, 20)
         instances = SnippetFactory.create_batch(cls.instance_number)
 
-        cls.instance = random.choice(instances)  # noqa: S311
+        cls.instance = fake.random_element(instances)
 
     @classmethod
     def get_detail_url(cls, instance: Snippet):
