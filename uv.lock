@@ -289,7 +289,7 @@ requires-dist = [
     { name = "django-phonenumber-field", extras = ["phonenumberslite"], specifier = "==8.4.0" },
     { name = "django-removals", specifier = "==1.2.1" },
     { name = "django-watchfiles", specifier = "==1.4.0" },
-    { name = "djangorestframework", specifier = "==3.17.1" },
+    { name = "djangorestframework", git = "https://github.com/encode/django-rest-framework?rev=fbb02d9be78b1e232784dbb813c3fa118c1ba076" },
     { name = "drf-nested-routers", specifier = "==0.95.0" },
     { name = "drf-spectacular", specifier = "==0.29.0" },
     { name = "flower", specifier = "==2.0.1" },
@@ -468,13 +468,9 @@ wheels = [
 [[package]]
 name = "djangorestframework"
 version = "3.17.1"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/encode/django-rest-framework?rev=fbb02d9be78b1e232784dbb813c3fa118c1ba076#fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
 dependencies = [
     { name = "django" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/ca/d7/c016e69fac19ff8afdc89db9d31d9ae43ae031e4d1993b20aca179b8301a/djangorestframework-3.17.1.tar.gz", hash = "sha256:a6def5f447fe78ff853bff1d47a3c59bf38f5434b031780b351b0c73a62db1a5", size = 905742, upload-time = "2026-03-24T16:58:33.705Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/5a/e1/2c516bdc83652b1a60c6119366ac2c0607b479ed05cd6093f916ca8928f8/djangorestframework-3.17.1-py3-none-any.whl", hash = "sha256:c3c74dd3e83a5a3efc37b3c18d92bd6f86a6791c7b7d4dff62bb068500e76457", size = 898844, upload-time = "2026-03-24T16:58:31.845Z" },
 ]
 
 [[package]]
