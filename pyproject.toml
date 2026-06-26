@@ -68,12 +68,17 @@ dev = [
 [tool.uv]
 # The earliest version that supports the current lock file revision
 required-version = ">=0.8.4"
+package = false
+
+[tool.uv.sources]
 # TODO:
 #   Switch back to the release version when the following fix is included in a release.
 #   https://github.com/encode/django-rest-framework/pull/9978
-sources.djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
-package = false
+djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
 
 [tool.pyproject-fmt]
 indent = 4
 keep_full_version = true
+table_format = "long"
+sub_table_spacing = "\n"
+collapse_tables = [ "project.authors" ]
