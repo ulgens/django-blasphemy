@@ -26,7 +26,7 @@ dependencies = [
     "django-click==2.5.0",
     "django-debug-toolbar==7.0.0",
     "django-dirtyfields==1.9.9",
-    "django-environ==0.13.0",
+    "django-environ==0.14.0",
     "django-extensions==4.1",
     "django-filter==25.2",
     "django-jsonform==2.23.2",
@@ -53,11 +53,11 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "coverage==7.14.1",
+    "coverage==7.14.3",
     "django-migration-vis==2.0.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
-    "ipython==9.14.1",
+    "ipython==9.15.0",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
     "ruff==0.15.17",               # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
@@ -74,4 +74,4 @@ package = false
 # TODO:
 #   Switch back to the release version when the following fix is included in a release.
 #   https://github.com/encode/django-rest-framework/pull/9978
-djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
+djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "6f0b74def3fcc81e126b87b08e59abdb6c2ad056" }
