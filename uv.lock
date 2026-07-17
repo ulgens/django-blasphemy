@@ -289,7 +289,7 @@ requires-dist = [
     { name = "django-phonenumber-field", extras = ["phonenumberslite"], specifier = "==8.4.0" },
     { name = "django-removals", specifier = "==1.4.0" },
     { name = "django-watchfiles", specifier = "==1.4.0" },
-    { name = "djangorestframework", git = "https://github.com/encode/django-rest-framework?rev=fbb02d9be78b1e232784dbb813c3fa118c1ba076" },
+    { name = "djangorestframework", git = "https://github.com/encode/django-rest-framework?rev=b73cae1db8b1caef92cc6547e22140a149a007b2" },
     { name = "drf-nested-routers", specifier = "==0.95.0" },
     { name = "drf-spectacular", specifier = "==0.30.0" },
     { name = "flower", specifier = "==2.0.1" },
@@ -468,7 +468,7 @@ wheels = [
 [[package]]
 name = "djangorestframework"
 version = "3.17.1"
-source = { git = "https://github.com/encode/django-rest-framework?rev=fbb02d9be78b1e232784dbb813c3fa118c1ba076#fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
+source = { git = "https://github.com/encode/django-rest-framework?rev=b73cae1db8b1caef92cc6547e22140a149a007b2#b73cae1db8b1caef92cc6547e22140a149a007b2" }
 dependencies = [
     { name = "django" },
 ]
