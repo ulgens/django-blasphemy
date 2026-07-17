@@ -28,7 +28,7 @@ dependencies = [
     "django-dirtyfields==1.9.9",
     "django-environ==0.13.0",
     "django-extensions==4.1",
-    "django-filter==25.2",
+    "django-filter==26.1",
     "django-jsonform==2.23.2",
     # Why lite version?
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
