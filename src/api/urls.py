@@ -5,6 +5,8 @@ from rest_framework.reverse import reverse_lazy
 
 from snippets.urls import urlpatterns as snippets_urlpatterns
 
+from .views import IsAliveView
+
 __all__ = ("urlpatterns",)
 
 app_name = "api"
@@ -29,4 +31,6 @@ swagger_patterns = [
 urlpatterns = [
     *swagger_patterns,
     path("snippets/", include(snippets_urlpatterns)),
+    # Health Check
+    path("is_alive/", IsAliveView.as_view(), name="is-alive"),
 ]
