@@ -5,7 +5,7 @@ from rest_framework.reverse import reverse_lazy
 
 from snippets.urls import urlpatterns as snippets_urlpatterns
 
-from .views import IsAliveView
+from .views import GitRefView, IsAliveView
 
 __all__ = ("urlpatterns",)
 
@@ -32,5 +32,6 @@ urlpatterns = [
     *swagger_patterns,
     path("snippets/", include(snippets_urlpatterns)),
     # Health Check
+    path("git_ref/", GitRefView.as_view(), name="git-ref"),
     path("is_alive/", IsAliveView.as_view(), name="is-alive"),
 ]
