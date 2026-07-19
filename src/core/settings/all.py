@@ -14,6 +14,7 @@ import sys
 from pathlib import Path
 
 import environ
+import git
 from celery.schedules import crontab
 from django.utils.translation import gettext_lazy as _
 
@@ -302,6 +303,12 @@ if USE_SSL:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
 
+# Git
+repo = git.Repo(search_parent_directories=True)
+
+GIT_BRANCH = repo.active_branch.name
+GIT_COMMIT_SHA = repo.head.object.hexsha
+
 # Sentry
 ENABLE_SENTRY = env.bool("ENABLE_SENTRY", default=False)
 ENABLE_SENTRY = ENABLE_SENTRY and not TESTING
@@ -309,4 +316,4 @@ ENABLE_SENTRY = ENABLE_SENTRY and not TESTING
 if ENABLE_SENTRY:
     from .sentry import init_sentry
 
-    init_sentry(env)
+    init_sentry(env, GIT_COMMIT_SHA)
