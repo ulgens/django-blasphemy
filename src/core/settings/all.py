@@ -306,7 +306,11 @@ if USE_SSL:
 # Git
 repo = git.Repo(search_parent_directories=True)
 
-GIT_BRANCH = repo.active_branch.name
+try:
+    GIT_BRANCH = repo.active_branch.name
+except TypeError:  # detached state
+    GIT_BRANCH = None
+
 GIT_COMMIT_SHA = repo.head.object.hexsha
 
 # Sentry
