@@ -204,16 +204,16 @@ wheels = [
 
 [[package]]
 name = "django"
-version = "6.1b1"
+version = "6.1rc1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asgiref" },
     { name = "sqlparse" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/82/9a/5437d9ef137f041f6e24a966feaa567d219953f189b1316e049a2fd1dc31/django-6.1b1.tar.gz", hash = "sha256:d08aae6f285b8c7bb1fb1156bc0e9dc3ec94282c80b8e975c46e09daeebbb89f", size = 11194569, upload-time = "2026-06-24T17:34:10.989Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/6e/250a009775787f4f83e2af2ee47f8722505722266907471c298863a1d42e/django-6.1rc1.tar.gz", hash = "sha256:3964a696caea6ccfcc22f9a31ae1e322546002e52ea46bc8fdfe85a518ef6394", size = 11209590, upload-time = "2026-07-22T20:07:51.603Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5d/6c/2bcd52d088f313f928b4dd899deb216b33e36ed4bcb8c1f809280ba69cf7/django-6.1b1-py3-none-any.whl", hash = "sha256:b7720a90857a46eb57f58aa29fc4d7844a1ac705fb61725e6fbebbad600e2479", size = 8410854, upload-time = "2026-06-24T17:34:04.435Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/91/54c1548dd7fd14b1d63df33d6b085b7350695bdbd38d9ce5890cf8a2d8be/django-6.1rc1-py3-none-any.whl", hash = "sha256:f8a355d15fa6aa4cb65a71d692b55acfc84a1fe4ba5d375fa1164fe6b7a34ef5", size = 8411536, upload-time = "2026-07-22T20:07:43.766Z" },
 ]
 
 [[package]]
@@ -277,7 +277,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "celery", extras = ["redis"], specifier = "==5.6.3" },
-    { name = "django", specifier = "==6.1b1" },
+    { name = "django", specifier = "==6.1rc1" },
     { name = "django-admin-interface", specifier = "==0.32.0" },
     { name = "django-click", specifier = "==2.5.0" },
     { name = "django-debug-toolbar", specifier = "==7.0.0" },
@@ -286,19 +286,19 @@ requires-dist = [
     { name = "django-extensions", specifier = "==4.1" },
     { name = "django-filter", specifier = "==26.1" },
     { name = "django-jsonform", specifier = "==2.23.2" },
-    { name = "django-phonenumber-field", extras = ["phonenumberslite"], specifier = "==8.4.0" },
+    { name = "django-phonenumber-field", extras = ["phonenumberslite"], specifier = "==8.5.0" },
     { name = "django-removals", specifier = "==1.4.0" },
     { name = "django-watchfiles", specifier = "==1.4.0" },
-    { name = "djangorestframework", git = "https://github.com/encode/django-rest-framework?rev=fbb02d9be78b1e232784dbb813c3fa118c1ba076" },
+    { name = "djangorestframework", git = "https://github.com/encode/django-rest-framework?rev=f0d95c2df066e163553f7d19b33d724e988744cc" },
     { name = "drf-nested-routers", specifier = "==0.95.0" },
     { name = "drf-spectacular", specifier = "==0.30.0" },
     { name = "flower", specifier = "==2.0.1" },
-    { name = "gitpython", specifier = "==3.1.52" },
+    { name = "gitpython", specifier = "==3.1.57" },
     { name = "gunicorn", specifier = "==26.0.0" },
     { name = "psycopg", extras = ["binary"], specifier = "==3.3.4" },
     { name = "pygments", specifier = "==2.20.0" },
     { name = "rich", specifier = "==15.0.0" },
-    { name = "sentry-sdk", specifier = "==2.66.0" },
+    { name = "sentry-sdk", specifier = "==2.66.1" },
     { name = "whitenoise", specifier = "==6.12.0" },
 ]
 
@@ -425,14 +425,14 @@ wheels = [
 
 [[package]]
 name = "django-phonenumber-field"
-version = "8.4.0"
+version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/87/bf/8aa60c9834773b955dff1ddea842e361e8daaf6b0945d5bfc29fc66d53ab/django_phonenumber_field-8.4.0.tar.gz", hash = "sha256:2b83e843dac35eec6a69880a166487235b737a71a1e38c9a52e5ad67d6996083", size = 45512, upload-time = "2025-11-24T15:09:51.904Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0f/82/479b070133cd493cad0f59bc04d6dd3e2e88b2c1f48cd6f54fd897225199/django_phonenumber_field-8.5.0.tar.gz", hash = "sha256:19c606fda7bb25630c4913f7ac83c1824186ea17e2e4c6dc9aa9373e8f5843c5", size = 46311, upload-time = "2026-07-23T12:24:16.471Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8b/a3/f6b85a9246e22cf719752ad83f5e95aa9ba12419b2f9eff70f20d30e55df/django_phonenumber_field-8.4.0-py3-none-any.whl", hash = "sha256:7a1cb3a6456edb54d879f11ffa0acb227ded08c93b587035d0f28093f0e46511", size = 69528, upload-time = "2025-11-24T15:09:45.479Z" },
+    { url = "https://files.pythonhosted.org/packages/77/14/4e33f4055afbf517ac3223371334f6f3226beecc92b781131a6eb6eeda1c/django_phonenumber_field-8.5.0-py3-none-any.whl", hash = "sha256:a6dd71250f7fd0724aad995df01bdb4ac457a65622f120d0d623792fe8283798", size = 69514, upload-time = "2026-07-23T12:24:14.955Z" },
 ]
 
 [package.optional-dependencies]
@@ -468,7 +468,7 @@ wheels = [
 [[package]]
 name = "djangorestframework"
 version = "3.17.1"
-source = { git = "https://github.com/encode/django-rest-framework?rev=fbb02d9be78b1e232784dbb813c3fa118c1ba076#fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
+source = { git = "https://github.com/encode/django-rest-framework?rev=f0d95c2df066e163553f7d19b33d724e988744cc#f0d95c2df066e163553f7d19b33d724e988744cc" }
 dependencies = [
     { name = "django" },
 ]
@@ -566,14 +566,14 @@ wheels = [
 
 [[package]]
 name = "gitpython"
-version = "3.1.52"
+version = "3.1.57"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "gitdb" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e5/fd/df0bafa4eb5ea2f51e1adee9f7a94c8e62c5d180e65117045dfca3439c8a/gitpython-3.1.52.tar.gz", hash = "sha256:de0a8ad86274c6e75ae8b37dd055ba68f19818c813108642263227b20775b48e", size = 223726, upload-time = "2026-07-16T03:15:59.599Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/0d/132ed135c871b6bf91adf16a0e43797cd535b81d4973b5d09291c54fc5ee/gitpython-3.1.57.tar.gz", hash = "sha256:c493ec57c0ef6b19743798b6a5af859c71814b524e7e6f97baa2f8e658961488", size = 225898, upload-time = "2026-07-26T07:33:26.351Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8d/90/04dff7c1e176bb1c3011ef1647393d368790da710d8dde1cdcfad301f45a/gitpython-3.1.52-py3-none-any.whl", hash = "sha256:79a36ee1f83523214a3f72d56cf1c4e490d577dc61af77e43dfe5862bd9da01a", size = 215366, upload-time = "2026-07-16T03:15:58.239Z" },
+    { url = "https://files.pythonhosted.org/packages/41/6e/2139de986d9c7c3ac86f1f8be43858ce90bdfe2f7175e6c80c650ba15242/gitpython-3.1.57-py3-none-any.whl", hash = "sha256:4ccf7d73c10f5c9e76043fbb2675ac5a1b3ff5b41e648f56bcbed5f63792ecaf", size = 217151, upload-time = "2026-07-26T07:33:24.838Z" },
 ]
 
 [[package]]
@@ -1115,15 +1115,15 @@ wheels = [
 
 [[package]]
 name = "sentry-sdk"
-version = "2.66.0"
+version = "2.66.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/48/ff/670abe04c5072719b5060ed93851d0d69525d60f8f2c5810f8becd58f9c1/sentry_sdk-2.66.0.tar.gz", hash = "sha256:9727d35aa83c56cd53294676fe65b96296a334c9ce107fa2142bd70f47acb265", size = 935745, upload-time = "2026-07-16T12:42:04.663Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7f/6f/d59cad0889d15fde85254cf58e701484de3f3f0406003b3197746910b19b/sentry_sdk-2.66.1.tar.gz", hash = "sha256:f882fb08710c5f8bfc603aafa3e901b384009a19cc3f76a572b863392ee81cdc", size = 940543, upload-time = "2026-07-22T12:26:54.553Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c7/bb/49b10783f29067da2eec179320617e94faf63196609de47aeab3c26c3325/sentry_sdk-2.66.0-py3-none-any.whl", hash = "sha256:096136c214c602be2b323524d30755dc5b30ec5a218a206207f33b12c05c6f11", size = 504769, upload-time = "2026-07-16T12:42:02.919Z" },
+    { url = "https://files.pythonhosted.org/packages/89/d3/726bd88f0eece09ddf431bea4c9191c18e7a8d070b854eb0014d447712ee/sentry_sdk-2.66.1-py3-none-any.whl", hash = "sha256:86002793161d9a95ef04bdd8d442e9bfece5d989b755f05d6360215094a7aff6", size = 505555, upload-time = "2026-07-22T12:26:52.71Z" },
 ]
 
 [[package]]
