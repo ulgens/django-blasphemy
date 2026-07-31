@@ -21,7 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "celery[redis]==5.6.3",
-    "django==6.1b1",
+    "django==6.1rc1",
     "django-admin-interface==0.32.0",
     "django-click==2.5.0",
     "django-debug-toolbar==7.0.0",
@@ -33,7 +33,7 @@ dependencies = [
     # Why lite version?
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
     # Short answer: We don't need geocoder, carrier and timezone info
-    "django-phonenumber-field[phonenumberslite]==8.4.0",
+    "django-phonenumber-field[phonenumberslite]==8.5.0",
     "django-removals==1.4.0",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
@@ -41,13 +41,13 @@ dependencies = [
     "drf-nested-routers==0.95.0",
     "drf-spectacular==0.30.0",
     "flower==2.0.1",
-    "gitpython==3.1.52",
+    "gitpython==3.1.57",
     "gunicorn==26.0.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.4",
     "pygments==2.20.0",
     "rich==15.0.0",
-    "sentry-sdk==2.66.0",
+    "sentry-sdk==2.66.1",
     "whitenoise==6.12.0",
 ]
 
@@ -74,4 +74,4 @@ package = false
 # TODO:
 #   Switch back to the release version when the following fix is included in a release.
 #   https://github.com/encode/django-rest-framework/pull/9978
-djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "fbb02d9be78b1e232784dbb813c3fa118c1ba076" }
+djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "f0d95c2df066e163553f7d19b33d724e988744cc" }
