@@ -74,4 +74,4 @@ package = false
 # TODO:
 #   Switch back to the release version when the following fix is included in a release.
 #   https://github.com/encode/django-rest-framework/pull/9978
-djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "f0d95c2df066e163553f7d19b33d724e988744cc" }
+djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "0e25e53582df802da4fcc329bd57e4ba5f61010b" }
