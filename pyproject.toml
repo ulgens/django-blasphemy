@@ -37,7 +37,7 @@ dependencies = [
     "django-removals==1.4.0",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
-    "djangorestframework",
+    "djangorestframework==3.18.0",
     "drf-nested-routers==0.95.3",
     "drf-spectacular==0.30.0",
     "flower==2.0.1",
@@ -69,9 +69,3 @@ dev = [
 # The earliest version that supports the current lock file revision
 required-version = ">=0.8.4"
 package = false
-
-[tool.uv.sources]
-# TODO:
-#   Switch back to the release version when the following fix is included in a release.
-#   https://github.com/encode/django-rest-framework/pull/9978
-djangorestframework = { git = "https://github.com/encode/django-rest-framework", rev = "d346a8c3c92a36fdb462c992331e238d0a737305" }
