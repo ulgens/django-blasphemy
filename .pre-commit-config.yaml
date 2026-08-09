@@ -44,19 +44,14 @@ repos:
       - id: yamlfmt
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.4
+    rev: 0.38.0
     hooks:
       # TODO:
       #   Consider migration to actionlint
       #   https://github.com/python-jsonschema/check-jsonschema/issues/586
       #   https://github.com/rhysd/actionlint
       - id: check-github-workflows
-      # https://check-jsonschema.readthedocs.io/en/stable/precommit_usage.html#check-a-builtin-schema
-      - id: check-jsonschema
-        name: "Check GitHub Workflows set timeout-minutes"
-        files: ^\.github/workflows/[^/]+$
-        types: [yaml]
-        args: ["--builtin-schema", "github-workflows-require-timeout"]
+      - id: check-github-workflows-require-timeout
       # https://github.com/python-jsonschema/check-jsonschema/pull/643#issuecomment-3903138224
       # https://github.com/python-jsonschema/check-jsonschema/issues/586
       - id: check-renovate
