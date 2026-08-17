@@ -24,7 +24,7 @@ dependencies = [
     "django==6.1",
     "django-admin-interface==0.32.0",
     "django-click==2.5.0",
-    "django-debug-toolbar==7.0.0",
+    "django-debug-toolbar==7.1.0",
     "django-dirtyfields==1.9.9",
     "django-environ==0.14.0",
     "django-extensions==4.1",
@@ -41,19 +41,19 @@ dependencies = [
     "drf-nested-routers==0.95.3",
     "drf-spectacular==0.30.0",
     "flower==2.0.1",
-    "gitpython==3.1.57",
+    "gitpython==3.1.59",
     "gunicorn==26.0.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.4",
     "pygments==2.20.0",
     "rich==15.0.0",
-    "sentry-sdk==2.66.1",
+    "sentry-sdk==2.68.0",
     "whitenoise==6.12.0",
 ]
 
 [dependency-groups]
 dev = [
-    "coverage==7.15.3",
+    "coverage==7.15.4",
     "django-migration-vis==2.0.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
