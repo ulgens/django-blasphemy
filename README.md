@@ -3,7 +3,7 @@
 # django-blasphemy
 
 [![Python](https://img.shields.io/badge/python-3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/django-6.0-092E20?&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Django](https://img.shields.io/badge/django-6.1-092E20?&logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![PostgreSQL](https://img.shields.io/badge/postgresql-18-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/-docker-2496ED?logo=docker&labelColor=555)](https://www.docker.com/)
 [![uv](https://img.shields.io/badge/-uv-DE5FE9?logo=uv&labelColor=555)](https://github.com/astral-sh/uv)
