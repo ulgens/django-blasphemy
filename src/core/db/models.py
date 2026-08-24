@@ -28,9 +28,13 @@ class UUIDModel(models.Model):
     # TODO: Try to make use of `models.GeneratedField`
     # TODO: Consider using this method to replace `created_at` field
     def get_created_at_from_id(self):
-        # > UUIDv7 features a time-ordered value field derived from the widely implemented and well-known
-        # > Unix Epoch timestamp source, the number of milliseconds since midnight 1 Jan 1970 UTC, leap seconds excluded.
-        # https://www.rfc-editor.org/rfc/rfc9562.html#name-uuid-version-7
+        """
+        Extract creation timestamp from id
+
+        > UUIDv7 features a time-ordered value field derived from the widely implemented and well-known
+        > Unix Epoch timestamp source, the number of milliseconds since midnight 1 Jan 1970 UTC, leap seconds excluded.
+        https://www.rfc-editor.org/rfc/rfc9562.html#name-uuid-version-7
+        """
         epoch_ms = self.id.time
 
         # Unix time (timestamp) is defined in seconds
