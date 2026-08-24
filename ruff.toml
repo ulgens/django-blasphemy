@@ -89,9 +89,6 @@ select = [
     "W",
 ]
 ignore = [
-    # Line lengths are checked & managed by ruff, don't need to check again.
-    # https://docs.astral.sh/ruff/rules/line-too-long/
-    "E501",
     # Absolute imports are not always better than relative imports.
     # https://docs.astral.sh/ruff/rules/relative-imports/
     "TID252",
