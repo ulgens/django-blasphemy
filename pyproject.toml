@@ -24,7 +24,7 @@ dependencies = [
     "django==6.1",
     "django-admin-interface==0.32.0",
     "django-click==2.5.0",
-    "django-debug-toolbar==7.1.1",
+    "django-debug-toolbar==8.0.0",
     "django-dirtyfields==1.9.9",
     "django-environ==0.14.0",
     "django-extensions==4.1",
