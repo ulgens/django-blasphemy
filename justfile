@@ -63,6 +63,11 @@ test *ARGS:
 test_fast *ARGS:
     {{ DJANGO_CMD }} python -Wd manage.py test --failfast --keepdb --shuffle --parallel=auto {{ ARGS }}
 
+# Testing pytest
+[group("django")]
+pytest *ARGS:
+    {{ DJANGO_CMD }} pytest {{ ARGS }}
+
 # Generate a visual representation of the Django migrations
 [group("visualization")]
 visualize_migrations *ARGS:
