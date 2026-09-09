@@ -1,0 +1,9 @@
+[pytest]
+DJANGO_SETTINGS_MODULE = "core.settings"
+addopts = [
+    "-n", "auto",
+]
+markers = [
+    "api",
+    "snippet",
+]
