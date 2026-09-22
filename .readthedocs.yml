@@ -10,10 +10,5 @@ build:
     install:
       - uv sync --only-group docs
 
-# https://github.com/readthedocs/readthedocs.org/blob/main/docs/dev/design/uv-native-support-proposal.md
-python:
-  install:
-    - method: uv
-
 sphinx:
   configuration: docs/conf.py
