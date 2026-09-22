@@ -6,13 +6,15 @@ build:
   os: ubuntu-26.04
   tools:
     python: "3.14"
+  jobs:
+    install:
+      - uv sync --only-group docs
 
+# https://github.com/readthedocs/readthedocs.org/blob/main/docs/dev/design/uv-native-support-proposal.md
 python:
   install:
     - method: uv
       command: sync
-      groups:
-        - docs
 
 sphinx:
   configuration: docs/conf.py
