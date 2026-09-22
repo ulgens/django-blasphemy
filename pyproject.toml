@@ -64,6 +64,9 @@ dev = [
     "unittest-parametrize==1.8.0",
     "xkcdpass==1.30.0",
 ]
+docs = [
+    "sphinx==9.1.0",
+]
 
 [tool.uv]
 # The earliest version that supports the current lock file revision
