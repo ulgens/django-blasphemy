@@ -14,7 +14,6 @@ build:
 python:
   install:
     - method: uv
-      command: sync
 
 sphinx:
   configuration: docs/conf.py
