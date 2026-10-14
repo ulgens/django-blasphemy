@@ -25,14 +25,14 @@ utils.find_formatters = find_formatters
 
 def run_formatters(
     written_files,
-    ruff_path=(sentinel := object()),  # noqa: B008
+    ruff_path=(sentinel_ := object()),  # noqa: B008
     stderr=sys.stderr,
 ):
     """
     Run ruff on the given files.
     """
     # Use a sentinel rather than None, as which() returns None when not found.
-    if ruff_path is sentinel:
+    if ruff_path is sentinel_:
         ruff_path = shutil.which("ruff")
 
     if not ruff_path:
