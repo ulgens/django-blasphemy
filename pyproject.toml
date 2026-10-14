@@ -69,6 +69,6 @@ docs = [
 ]
 
 [tool.uv]
-# The earliest version that supports the current lock file revision
-required-version = ">=0.8.4"
+# The earliest version that supports the current lock file revision (5)
+required-version = ">=0.12.22"
 package = false
