@@ -29,7 +29,7 @@ repos:
       - id: ruff-format
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.32.0
+    rev: 1.33.0
     hooks:
       - id: django-upgrade
 
@@ -44,7 +44,7 @@ repos:
       - id: yamlfmt
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.38.0
+    rev: 0.38.2
     hooks:
       # TODO:
       #   Consider migration to actionlint
