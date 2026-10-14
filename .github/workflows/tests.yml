@@ -60,7 +60,7 @@ jobs:
           version: ${{ env.UV_VERSION }}
 
       - name: Install packages
-        run: uv sync --frozen --no-install-project
+        run: uv sync --group pytest --frozen --no-install-project
 
       - name: Run tests
         working-directory: ./src
@@ -79,7 +79,7 @@ jobs:
         run: |
           uv run python manage.py wait_for_db
           uv run python manage.py wait_for_cache
-          uv run coverage run manage.py test --parallel --shuffle
+          uv run coverage run pytest
           uv run coverage report
           uv run coverage xml
 
