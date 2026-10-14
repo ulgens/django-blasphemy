@@ -21,14 +21,14 @@ classifiers = [
 ]
 dependencies = [
     "celery[redis]==5.6.3",
-    "django==6.1.1",
+    "django==6.1.2",
     "django-admin-interface==0.32.0",
     "django-click==2.5.0",
     "django-debug-toolbar==8.0.0",
     "django-dirtyfields==1.9.9",
     "django-environ==0.14.0",
     "django-extensions==4.1",
-    "django-filter==26.1",
+    "django-filter==26.2",
     "django-jsonform==2.23.2",
     # Why lite version?
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
@@ -37,23 +37,23 @@ dependencies = [
     "django-removals==1.5.0",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
-    "djangorestframework==3.18.1",
+    "djangorestframework==3.18.3",
     "drf-nested-routers==0.95.3",
     "drf-spectacular==0.30.0",
-    "flower==2.1.0",
-    "gitpython==3.1.62",
+    "flower==2.2.0",
+    "gitpython==3.2.0",
     "gunicorn==26.2.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.6",
     "pygments==2.21.0",
     "rich==15.0.0",
-    "sentry-sdk==2.69.1",
+    "sentry-sdk==2.71.0",
     "whitenoise==6.12.0",
 ]
 
 [dependency-groups]
 dev = [
-    "coverage==7.16.0",
+    "coverage==7.16.2",
     "django-migration-vis==2.0.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
@@ -61,7 +61,7 @@ dev = [
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
     "ruff==0.17.0",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
-    "unittest-parametrize==1.8.0",
+    "unittest-parametrize==1.9.0",
     "xkcdpass==1.30.0",
 ]
 docs = [
