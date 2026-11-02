@@ -34,30 +34,30 @@ dependencies = [
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
     # Short answer: We don't need geocoder, carrier and timezone info
     "django-phonenumber-field[phonenumberslite]==8.5.0",
-    "django-removals==1.5.0",
+    "django-removals==1.5.1",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
     "djangorestframework==3.18.3",
     "drf-nested-routers==0.95.3",
     "drf-spectacular==0.30.0",
     "flower==2.2.0",
-    "gitpython==3.2.0",
+    "gitpython==3.2.1",
     "gunicorn==26.2.0",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.6",
     "pygments==2.21.0",
     "rich==15.0.0",
-    "sentry-sdk==2.71.0",
+    "sentry-sdk==2.73.0",
     "whitenoise==6.12.0",
 ]
 
 [dependency-groups]
 dev = [
-    "coverage==7.16.2",
+    "coverage==7.17.0",
     "django-migration-vis==2.0.1",
     "factory-boy==3.3.3",
     "ipdb==0.13.13",
-    "ipython==9.17.1",
+    "ipython==9.18.0",
     "pydot==4.0.1",                # For visualizing Django models with "graph_models --pydot"
     "ruff==0.17.3",                # Used by Django's find_formatters and run_formatters (with a monkey patch)
     "tblib==3.2.2",                # Enables proper tracebacks when Django tests fail with --parallel
@@ -65,7 +65,7 @@ dev = [
     "xkcdpass==1.30.0",
 ]
 docs = [
-    "sphinx==9.1.0",
+    "sphinx==9.2.0",
 ]
 
 [tool.uv]
