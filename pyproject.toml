@@ -33,7 +33,7 @@ dependencies = [
     # Why lite version?
     # https://github.com/daviddrysdale/python-phonenumbers?tab=readme-ov-file#memory-usage
     # Short answer: We don't need geocoder, carrier and timezone info
-    "django-phonenumber-field[phonenumberslite]==8.5.0",
+    "django-phonenumber-field[phonenumberslite]==9.0.0",
     "django-removals==1.5.1",
     # TODO: Consider moving to dev dependencies
     "django-watchfiles==1.4.0",
@@ -42,7 +42,7 @@ dependencies = [
     "drf-spectacular==0.30.0",
     "flower==2.2.0",
     "gitpython==3.2.1",
-    "gunicorn==26.2.0",
+    "gunicorn==27.0.1",
     # https://docs.djangoproject.com/en/dev/releases/4.2/#psycopg-3-support
     "psycopg[binary]==3.3.6",
     "pygments==2.21.0",
